@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Halaman tidak ditemui" description="Halaman yang anda cari tidak wujud atau telah dialihkan.">
+	<section class="not-found section-paper">
+		<div class="container-narrow not-found-inner">
+			<p class="error-code">404</p>
+			<h1>Halaman tidak ditemui.</h1>
+			<p>Halaman yang anda cari mungkin telah dialihkan, dipadam, atau tidak pernah wujud. Berikut adalah beberapa pautan yang mungkin membantu.</p>
+			<ul class="suggest-list">
+				<li><a href="/">Halaman Utama</a> — gambaran keseluruhan program</li>
+				<li><a href="/program">Program Latihan</a> — tiga modul utama</li>
+				<li><a href="/penerbitan">Enterprise Publishing</a> — servis penerbitan korporat</li>
+				<li><a href="/hubungi">Hubungi Kami</a> — borang proposal</li>
+			</ul>
+			<a href="/" class="btn btn-primary not-found-cta">Kembali ke utama</a>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.not-found {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		padding-block: 6rem;
+	}
+	.not-found-inner {
+		text-align: center;
+	}
+	.error-code {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: clamp(5rem, 14vw, 10rem);
+		line-height: 0.9;
+		color: var(--gold-500);
+		margin: 0;
+		opacity: 0.55;
+	}
+	.not-found h1 {
+		margin: 1rem 0 1.5rem;
+		font-size: clamp(2rem, 4vw, 3rem);
+	}
+	.not-found p {
+		max-width: 56ch;
+		margin: 0 auto 2.5rem;
+		color: var(--ink-500);
+		font-size: var(--text-lg);
+		line-height: 1.55;
+	}
+	.suggest-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2.5rem;
+		max-width: 460px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+		text-align: left;
+	}
+	.suggest-list li {
+		padding: 0.85rem 1.25rem;
+		background: var(--ash-50);
+		border-radius: var(--radius);
+		font-size: var(--text-sm);
+		color: var(--ink-700);
+	}
+	.suggest-list a {
+		font-weight: 600;
+		color: var(--navy-800);
+	}
+	.not-found-cta { padding: 1rem 2.5rem; }
+</style>

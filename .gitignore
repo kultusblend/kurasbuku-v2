@@ -1,0 +1,31 @@
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Local env files
+.env
+.env.production
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+
+# Wrangler
+.wrangler/
+
+# Local preview config (per-machine)
+.claude/launch.json
+
+# Cloudflare Pages
+functions/

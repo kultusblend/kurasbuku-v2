@@ -1,0 +1,803 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+	MODULES,
+	METHODOLOGY,
+	TRUSTED_BY,
+	CASE_STUDIES,
+	PROGRAM_OPTIONS,
+	PAX_OPTIONS,
+	SITE_DESCRIPTION,
+} from '../consts';
+
+const moduleEntries = Object.entries(MODULES);
+---
+
+<BaseLayout title="Kuras Buku — Latihan Komunikasi Korporat & Kerajaan" description={SITE_DESCRIPTION}>
+	{/* ---------- 1. HERO ---------- */}
+	<section class="hero section-paper">
+		<div class="container hero-grid">
+			<div class="hero-copy">
+				<p class="eyebrow reveal">Latihan Korporat & Kerajaan</p>
+				<h1 class="reveal" style="--reveal-delay: 80ms;">
+					Memperkasa <span class="serif-italic">komunikasi</span> dan penerbitan organisasi.
+				</h1>
+				<p class="hero-sub reveal" style="--reveal-delay: 160ms;">
+					Program latihan khas untuk agensi kerajaan dan korporat swasta. Lengkapi pasukan anda dengan kemahiran menulis berkesan, menerbitkan rangka kerja dalaman, dan menguasai komunikasi strategik.
+				</p>
+				<div class="hero-ctas reveal" style="--reveal-delay: 240ms;">
+					<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Proposal Korporat</a>
+					<a href="#modul" class="btn btn-outline">Lihat Modul Latihan</a>
+				</div>
+				<dl class="hero-stats reveal" style="--reveal-delay: 320ms;">
+					<div>
+						<dt>Sejak</dt>
+						<dd>2015</dd>
+					</div>
+					<div>
+						<dt>Pengalaman</dt>
+						<dd>10 tahun</dd>
+					</div>
+					<div>
+						<dt>Penerbitan</dt>
+						<dd>100+ buku</dd>
+					</div>
+				</dl>
+			</div>
+			<aside class="hero-aside reveal" style="--reveal-delay: 180ms;">
+				<img
+					src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80"
+					alt=""
+					class="hero-image"
+					loading="eager"
+					decoding="async"
+					width="600"
+					height="800"
+				/>
+				<div class="hero-badge">
+					<p class="badge-label">Kapasiti latihan tahunan</p>
+					<p class="badge-value">800+ <span>peserta</span></p>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	{/* ---------- 2. TRUST INDICATORS ---------- */}
+	<section class="trust section-ash" aria-label="Klien dan rakan kongsi">
+		<div class="container">
+			<p class="trust-label reveal">Dipercayai oleh agensi dan organisasi terkemuka</p>
+			<ul class="trust-logos">
+				{TRUSTED_BY.map((name, i) => (
+					<li class="trust-logo reveal" style={`--reveal-delay: ${i * 60}ms;`} aria-label={name}>
+						<span>{name}</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	</section>
+
+	{/* ---------- 3. CORE TRAINING ECOSYSTEM ---------- */}
+	<section id="modul" class="modules section-paper">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Ekosistem Latihan Korporat</p>
+				<h2>Tiga modul. Satu standard komunikasi organisasi.</h2>
+				<p class="section-lede">
+					Setiap modul direka untuk pasukan dalaman: dari penulis polisi hingga ke pegawai perhubungan awam. Diluluskan untuk klaim HRD Corp dan tender kerajaan.
+				</p>
+			</header>
+
+			<ol class="module-table">
+				{moduleEntries.map(([key, mod], i) => (
+					<li class="module-row reveal" style={`--reveal-delay: ${i * 100}ms;`}>
+						<div class="module-num">
+							<span>{String(i + 1).padStart(2, '0')}</span>
+						</div>
+						<div class="module-content">
+							<h3 id={`modul-${key}`}>{mod.label}</h3>
+							<p class="module-positioning">{mod.positioning}</p>
+							<div class="module-meta">
+								<div class="meta-block">
+									<p class="meta-label">Outcomes</p>
+									<p class="meta-value">{mod.outcome}</p>
+								</div>
+								<div class="meta-block">
+									<p class="meta-label">Komponen utama</p>
+									<ul class="meta-list">
+										{mod.bullets.map((b) => <li>{b}</li>)}
+									</ul>
+								</div>
+							</div>
+							<a href="/hubungi?program=" class="module-cta">Mohon proposal untuk modul ini →</a>
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- 4. METHODOLOGY ---------- */}
+	<section id="metodologi" class="methodology section-navy">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow eyebrow-light">Metodologi Kuras Buku</p>
+				<h2>Tiga langkah berstruktur. Outcomes yang boleh diukur.</h2>
+				<p class="section-lede on-dark">
+					Kami tidak datang dengan slide generik. Setiap engagement bermula dengan diagnostik organisasi anda, dibina dengan kurikulum yang direka khas, dan disokong dengan pelaksanaan susulan.
+				</p>
+			</header>
+
+			<ol class="method-grid">
+				{METHODOLOGY.map((step, i) => (
+					<li class="method-card reveal" style={`--reveal-delay: ${i * 120}ms;`}>
+						<span class="method-num">{step.num}</span>
+						<h3>{step.title} <span class="method-bm">{step.bm}</span></h3>
+						<p>{step.desc}</p>
+					</li>
+				))}
+			</ol>
+
+			<div class="method-flow" aria-hidden="true">
+				<span class="flow-step">Diagnostik</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step">Latihan</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step">Pelaksanaan</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step flow-step-gold">Outcomes</span>
+			</div>
+		</div>
+	</section>
+
+	{/* ---------- 5. ENTERPRISE PUBLISHING ---------- */}
+	<section class="enterprise section-paper">
+		<div class="container enterprise-grid">
+			<div class="enterprise-copy reveal">
+				<p class="eyebrow">Servis Tambahan</p>
+				<h2>Penerbitan enterprise dari hujung ke hujung.</h2>
+				<p>
+					Untuk projek yang memerlukan pelaksanaan luar, rumah penerbitan kami beroperasi pada kapasiti penuh. Dari suntingan manuskrip profesional, susun atur, hingga cetakan kuantiti tinggi dan pengurusan ISBN. Pasukan teknikal kami yang uruskan, supaya pasukan anda boleh fokus pada strategi.
+				</p>
+				<ul class="enterprise-list">
+					<li>Suntingan manuskrip profesional</li>
+					<li>Susun atur dan reka bentuk muka surat</li>
+					<li>Cetakan kuantiti rendah hingga tinggi</li>
+					<li>Pengurusan ISBN dan deposit perpustakaan</li>
+					<li>Pengedaran B2B dan e-commerce</li>
+				</ul>
+				<a href="/penerbitan" class="btn btn-outline">Lihat Servis Enterprise</a>
+			</div>
+			<aside class="enterprise-aside reveal" style="--reveal-delay: 120ms;">
+				<img
+					src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=900&q=80"
+					alt=""
+					class="enterprise-image"
+					loading="lazy"
+					decoding="async"
+					width="600"
+					height="800"
+				/>
+			</aside>
+		</div>
+	</section>
+
+	{/* ---------- 6. CASE STUDIES ---------- */}
+	<section id="kajian-kes" class="case-studies section-ash">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Hasil yang Diukur</p>
+				<h2>Kajian kes organisasi.</h2>
+				<p class="section-lede">
+					Klien kami diukur dengan metric, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar.
+				</p>
+			</header>
+
+			<ol class="case-grid">
+				{CASE_STUDIES.map((cs, i) => (
+					<li class="case-card reveal" style={`--reveal-delay: ${i * 100}ms;`}>
+						<p class="case-metric">{cs.metric}</p>
+						<p class="case-metric-label">{cs.label}</p>
+						<blockquote>
+							<p>{cs.quote}</p>
+						</blockquote>
+						<cite>— {cs.attribution}</cite>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- 7. LEAD GEN ---------- */}
+	<section id="intake" class="lead-gen section-paper">
+		<div class="container-narrow lead-grid">
+			<header class="reveal">
+				<p class="eyebrow">Borang Permohonan</p>
+				<h2>Bersedia menaikkan keupayaan komunikasi pasukan anda?</h2>
+				<p>
+					Lengkapkan borang di bawah. Pasukan kami akan respons dengan butiran program, kos, dan jadual kohort dalam tempoh dua hari bekerja.
+				</p>
+				<ul class="trust-list">
+					<li>Proposal khas mengikut keperluan organisasi anda</li>
+					<li>Kompatibel dengan klaim HRD Corp</li>
+					<li>Boleh dijalankan secara on-site atau hybrid</li>
+				</ul>
+			</header>
+
+			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="post" action="#">
+				<div class="row-2">
+					<div class="field">
+						<label for="lf-name">Nama penuh</label>
+						<input id="lf-name" name="name" type="text" required autocomplete="name" />
+					</div>
+					<div class="field">
+						<label for="lf-email">E-mel kerja</label>
+						<input id="lf-email" name="email" type="email" required autocomplete="email" />
+					</div>
+				</div>
+
+				<div class="row-2">
+					<div class="field">
+						<label for="lf-org">Organisasi / Agensi</label>
+						<input id="lf-org" name="organization" type="text" required autocomplete="organization" />
+					</div>
+					<div class="field">
+						<label for="lf-position">Jawatan</label>
+						<input id="lf-position" name="position" type="text" autocomplete="organization-title" />
+					</div>
+				</div>
+
+				<div class="row-2">
+					<div class="field">
+						<label for="lf-pax">Anggaran bilangan peserta</label>
+						<select id="lf-pax" name="pax" required>
+							<option value="">Pilih…</option>
+							{PAX_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
+						</select>
+					</div>
+					<div class="field">
+						<label for="lf-program">Program berminat</label>
+						<select id="lf-program" name="program" required>
+							<option value="">Pilih…</option>
+							{PROGRAM_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
+						</select>
+					</div>
+				</div>
+
+				<div class="field">
+					<label for="lf-message">Keperluan khusus (pilihan)</label>
+					<textarea id="lf-message" name="message" rows="4" placeholder="Cth: latihan untuk pasukan 25 orang, sesi on-site di KL, fokus pada penulisan laporan tahunan…"></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-primary lead-submit">Hantar Permohonan</button>
+				<p class="form-note">Maklumat anda hanya digunakan untuk respons proposal. Tiada senarai mel atau pemasaran tambahan.</p>
+			</form>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	/* ---------- HERO ---------- */
+	.hero { padding-block: clamp(4rem, 8vw, 7rem); }
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	@media (max-width: 980px) {
+		.hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+		.hero-aside { display: none; }
+	}
+
+	.hero-copy h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5vw, 4.5rem);
+		line-height: 1.05;
+	}
+	.hero-copy h1 .serif-italic {
+		color: var(--gold-700);
+	}
+	.hero-sub {
+		max-width: 56ch;
+		margin: 2rem 0 2.5rem;
+		font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.hero-ctas {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 3rem;
+	}
+
+	.hero-stats {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		gap: 2.5rem;
+		margin: 0;
+		padding-top: 2rem;
+		border-top: 1px solid var(--ash-200);
+		justify-content: start;
+	}
+	.hero-stats div { display: flex; flex-direction: column; gap: 0.25rem; }
+	.hero-stats dt {
+		font-size: var(--text-xs);
+		font-weight: 500;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+	}
+	.hero-stats dd {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 1.75rem;
+		color: var(--ink-900);
+		margin: 0;
+	}
+
+	.hero-aside {
+		position: relative;
+	}
+	.hero-image {
+		width: 100%;
+		height: auto;
+		max-height: 560px;
+		object-fit: cover;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+	}
+	.hero-badge {
+		position: absolute;
+		left: -1.5rem;
+		bottom: 1.5rem;
+		background: var(--paper);
+		padding: 1.25rem 1.5rem;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+		border-left: 4px solid var(--gold-600);
+	}
+	.badge-label {
+		margin: 0;
+		font-size: var(--text-xs);
+		font-weight: 500;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+	}
+	.badge-value {
+		margin: 0.5rem 0 0;
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--ink-900);
+	}
+	.badge-value span {
+		font-family: var(--font-body);
+		font-weight: 400;
+		font-size: var(--text-sm);
+		color: var(--ink-500);
+	}
+
+	/* ---------- TRUST ---------- */
+	.trust { padding-block: 3rem; }
+	.trust-label {
+		text-align: center;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+		margin: 0 0 2rem;
+	}
+	.trust-logos {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 1.5rem;
+		align-items: center;
+	}
+	@media (max-width: 880px) { .trust-logos { grid-template-columns: repeat(3, 1fr); } }
+	@media (max-width: 540px) { .trust-logos { grid-template-columns: repeat(2, 1fr); } }
+	.trust-logo {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 1.125rem;
+		text-align: center;
+		color: var(--ink-300);
+		padding: 1rem;
+		border: 1px dashed var(--ash-300);
+		border-radius: var(--radius);
+		filter: grayscale(1);
+		transition: color var(--transition-fast), border-color var(--transition-fast);
+	}
+	.trust-logo:hover { color: var(--ink-500); border-color: var(--ash-300); }
+
+	/* ---------- SECTION HEADERS ---------- */
+	.section-head {
+		max-width: 820px;
+		margin-bottom: 4rem;
+	}
+	.section-head h2 {
+		margin-top: 1rem;
+		font-size: clamp(2.25rem, 4vw, 3.25rem);
+	}
+	.section-lede {
+		margin-top: 1.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+		max-width: 64ch;
+	}
+	.section-lede.on-dark { color: var(--ink-on-dark); }
+	.eyebrow-light { color: var(--gold-300); }
+
+	/* ---------- MODULES (B2B table format) ---------- */
+	.module-table {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.module-row {
+		display: grid;
+		grid-template-columns: 120px 1fr;
+		gap: 2rem;
+		padding: 2.5rem 2.5rem 2.5rem 2rem;
+		background: var(--ash-50);
+		border-left: 4px solid var(--gold-600);
+		border-radius: var(--radius);
+		transition: transform var(--transition-fast), box-shadow var(--transition);
+	}
+	.module-row:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow);
+	}
+	@media (max-width: 720px) {
+		.module-row { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 1.25rem; }
+	}
+	.module-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 4.5rem;
+		line-height: 0.9;
+		color: var(--gold-500);
+		opacity: 0.5;
+	}
+	.module-content h3 {
+		font-size: var(--text-2xl);
+		margin: 0 0 0.75rem;
+		line-height: 1.15;
+	}
+	.module-positioning {
+		font-size: var(--text-lg);
+		line-height: 1.5;
+		color: var(--ink-700);
+		margin: 0 0 1.5rem;
+		max-width: 64ch;
+	}
+	.module-meta {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		gap: 1.5rem;
+		padding-block: 1.5rem;
+		border-top: 1px solid var(--ash-200);
+		border-bottom: 1px solid var(--ash-200);
+		margin-bottom: 1.5rem;
+	}
+	@media (max-width: 720px) { .module-meta { grid-template-columns: 1fr; } }
+	.meta-block { display: flex; flex-direction: column; gap: 0.5rem; }
+	.meta-label {
+		font-family: var(--font-body);
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+		margin: 0;
+	}
+	.meta-value {
+		margin: 0;
+		font-size: var(--text-sm);
+		line-height: 1.55;
+		color: var(--ink-900);
+	}
+	.meta-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.4rem;
+	}
+	.meta-list li {
+		position: relative;
+		padding-left: 1.25rem;
+		font-size: var(--text-sm);
+		color: var(--ink-700);
+	}
+	.meta-list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.65em;
+		width: 8px;
+		height: 1px;
+		background: var(--gold-600);
+	}
+	.module-cta {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--navy-800);
+		text-decoration: none;
+		transition: color var(--transition-fast);
+	}
+	.module-cta:hover { color: var(--gold-700); }
+
+	/* ---------- METHODOLOGY ---------- */
+	.method-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 4rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	@media (max-width: 880px) { .method-grid { grid-template-columns: 1fr; } }
+	.method-card {
+		padding: 2.5rem 2rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: var(--radius);
+		transition: border-color var(--transition-fast), background var(--transition-fast);
+	}
+	.method-card:hover {
+		background: rgba(255, 255, 255, 0.08);
+		border-color: var(--gold-500);
+	}
+	.method-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 3.5rem;
+		line-height: 1;
+		color: var(--gold-300);
+		display: block;
+		margin-bottom: 1.25rem;
+	}
+	.method-card h3 {
+		font-size: var(--text-2xl);
+		margin: 0 0 1rem;
+		color: var(--ink-on-dark-strong);
+	}
+	.method-bm {
+		font-family: var(--font-body);
+		font-weight: 400;
+		font-size: var(--text-sm);
+		color: var(--gold-300);
+		letter-spacing: var(--tracking-wide);
+	}
+	.method-card p {
+		margin: 0;
+		color: var(--ink-on-dark);
+		line-height: 1.6;
+	}
+
+	.method-flow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		padding: 2rem;
+		background: rgba(255, 255, 255, 0.04);
+		border: 1px dashed rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius);
+	}
+	.flow-step {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-on-dark);
+	}
+	.flow-step-gold { color: var(--gold-300); }
+	.flow-arrow {
+		color: var(--ink-on-dark-muted);
+		font-size: 1.5rem;
+	}
+
+	/* ---------- ENTERPRISE ---------- */
+	.enterprise-grid {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	@media (max-width: 880px) { .enterprise-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+	.enterprise-copy h2 { margin-top: 1.25rem; }
+	.enterprise-copy p {
+		margin: 1.5rem 0 1.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		max-width: 56ch;
+	}
+	.enterprise-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem 1.5rem;
+	}
+	@media (max-width: 560px) { .enterprise-list { grid-template-columns: 1fr; } }
+	.enterprise-list li {
+		position: relative;
+		padding-left: 1.25rem;
+		font-size: var(--text-base);
+		color: var(--ink-700);
+	}
+	.enterprise-list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.7em;
+		width: 8px;
+		height: 1px;
+		background: var(--gold-600);
+	}
+	.enterprise-image {
+		width: 100%;
+		height: auto;
+		max-height: 520px;
+		object-fit: cover;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+	}
+
+	/* ---------- CASE STUDIES ---------- */
+	.case-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+	@media (max-width: 980px) { .case-grid { grid-template-columns: 1fr 1fr; } }
+	@media (max-width: 620px) { .case-grid { grid-template-columns: 1fr; } }
+	.case-card {
+		padding: 2.5rem;
+		background: var(--paper);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-sm);
+		border-top: 4px solid var(--gold-600);
+	}
+	.case-metric {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 3.25rem;
+		line-height: 1;
+		color: var(--navy-800);
+		margin: 0;
+	}
+	.case-metric-label {
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--gold-700);
+		margin: 0.5rem 0 1.75rem;
+	}
+	.case-card blockquote {
+		margin: 0 0 1.5rem;
+	}
+	.case-card blockquote p {
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: var(--text-lg);
+		line-height: 1.4;
+		color: var(--ink-900);
+		margin: 0;
+	}
+	.case-card cite {
+		font-style: normal;
+		font-size: var(--text-sm);
+		color: var(--ink-500);
+		display: block;
+	}
+
+	/* ---------- LEAD GEN ---------- */
+	.lead-gen { background: var(--ash-50); padding-block: clamp(4rem, 8vw, 7rem); }
+	.lead-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.3fr;
+		gap: 4rem;
+		align-items: start;
+	}
+	@media (max-width: 980px) { .lead-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+	.lead-gen header h2 { margin-top: 1.25rem; font-size: clamp(2rem, 3.5vw, 2.75rem); }
+	.lead-gen header p {
+		margin: 1.5rem 0 2rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.trust-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.65rem;
+	}
+	.trust-list li {
+		position: relative;
+		padding-left: 1.75rem;
+		font-size: var(--text-sm);
+		color: var(--ink-700);
+	}
+	.trust-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: var(--gold-700);
+		font-weight: 700;
+	}
+
+	.lead-form {
+		padding: 2.5rem;
+		background: var(--paper);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-sm);
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+	.row-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	@media (max-width: 540px) { .row-2 { grid-template-columns: 1fr; } }
+	.field {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+	.field label {
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--ink-900);
+	}
+	.field input,
+	.field select,
+	.field textarea {
+		font-family: var(--font-body);
+		font-size: var(--text-base);
+		padding: 0.85rem 1rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-300);
+		border-radius: var(--radius);
+		color: var(--ink-900);
+		transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+	}
+	.field input:focus,
+	.field select:focus,
+	.field textarea:focus {
+		outline: none;
+		border-color: var(--navy-700);
+		box-shadow: 0 0 0 3px rgba(26, 60, 112, 0.1);
+	}
+	.lead-submit { margin-top: 0.5rem; width: fit-content; padding: 1rem 2rem; }
+	.form-note {
+		margin: 0;
+		font-size: var(--text-xs);
+		color: var(--ink-500);
+	}
+</style>

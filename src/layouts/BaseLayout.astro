@@ -1,0 +1,63 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_LANG, SITE_TITLE } from '../consts';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	article?: boolean;
+	pubDate?: Date;
+	updatedDate?: Date;
+	authorName?: string;
+	tags?: string[];
+	headerless?: boolean;
+}
+
+const { title, headerless = false, ...rest } = Astro.props;
+const fullTitle = title.includes(SITE_TITLE) ? title : `${title} | ${SITE_TITLE}`;
+---
+
+<!doctype html>
+<html lang={SITE_LANG}>
+	<head>
+		<BaseHead title={fullTitle} {...rest} />
+		<slot name="head" />
+	</head>
+	<body>
+		{!headerless && <Header />}
+		<main id="main">
+			<slot />
+		</main>
+		<Footer />
+
+		<script>
+			const setupReveal = () => {
+				const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				const targets = document.querySelectorAll<HTMLElement>('.reveal:not(.is-visible)');
+				if (!targets.length) return;
+				if (reduceMotion) {
+					targets.forEach((el) => el.classList.add('is-visible'));
+					return;
+				}
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('is-visible');
+								observer.unobserve(entry.target);
+							}
+						});
+					},
+					{ rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+				);
+				targets.forEach((el) => observer.observe(el));
+			};
+
+			setupReveal();
+			document.addEventListener('astro:after-swap', setupReveal);
+		</script>
+	</body>
+</html>
