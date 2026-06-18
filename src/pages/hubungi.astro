@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import copy from '../content/data/pages/hubungi.json';
-import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, INTAKE_FORM_ENDPOINT } from '../consts';
+import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3FORMS_KEY, WEB3FORMS_ACTION } from '../consts';
 ---
 
 <BaseLayout title={copy.metaTitle} description="Hantar permohonan untuk cadangan latihan korporat atau penerbitan enterprise. Pasukan kami akan respons dalam tempoh 2 hari bekerja.">
@@ -16,7 +16,15 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, INTAK
 			</header>
 
 			<div class="hubungi-grid">
-				<form class="hubungi-form reveal" style="--reveal-delay: 80ms;" method="post" action={INTAKE_FORM_ENDPOINT || '#'}>
+				<form class="hubungi-form reveal" style="--reveal-delay: 80ms;" method="POST" action={WEB3FORMS_KEY ? WEB3FORMS_ACTION : '#'}>
+						{WEB3FORMS_KEY && (
+							<>
+								<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+								<input type="hidden" name="subject" value="Mohon Cadangan Korporat — kurasbuku.com" />
+								<input type="hidden" name="from_name" value="Borang Hubungi Kuras Buku" />
+								<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+							</>
+						)}
 					<fieldset class="form-section">
 						<legend>Maklumat anda</legend>
 						<div class="row-2">

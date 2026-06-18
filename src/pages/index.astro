@@ -11,7 +11,8 @@ import {
 	PROGRAM_OPTIONS,
 	PAX_OPTIONS,
 	SITE_DESCRIPTION,
-	INTAKE_FORM_ENDPOINT,
+	WEB3FORMS_KEY,
+	WEB3FORMS_ACTION,
 } from '../consts';
 import copy from '../content/data/pages/home.json';
 
@@ -241,7 +242,15 @@ const ICON_PATHS: Record<string, string> = {
 				</ul>
 			</header>
 
-			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="post" action={INTAKE_FORM_ENDPOINT || '#'}>
+			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="POST" action={WEB3FORMS_KEY ? WEB3FORMS_ACTION : '#'}>
+					{WEB3FORMS_KEY && (
+						<>
+							<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+							<input type="hidden" name="subject" value="Permohonan baru (Laman Utama) — kurasbuku.com" />
+							<input type="hidden" name="from_name" value="Borang Laman Utama Kuras Buku" />
+							<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+						</>
+					)}
 				<div class="row-2">
 					<div class="field">
 						<label for="lf-name">{copy.leadgen.labelName}</label>
