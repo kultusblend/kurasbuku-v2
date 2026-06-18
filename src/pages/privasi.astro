@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_ORG, SSM_REGISTRATION } from '../consts';
+
+const lastUpdated = 'Jun 2026';
+---
+
+<BaseLayout
+	title="Polisi Privasi"
+	description="Polisi privasi Kuras Buku Enterprise Communications. Bagaimana kami mengumpul, menggunakan, dan melindungi maklumat peribadi anda selaras dengan Akta Perlindungan Data Peribadi 2010."
+>
+	<article class="legal section-paper">
+		<div class="container-narrow">
+			<header class="legal-head reveal">
+				<p class="eyebrow">Polisi Privasi</p>
+				<h1>Polisi Privasi</h1>
+				<p class="legal-updated">Kemaskini terakhir: {lastUpdated}</p>
+			</header>
+
+			<div class="legal-body reveal" style="--reveal-delay: 80ms;">
+				<p class="legal-intro">
+					{SITE_ORG} ("kami") menghormati privasi setiap individu dan organisasi yang berurusan dengan kami. Polisi ini menjelaskan cara kami mengumpul, menggunakan, menyimpan, dan melindungi maklumat anda selaras dengan Akta Perlindungan Data Peribadi 2010 (PDPA).
+				</p>
+
+				<section>
+					<h2>1. Maklumat yang Kami Kumpul</h2>
+					<p>Kami mengumpul maklumat yang anda berikan secara langsung melalui borang permohonan, e-mel, atau urusan rasmi, termasuk:</p>
+					<ul>
+						<li>Nama, jawatan, dan butiran perhubungan</li>
+						<li>Nama organisasi atau agensi anda</li>
+						<li>Maklumat berkaitan keperluan latihan atau penerbitan</li>
+						<li>Sebarang maklumat lain yang anda kongsikan secara sukarela</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>2. Tujuan Pengumpulan</h2>
+					<p>Maklumat anda digunakan semata-mata untuk:</p>
+					<ul>
+						<li>Memproses dan menyediakan cadangan korporat</li>
+						<li>Berkomunikasi berkenaan pertanyaan dan perkhidmatan anda</li>
+						<li>Menyediakan latihan, penerbitan, atau perkhidmatan yang dipersetujui</li>
+						<li>Mematuhi keperluan undang-undang dan pengauditan</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>3. Perkongsian Maklumat</h2>
+					<p>
+						Kami tidak menjual, menyewa, atau berkongsi maklumat peribadi anda dengan pihak ketiga untuk tujuan pemasaran. Maklumat hanya boleh dikongsi dengan pembekal perkhidmatan yang membantu operasi kami, tertakluk kepada obligasi kerahsiaan yang ketat, atau apabila dikehendaki oleh undang-undang.
+					</p>
+				</section>
+
+				<section>
+					<h2>4. Keselamatan Data</h2>
+					<p>
+						Kami mengambil langkah teknikal dan organisasi yang munasabah untuk melindungi maklumat anda daripada akses, pendedahan, atau kehilangan yang tidak dibenarkan. Walau bagaimanapun, tiada kaedah penghantaran melalui internet yang terjamin sepenuhnya.
+					</p>
+				</section>
+
+				<section>
+					<h2>5. Hak Anda</h2>
+					<p>Di bawah PDPA, anda berhak untuk:</p>
+					<ul>
+						<li>Mengakses maklumat peribadi yang kami simpan tentang anda</li>
+						<li>Memohon pembetulan maklumat yang tidak tepat</li>
+						<li>Menarik balik persetujuan untuk pemprosesan tertentu</li>
+						<li>Mengemukakan pertanyaan tentang pengendalian data anda</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>6. Cookies</h2>
+					<p>
+						Laman web kami mungkin menggunakan cookies asas untuk meningkatkan pengalaman pelayaran dan memahami trafik laman secara agregat. Anda boleh mengawal tetapan cookies melalui pelayar anda.
+					</p>
+				</section>
+
+				<section>
+					<h2>7. Hubungi Kami</h2>
+					<p>
+						Untuk sebarang pertanyaan tentang polisi ini atau hak data anda, sila hubungi kami melalui <a href="/hubungi">borang rasmi</a> atau e-mel ke <a href="mailto:privasi@kurasbuku.com">privasi@kurasbuku.com</a>.
+					</p>
+					<p class="legal-org">
+						{SITE_ORG}<br />
+						{SSM_REGISTRATION}
+					</p>
+				</section>
+
+				<p class="legal-disclaimer">
+					Dokumen ini adalah template umum dan perlu disemak oleh penasihat undang-undang sebelum digunakan secara rasmi.
+				</p>
+			</div>
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	.legal { padding-block: clamp(5rem, 8vw, 7rem); }
+	.legal-head { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--ash-200); }
+	.legal-head h1 { margin-top: 1rem; font-size: clamp(2.25rem, 4.5vw, 3.5rem); }
+	.legal-updated {
+		margin: 1rem 0 0;
+		font-size: var(--text-sm);
+		color: var(--ink-500);
+		letter-spacing: var(--tracking-wide);
+	}
+	.legal-intro {
+		font-size: var(--text-lg);
+		line-height: 1.65;
+		color: var(--ink-700);
+		margin: 0 0 1rem;
+	}
+	.legal-body section { margin-top: 2.75rem; }
+	.legal-body h2 {
+		font-size: var(--text-xl);
+		margin: 0 0 1rem;
+		color: var(--navy-800);
+	}
+	.legal-body p { font-size: var(--text-base); line-height: 1.7; color: var(--ink-700); margin: 0 0 1rem; }
+	.legal-body ul { margin: 0 0 1rem; padding-left: 1.5rem; display: grid; gap: 0.5rem; }
+	.legal-body li { font-size: var(--text-base); line-height: 1.6; color: var(--ink-700); }
+	.legal-org { font-size: var(--text-sm); color: var(--ink-500); line-height: 1.7; }
+	.legal-disclaimer {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--ash-200);
+		font-size: var(--text-sm);
+		font-style: italic;
+		color: var(--ink-500);
+	}
+</style>

@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { MODULES } from '../../consts';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft).catch(() => []);
+const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const formatter = new Intl.DateTimeFormat('ms-MY', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const topics = [
+	{ key: 'penulisan', label: 'Penulisan & Dokumentasi', desc: 'Teknik merangka kertas putih, dokumen dasar, dan laporan korporat yang jelas.' },
+	{ key: 'penerbitan', label: 'Penerbitan Korporat', desc: 'Workflow penerbitan dalaman, standard editorial, dan produksi bertaraf premium.' },
+	{ key: 'strategik', label: 'Komunikasi Strategik', desc: 'Messaging, perhubungan media, dan pembinaan reputasi organisasi.' },
+];
+---
+
+<BaseLayout
+	title="Wawasan & Artikel"
+	description="Wawasan dari Kuras Buku tentang penulisan profesional, penerbitan korporat, dan komunikasi strategik untuk agensi kerajaan dan organisasi."
+>
+	{/* ---------- HERO ---------- */}
+	<section class="page-hero section-paper">
+		<div class="container">
+			<p class="eyebrow reveal">Wawasan & Artikel</p>
+			<h1 class="reveal" style="--reveal-delay: 80ms;">
+				Pemikiran di Sebalik<br /><span class="serif-italic">Setiap Kata yang Tersusun.</span>
+			</h1>
+			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
+				Wawasan, panduan, dan pandangan dari pasukan kami tentang seni dan disiplin komunikasi organisasi. Kami berkongsi ilmu yang sama yang kami bawa ke bilik latihan.
+			</p>
+		</div>
+	</section>
+
+	{posts.length > 0 ? (
+		<section class="articles section-ash">
+			<div class="container">
+				<ol class="article-grid">
+					{posts.map((post, i) => (
+						<li class="article-card reveal" style={`--reveal-delay: ${i * 80}ms;`}>
+							<a href={`/artikel/${post.id}/`}>
+								<p class="article-meta">
+									<span class="article-topic">{MODULES[post.data.module as keyof typeof MODULES]?.label ?? 'Umum'}</span>
+									<time datetime={post.data.pubDate.toISOString()}>{formatter.format(post.data.pubDate)}</time>
+								</p>
+								<h2>{post.data.title}</h2>
+								<p class="article-desc">{post.data.description}</p>
+								<span class="article-cta">Baca artikel →</span>
+							</a>
+						</li>
+					))}
+				</ol>
+			</div>
+		</section>
+	) : (
+		<>
+			{/* ---------- TOPIC PILLARS (empty state) ---------- */}
+			<section class="topics section-ash">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="eyebrow">Bidang Tumpuan</p>
+						<h2>Tiga bidang yang akan kami terokai.</h2>
+						<p class="section-lede">
+							Koleksi wawasan pertama kami sedang disiapkan. Setiap artikel akan menyelami salah satu daripada tiga bidang teras kepakaran kami.
+						</p>
+					</header>
+
+					<ol class="topic-grid">
+						{topics.map((t, i) => (
+							<li class="topic-card reveal" style={`--reveal-delay: ${i * 100}ms;`}>
+								<span class="topic-num">{String(i + 1).padStart(2, '0')}</span>
+								<h3>{t.label}</h3>
+								<p>{t.desc}</p>
+							</li>
+						))}
+					</ol>
+				</div>
+			</section>
+
+			{/* ---------- CTA ---------- */}
+			<section class="cta-band section-paper">
+				<div class="container-narrow cta-inner reveal">
+					<h2>Mahu dimaklumkan apabila wawasan pertama terbit?</h2>
+					<p>
+						Sementara menunggu, pasukan kami sedia membincangkan keperluan komunikasi organisasi anda secara langsung. Itu wawasan yang paling peribadi.
+					</p>
+					<div class="cta-row">
+						<a href="/hubungi?intent=proposal" class="btn btn-primary">Hubungi Pasukan Kami</a>
+						<a href="/program" class="btn btn-outline">Lihat Program Latihan</a>
+					</div>
+				</div>
+			</section>
+		</>
+	)}
+</BaseLayout>
+
+<style>
+	.page-hero { padding-block: clamp(5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem); }
+	.page-hero h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+		line-height: 1.05;
+		max-width: 16ch;
+	}
+	.page-hero h1 .serif-italic { color: var(--gold-700); }
+	.page-lede {
+		margin-top: 2rem;
+		max-width: 62ch;
+		font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+
+	.section-head { max-width: 760px; margin-bottom: 3.5rem; }
+	.section-head h2 { margin-top: 1rem; font-size: clamp(2rem, 4vw, 3rem); }
+	.section-lede {
+		margin-top: 1.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+		max-width: 62ch;
+	}
+
+	/* ---------- TOPIC PILLARS ---------- */
+	.topic-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+	@media (max-width: 880px) { .topic-grid { grid-template-columns: 1fr; } }
+	.topic-card {
+		padding: 2.5rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		border-top: 4px solid var(--gold-600);
+	}
+	.topic-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--gold-500);
+		display: block;
+		margin-bottom: 1.25rem;
+		opacity: 0.6;
+	}
+	.topic-card h3 { font-size: var(--text-xl); line-height: 1.25; margin: 0 0 0.85rem; }
+	.topic-card p { margin: 0; color: var(--ink-500); line-height: 1.6; }
+
+	/* ---------- ARTICLE GRID (when posts exist) ---------- */
+	.article-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+	@media (max-width: 720px) { .article-grid { grid-template-columns: 1fr; } }
+	.article-card a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		padding: 2.5rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		transition: transform var(--transition-fast), box-shadow var(--transition);
+	}
+	.article-card a:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+	.article-meta {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-wrap: wrap;
+		font-size: var(--text-xs);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		color: var(--ink-500);
+		margin: 0 0 1rem;
+	}
+	.article-topic { color: var(--gold-700); font-weight: 600; }
+	.article-card h2 { font-size: var(--text-2xl); line-height: 1.2; margin: 0 0 1rem; }
+	.article-desc { margin: 0 0 1.5rem; color: var(--ink-500); line-height: 1.55; }
+	.article-cta { font-size: var(--text-sm); font-weight: 600; color: var(--navy-800); }
+
+	/* ---------- CTA ---------- */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(1.85rem, 3.5vw, 2.75rem); max-width: 24ch; margin-inline: auto; }
+	.cta-inner p {
+		max-width: 56ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.cta-row { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+</style>

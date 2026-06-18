@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_ORG, SSM_REGISTRATION } from '../consts';
+
+const lastUpdated = 'Jun 2026';
+---
+
+<BaseLayout
+	title="Terma Perkhidmatan"
+	description="Terma dan syarat penggunaan perkhidmatan Kuras Buku Enterprise Communications untuk latihan komunikasi dan penerbitan korporat."
+>
+	<article class="legal section-paper">
+		<div class="container-narrow">
+			<header class="legal-head reveal">
+				<p class="eyebrow">Terma Perkhidmatan</p>
+				<h1>Terma Perkhidmatan</h1>
+				<p class="legal-updated">Kemaskini terakhir: {lastUpdated}</p>
+			</header>
+
+			<div class="legal-body reveal" style="--reveal-delay: 80ms;">
+				<p class="legal-intro">
+					Terma ini mengawal penggunaan laman web dan perkhidmatan {SITE_ORG} ("kami"). Dengan berurusan dengan kami, anda bersetuju untuk terikat dengan terma yang dinyatakan di bawah.
+				</p>
+
+				<section>
+					<h2>1. Perkhidmatan Kami</h2>
+					<p>
+						Kami menyediakan perkhidmatan latihan komunikasi dan penerbitan korporat untuk agensi kerajaan dan organisasi. Skop, kos, dan jangka masa setiap projek akan ditentukan secara bertulis melalui cadangan atau kontrak rasmi yang berasingan.
+					</p>
+				</section>
+
+				<section>
+					<h2>2. Tanggungjawab Pelanggan</h2>
+					<p>Untuk memastikan kelancaran perkhidmatan, pelanggan bertanggungjawab untuk:</p>
+					<ul>
+						<li>Memberikan maklumat yang tepat dan lengkap</li>
+						<li>Menyediakan bahan dan akses yang diperlukan tepat pada masanya</li>
+						<li>Memberi maklum balas dan kelulusan dalam tempoh yang dipersetujui</li>
+						<li>Menjelaskan pembayaran mengikut jadual yang ditetapkan</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>3. Harta Intelek</h2>
+					<p>
+						Bahan latihan, kurikulum, templat, dan kerangka yang dibangunkan oleh kami kekal sebagai harta intelek kami, melainkan dipersetujui sebaliknya secara bertulis. Naskhah dan kandungan yang diterbitkan untuk pelanggan kekal sebagai hak pelanggan selepas pembayaran penuh.
+					</p>
+				</section>
+
+				<section>
+					<h2>4. Pembayaran</h2>
+					<p>
+						Terma pembayaran akan dinyatakan dalam setiap cadangan atau invois. Melainkan dipersetujui sebaliknya, pembayaran perlu dijelaskan dalam tempoh yang ditetapkan pada invois. Kelewatan pembayaran boleh menyebabkan penangguhan perkhidmatan.
+					</p>
+				</section>
+
+				<section>
+					<h2>5. Kerahsiaan</h2>
+					<p>
+						Kami komited untuk menjaga kerahsiaan semua maklumat dan dokumen organisasi anda. Perjanjian kerahsiaan (NDA) yang berasingan boleh dimeterai atas permintaan untuk projek yang sensitif.
+					</p>
+				</section>
+
+				<section>
+					<h2>6. Had Liabiliti</h2>
+					<p>
+						Kami menyediakan perkhidmatan dengan ketelitian profesional yang munasabah. Walau bagaimanapun, liabiliti kami terhad kepada nilai kontrak perkhidmatan berkenaan, dan tidak meliputi kerugian tidak langsung atau berbangkit.
+					</p>
+				</section>
+
+				<section>
+					<h2>7. Pindaan Terma</h2>
+					<p>
+						Kami berhak mengemaskini terma ini dari semasa ke semasa. Versi terkini akan sentiasa tersedia di laman web ini. Penggunaan berterusan perkhidmatan kami menandakan penerimaan terhadap terma yang dikemaskini.
+					</p>
+				</section>
+
+				<section>
+					<h2>8. Undang-undang yang Mengawal</h2>
+					<p>
+						Terma ini ditadbir mengikut undang-undang Malaysia. Sebarang pertikaian akan tertakluk kepada bidang kuasa mahkamah Malaysia.
+					</p>
+				</section>
+
+				<section>
+					<h2>9. Hubungi Kami</h2>
+					<p>
+						Untuk sebarang pertanyaan tentang terma ini, sila hubungi kami melalui <a href="/hubungi">borang rasmi</a> atau e-mel ke <a href="mailto:hello@kurasbuku.com">hello@kurasbuku.com</a>.
+					</p>
+					<p class="legal-org">
+						{SITE_ORG}<br />
+						{SSM_REGISTRATION}
+					</p>
+				</section>
+
+				<p class="legal-disclaimer">
+					Dokumen ini adalah template umum dan perlu disemak oleh penasihat undang-undang sebelum digunakan secara rasmi.
+				</p>
+			</div>
+		</div>
+	</article>
+</BaseLayout>
+
+<style>
+	.legal { padding-block: clamp(5rem, 8vw, 7rem); }
+	.legal-head { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--ash-200); }
+	.legal-head h1 { margin-top: 1rem; font-size: clamp(2.25rem, 4.5vw, 3.5rem); }
+	.legal-updated {
+		margin: 1rem 0 0;
+		font-size: var(--text-sm);
+		color: var(--ink-500);
+		letter-spacing: var(--tracking-wide);
+	}
+	.legal-intro {
+		font-size: var(--text-lg);
+		line-height: 1.65;
+		color: var(--ink-700);
+		margin: 0 0 1rem;
+	}
+	.legal-body section { margin-top: 2.75rem; }
+	.legal-body h2 {
+		font-size: var(--text-xl);
+		margin: 0 0 1rem;
+		color: var(--navy-800);
+	}
+	.legal-body p { font-size: var(--text-base); line-height: 1.7; color: var(--ink-700); margin: 0 0 1rem; }
+	.legal-body ul { margin: 0 0 1rem; padding-left: 1.5rem; display: grid; gap: 0.5rem; }
+	.legal-body li { font-size: var(--text-base); line-height: 1.6; color: var(--ink-700); }
+	.legal-org { font-size: var(--text-sm); color: var(--ink-500); line-height: 1.7; }
+	.legal-disclaimer {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--ash-200);
+		font-size: var(--text-sm);
+		font-style: italic;
+		color: var(--ink-500);
+	}
+</style>
