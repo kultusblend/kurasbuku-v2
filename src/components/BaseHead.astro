@@ -9,7 +9,7 @@ import '@fontsource/playfair-display/700.css';
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import { ClientRouter } from 'astro:transitions';
-import { SITE_TITLE, SITE_LOCALE, SITE_ORG, SITE_DESCRIPTION, BUSINESS_ADDRESS_PARTS } from '../consts';
+import { SITE_TITLE, SITE_LOCALE, SITE_ORG, SITE_DESCRIPTION, BUSINESS_ADDRESS_PARTS, SSM_NUMBER } from '../consts';
 
 const DEFAULT_OG_IMAGE = '/og-default.png';
 
@@ -61,6 +61,11 @@ const orgSchema = {
 	logo: new URL('/logo.png', Astro.url).toString(),
 	image: new URL('/og-default.png', Astro.url).toString(),
 	description: SITE_DESCRIPTION,
+	identifier: {
+		'@type': 'PropertyValue',
+		propertyID: 'SSM',
+		value: SSM_NUMBER,
+	},
 	areaServed: { '@type': 'Country', name: 'Malaysia' },
 	address: {
 		'@type': 'PostalAddress',

@@ -8,7 +8,8 @@ export const SITE_LANG = 'ms';
 export const SITE_LOCALE = 'ms_MY';
 
 // Corporate verification details (visible in footer per procurement requirements)
-export const SSM_REGISTRATION = 'SSM XXXXXXXX-X (Kemaskini)';
+export const SSM_NUMBER = '201503180769 (002449655-D)';
+export const SSM_REGISTRATION = `No. SSM: ${SSM_NUMBER}`;
 export const SST_NUMBER = '';
 export const BUSINESS_ADDRESS =
 	'18-1, Jalan Puteri 3A/5, Bandar Puteri Bangi, 43000 Kajang, Selangor, Malaysia';
