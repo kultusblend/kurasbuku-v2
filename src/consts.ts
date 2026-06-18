@@ -32,7 +32,7 @@ export const MODULES: Record<
 	penulisan: {
 		label: 'Penulisan Profesional & Dokumentasi',
 		positioning:
-			'Latihan menulis kertas putih, dokumen polisi, dan laporan korporat dengan struktur yang jelas dan tepat.',
+			'Latihan intensif merangka kertas putih (white papers), dokumen dasar, dan laporan korporat. Ubah data yang kompleks menjadi naratif yang jelas, padat, dan memikat.',
 		outcome:
 			'Komunikasi organisasi yang jelas, bebas ralat, dan berstruktur tinggi.',
 		bullets: [
@@ -45,7 +45,7 @@ export const MODULES: Record<
 	penerbitan: {
 		label: 'Strategi Penerbitan Korporat',
 		positioning:
-			'Pengurusan penerbitan dalaman, dari newsletter ke laporan tahunan, menggunakan workflow standard industri.',
+			'Kuasai rantaian pengeluaran penerbitan dalaman. Dari surat berita hingga laporan tahunan, kami terapkan standard industri bagi memastikan hasil cetakan dan digital bertaraf premium.',
 		outcome:
 			'Kitaran produksi diperkemas dan kualiti visual serta editorial dipertingkatkan.',
 		bullets: [
@@ -58,7 +58,7 @@ export const MODULES: Record<
 	strategik: {
 		label: 'Komunikasi Strategik',
 		positioning:
-			'Menyelaraskan mesej pasukan, mengurus perhubungan media, dan membina kuasa organisasi.',
+			'Selaraskan suara pasukan, tangani media dengan taktikal, dan bina reputasi kebal. Komunikasi bukan sekadar melontar mesej, tetapi memastikan ia membumi dan memberi impak.',
 		outcome:
 			'Naratif awam yang padu dan penglibatan stakeholder yang lebih baik.',
 		bullets: [
@@ -74,24 +74,24 @@ export const MODULES: Record<
 export const METHODOLOGY = [
 	{
 		num: '01',
-		title: 'Assess',
-		bm: 'Diagnostik',
+		title: 'Penilaian',
+		bm: '(Assess)',
 		desc:
-			'Audit komunikasi sedia ada, temubual stakeholder, dan analisis dokumentasi. Kami pulang dengan laporan dapatan yang spesifik untuk organisasi anda.',
+			'Kenal pasti kelompangan komunikasi sedia ada. Kami mengaudit aliran kerja dan sasaran mesej organisasi anda.',
 	},
 	{
 		num: '02',
-		title: 'Train',
-		bm: 'Latihan',
+		title: 'Latihan',
+		bm: '(Train)',
 		desc:
-			'Modul direka khas berdasarkan dapatan audit. Sesi fizikal atau hybrid mengikut keperluan jadual pasukan. Saiz kohort kekal kecil untuk maklum balas peribadi.',
+			'Pemindahan ilmu secara taktikal. Latihan praktikal dirangka bagi merapatkan jurang kemahiran menerusi modul yang disesuaikan.',
 	},
 	{
 		num: '03',
-		title: 'Implement',
-		bm: 'Pelaksanaan',
+		title: 'Pelaksanaan',
+		bm: '(Implement)',
 		desc:
-			'Sokongan susulan 90 hari: review draf, troubleshoot workflow, dan refinement framework. Outcomes yang boleh diukur, bukan janji kosong.',
+			'Merencana gerak kerja pasca-latihan. Kami bantu anda menterjemah setiap modul menjadi amalan harian yang nyata.',
 	},
 ];
 
