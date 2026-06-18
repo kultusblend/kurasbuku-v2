@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Milestones — illustrative arc. SAHKAN tarikh sebenar dengan klien sebelum live.
+const milestones = [
+	{
+		year: '2015',
+		title: 'Bermula sebagai rumah penerbitan',
+		desc: 'Kuras Buku ditubuhkan untuk membantu penulis menerbitkan karya, dari manuskrip mentah hingga naskhah bercetak.',
+	},
+	{
+		year: '2018',
+		title: 'Memperluas khidmat produksi',
+		desc: 'Skop berkembang merangkumi suntingan, reka letak, rekaan visual, dan urusan cetakan sepenuhnya.',
+	},
+	{
+		year: '2021',
+		title: 'Memasuki ruang korporat',
+		desc: 'Mula menerbitkan dokumen rasmi untuk agensi, universiti, dan organisasi, dari laporan tahunan ke buku dasar.',
+	},
+	{
+		year: '2023',
+		title: 'Melancarkan modul latihan',
+		desc: 'Pengalaman lapangan diterjemahkan menjadi kurikulum latihan komunikasi untuk pasukan dalaman organisasi.',
+	},
+	{
+		year: '2025',
+		title: 'Akademi komunikasi bersepadu',
+		desc: 'Hari ini, kami menggabungkan latihan dan penerbitan dalam satu ekosistem untuk sektor awam dan korporat.',
+	},
+];
+
+const pillars = [
+	{
+		num: '01',
+		title: 'Pengamal, Bukan Pemerhati',
+		desc: 'Setiap fasilitator kami pengamal aktif dalam dunia penerbitan dan komunikasi. Apa yang diajar adalah apa yang masih relevan di lapangan hari ini, bukan teori usang.',
+	},
+	{
+		num: '02',
+		title: 'Kerangka Akademik, Aplikasi Praktikal',
+		desc: 'Metodologi kami berakar pada kajian persuratan dan dipraktikkan menerusi tugasan sebenar. Setiap modul menghasilkan output yang boleh diuji, bukan sekadar nota.',
+	},
+	{
+		num: '03',
+		title: 'Mutu Tanpa Kompromi',
+		desc: 'Sama ada latihan atau penerbitan, kami menjaga laras bahasa rasmi dan piawai editorial yang tinggi. Reputasi organisasi anda dijaga seperti reputasi kami sendiri.',
+	},
+];
+
+const stats = [
+	{ value: '2015', label: 'Tahun ditubuhkan' },
+	{ value: '100+', label: 'Naskhah diterbitkan' },
+	{ value: '10 tahun', label: 'Pengalaman industri' },
+	{ value: '3 Modul', label: 'Latihan teras' },
+];
+---
+
+<BaseLayout
+	title="Tentang Kami"
+	description="Kuras Buku bermula sebagai rumah penerbitan pada 2015 dan kini sebuah akademi komunikasi untuk agensi kerajaan dan organisasi korporat. Inilah perjalanan, falsafah, dan kepakaran kami."
+>
+	{/* ---------- HERO ---------- */}
+	<section class="about-hero section-paper">
+		<div class="container">
+			<p class="eyebrow reveal">Tentang Kami</p>
+			<h1 class="reveal" style="--reveal-delay: 80ms;">
+				Berakar di Dunia Persuratan,<br /><span class="serif-italic">Berkembang ke Ruang Korporat.</span>
+			</h1>
+			<p class="about-lede reveal" style="--reveal-delay: 160ms;">
+				Kuras Buku bermula sebagai rumah penerbitan pada 2015. Hari ini, kami sebuah akademi komunikasi yang melengkapkan agensi kerajaan dan organisasi korporat dengan kemahiran menulis, menerbit, dan berkomunikasi pada tahap tertinggi.
+			</p>
+		</div>
+	</section>
+
+	{/* ---------- STORY + TIMELINE ---------- */}
+	<section class="story section-ash">
+		<div class="container story-grid">
+			<div class="story-copy reveal">
+				<p class="eyebrow">Perjalanan Kami</p>
+				<h2>Sepuluh Tahun Mengasah Kata, Membentuk Naratif.</h2>
+				<p>
+					Kami memulakan langkah dengan satu keyakinan ringkas: setiap idea yang berbaloi disampaikan layak mendapat naskhah yang berwibawa. Dari sebuah rumah penerbitan kecil, kami mengasah kemahiran teknikal di lapangan, satu manuskrip demi satu manuskrip.
+				</p>
+				<p>
+					Apabila agensi dan organisasi mula mempercayakan dokumen rasmi mereka kepada kami, kami sedar cabaran sebenar bukan sekadar pada hasil cetakan, tetapi pada keupayaan menulis dan berkomunikasi dalaman pasukan itu sendiri. Dari kesedaran itu lahirnya modul latihan kami.
+				</p>
+				<p>
+					Hari ini, Kuras Buku berdiri di persimpangan antara persuratan dan strategi korporat. Kami tidak sekadar menerbitkan untuk anda; kami membentuk pasukan anda agar mampu berdiri sendiri.
+				</p>
+			</div>
+
+			<ol class="timeline reveal" style="--reveal-delay: 120ms;">
+				{milestones.map((m) => (
+					<li class="timeline-item">
+						<span class="timeline-year">{m.year}</span>
+						<div class="timeline-body">
+							<h3>{m.title}</h3>
+							<p>{m.desc}</p>
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- PHILOSOPHY ---------- */}
+	<section class="philosophy section-paper">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Falsafah Kami</p>
+				<h2>Tiga Pegangan yang Membezakan Kami.</h2>
+				<p class="section-lede">
+					Cara kerja kami bukan kebetulan. Inilah prinsip yang dijaga sepanjang perjalanan, dan inilah yang anda boleh harapkan apabila bekerja dengan kami.
+				</p>
+			</header>
+
+			<ol class="pillar-grid">
+				{pillars.map((p, i) => (
+					<li class="pillar-card reveal" style={`--reveal-delay: ${i * 100}ms;`}>
+						<span class="pillar-num">{p.num}</span>
+						<h3>{p.title}</h3>
+						<p>{p.desc}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- STATS BAND ---------- */}
+	<section class="stats-band section-navy">
+		<div class="container">
+			<header class="stats-head reveal">
+				<p class="eyebrow eyebrow-light">Rekod Kami</p>
+				<h2>Pengalaman yang berbicara melalui hasil.</h2>
+			</header>
+			<dl class="stats-grid">
+				{stats.map((s, i) => (
+					<div class="stat reveal" style={`--reveal-delay: ${i * 80}ms;`}>
+						<dt>{s.value}</dt>
+						<dd>{s.label}</dd>
+					</div>
+				))}
+			</dl>
+		</div>
+	</section>
+
+	{/* ---------- CTA ---------- */}
+	<section class="cta-band section-paper">
+		<div class="container-narrow cta-inner reveal">
+			<h2>Sedia memulakan perbualan?</h2>
+			<p>
+				Sama ada anda memerlukan latihan untuk pasukan dalaman atau pelaksanaan penerbitan sepenuhnya, langkah pertama bermula dengan satu perbualan ringkas.
+			</p>
+			<div class="cta-row">
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Cadangan Korporat</a>
+				<a href="/#modul" class="btn btn-outline">Teroka Modul Latihan</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	/* ---------- HERO ---------- */
+	.about-hero {
+		padding-block: clamp(5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem);
+	}
+	.about-hero h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+		line-height: 1.05;
+		max-width: 18ch;
+	}
+	.about-hero h1 .serif-italic { color: var(--gold-700); }
+	.about-lede {
+		margin-top: 2rem;
+		max-width: 60ch;
+		font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+
+	/* ---------- STORY + TIMELINE ---------- */
+	.story-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+	@media (max-width: 920px) { .story-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+	.story-copy h2 {
+		margin-top: 1rem;
+		font-size: clamp(2rem, 3.5vw, 3rem);
+	}
+	.story-copy p {
+		margin: 1.5rem 0 0;
+		font-size: var(--text-lg);
+		line-height: 1.65;
+		color: var(--ink-700);
+		max-width: 52ch;
+	}
+
+	.timeline {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+	}
+	.timeline-item {
+		display: grid;
+		grid-template-columns: 84px 1fr;
+		gap: 1.5rem;
+		padding: 0 0 2rem 0;
+		position: relative;
+	}
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		left: 90px;
+		top: 2.4rem;
+		bottom: -0.4rem;
+		width: 1px;
+		background: var(--ash-300);
+	}
+	.timeline-item:last-child { padding-bottom: 0; }
+	.timeline-item:last-child::before { display: none; }
+	.timeline-year {
+		font-family: var(--font-mono, var(--font-body));
+		font-size: var(--text-sm);
+		font-weight: 700;
+		letter-spacing: var(--tracking-wide);
+		color: var(--gold-700);
+		padding-top: 0.15rem;
+	}
+	.timeline-body h3 {
+		font-size: var(--text-lg);
+		margin: 0 0 0.4rem;
+		line-height: 1.25;
+	}
+	.timeline-body p {
+		margin: 0;
+		font-size: var(--text-sm);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+
+	/* ---------- PHILOSOPHY ---------- */
+	.section-head {
+		max-width: 760px;
+		margin-bottom: 4rem;
+	}
+	.section-head h2 {
+		margin-top: 1rem;
+		font-size: clamp(2rem, 4vw, 3rem);
+	}
+	.section-lede {
+		margin-top: 1.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+		max-width: 62ch;
+	}
+	.pillar-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+	@media (max-width: 880px) { .pillar-grid { grid-template-columns: 1fr; } }
+	.pillar-card {
+		padding: 2.5rem;
+		background: var(--ash-50);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		border-top: 4px solid var(--gold-600);
+	}
+	.pillar-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--gold-500);
+		display: block;
+		margin-bottom: 1.25rem;
+		opacity: 0.6;
+	}
+	.pillar-card h3 {
+		font-size: var(--text-xl);
+		line-height: 1.25;
+		margin: 0 0 0.85rem;
+	}
+	.pillar-card p {
+		margin: 0;
+		color: var(--ink-500);
+		line-height: 1.6;
+	}
+
+	/* ---------- STATS BAND ---------- */
+	.stats-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.stats-head { max-width: 640px; margin-bottom: 3.5rem; }
+	.stats-head h2 {
+		margin-top: 1rem;
+		font-size: clamp(1.75rem, 3vw, 2.5rem);
+		color: var(--ink-on-dark-strong);
+	}
+	.eyebrow-light { color: var(--gold-300); }
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+		margin: 0;
+	}
+	@media (max-width: 720px) { .stats-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+	.stat {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.15);
+	}
+	.stat dt {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: clamp(2rem, 3.5vw, 2.75rem);
+		line-height: 1;
+		color: var(--gold-300);
+	}
+	.stat dd {
+		margin: 0;
+		font-size: var(--text-sm);
+		color: var(--ink-on-dark-muted);
+		letter-spacing: var(--tracking-wide);
+	}
+
+	/* ---------- CTA ---------- */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(2rem, 3.5vw, 3rem); }
+	.cta-inner p {
+		max-width: 56ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.cta-row {
+		display: inline-flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+</style>
