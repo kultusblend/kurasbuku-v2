@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CASE_STUDIES, MODULES, type ModuleKey } from '../consts';
+
+// Naratif lanjutan untuk setiap kajian kes. CONTOH ILUSTRASI, bukan rekod sebenar.
+// SAHKAN dengan klien sebelum guna untuk tender.
+const narratives = [
+	{
+		cabaran:
+			'Proses pelaporan jabatan mengambil masa berminggu kerana setiap draf melalui pusingan suntingan yang panjang dan tidak konsisten antara pegawai.',
+		pendekatan:
+			'Kami audit aliran kerja sedia ada, membina templat berstruktur, dan melatih pasukan dengan standard editorial yang seragam.',
+	},
+	{
+		cabaran:
+			'Newsletter organisasi terbit tidak menentu kerana ketiadaan workflow yang jelas dan pergantungan pada segelintir individu.',
+		pendekatan:
+			'Kami terapkan rantaian pengeluaran penerbitan standard industri dan style guide yang membolehkan pasukan terbit secara konsisten.',
+	},
+	{
+		cabaran:
+			'Respons kepada pertanyaan media lambat dan tidak konsisten, mendedahkan organisasi kepada risiko salah tafsir naratif.',
+		pendekatan:
+			'Kami bangunkan crisis playbook dan messaging framework, serta melatih jurucakap untuk respons yang pantas dan padu.',
+	},
+];
+
+const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
+---
+
+<BaseLayout
+	title="Kajian Kes"
+	description="Hasil sebenar dari latihan dan penerbitan Kuras Buku untuk agensi kerajaan dan organisasi korporat. Diukur dengan metrik, bukan janji."
+>
+	{/* ---------- HERO ---------- */}
+	<section class="page-hero section-paper">
+		<div class="container">
+			<p class="eyebrow reveal">Kajian Kes</p>
+			<h1 class="reveal" style="--reveal-delay: 80ms;">
+				Hasil yang Diukur,<br /><span class="serif-italic">Bukan Janji yang Dilaung.</span>
+			</h1>
+			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
+				Klien kami dinilai melalui perubahan yang nyata dan boleh diukur. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar, dirumuskan menerusi metrik dan kisah di sebaliknya.
+			</p>
+		</div>
+	</section>
+
+	{/* ---------- CASE STUDY DETAILS ---------- */}
+	{cases.map((cs, i) => (
+		<section class={`case ${i % 2 === 0 ? 'section-ash' : 'section-paper'}`}>
+			<div class="container case-grid">
+				<aside class="case-metric-side reveal">
+					<p class="case-metric">{cs.metric}</p>
+					<p class="case-metric-label">{cs.label}</p>
+					<span class="case-tag">{MODULES[cs.module as ModuleKey]?.label ?? 'Komunikasi'}</span>
+				</aside>
+
+				<div class="case-body reveal" style="--reveal-delay: 120ms;">
+					<div class="case-block">
+						<p class="case-block-label">Cabaran</p>
+						<p>{cs.cabaran}</p>
+					</div>
+					<div class="case-block">
+						<p class="case-block-label">Pendekatan</p>
+						<p>{cs.pendekatan}</p>
+					</div>
+					<blockquote class="case-quote">
+						<p>{cs.quote}</p>
+						<cite>— {cs.attribution}</cite>
+					</blockquote>
+				</div>
+			</div>
+		</section>
+	))}
+
+	{/* ---------- DISCLAIMER NOTE ---------- */}
+	<section class="note-band section-paper">
+		<div class="container-narrow reveal">
+			<p class="disclaimer">
+				Catatan: Identiti klien dirahsiakan atas dasar kerahsiaan perjanjian. Butiran lanjut boleh dikongsi semasa sesi perundingan rasmi.
+			</p>
+		</div>
+	</section>
+
+	{/* ---------- CTA ---------- */}
+	<section class="cta-band section-navy">
+		<div class="container-narrow cta-inner reveal">
+			<h2>Sedia menulis kisah kejayaan anda sendiri?</h2>
+			<p>
+				Setiap kajian kes bermula dengan satu organisasi yang berani melabur dalam keupayaan komunikasi pasukannya. Jadikan organisasi anda yang seterusnya.
+			</p>
+			<div class="cta-row">
+				<a href="/hubungi?intent=proposal" class="btn btn-gold">Mohon Cadangan Korporat</a>
+				<a href="/program" class="btn btn-ghost">Lihat Modul Latihan</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.page-hero { padding-block: clamp(5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem); }
+	.page-hero h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+		line-height: 1.05;
+		max-width: 15ch;
+	}
+	.page-hero h1 .serif-italic { color: var(--gold-700); }
+	.page-lede {
+		margin-top: 2rem;
+		max-width: 62ch;
+		font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+
+	/* ---------- CASE DETAILS ---------- */
+	.case { padding-block: clamp(4rem, 7vw, 6.5rem); }
+	.case-grid {
+		display: grid;
+		grid-template-columns: 0.8fr 1.2fr;
+		gap: 4rem;
+		align-items: start;
+	}
+	@media (max-width: 920px) { .case-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+	.case-metric-side {
+		position: sticky;
+		top: 100px;
+	}
+	@media (max-width: 920px) { .case-metric-side { position: static; } }
+	.case-metric {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: clamp(4rem, 8vw, 6rem);
+		line-height: 0.95;
+		color: var(--navy-800);
+		margin: 0;
+	}
+	.case-metric-label {
+		font-size: var(--text-sm);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		color: var(--gold-700);
+		margin: 0.5rem 0 1.5rem;
+	}
+	.case-tag {
+		display: inline-block;
+		font-size: var(--text-xs);
+		font-weight: 500;
+		color: var(--ink-500);
+		padding: 0.5rem 1rem;
+		border: 1px solid var(--ash-300);
+		border-radius: var(--radius-pill);
+	}
+
+	.case-body { display: flex; flex-direction: column; gap: 2rem; }
+	.case-block-label {
+		margin: 0 0 0.6rem;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+	}
+	.case-block p:not(.case-block-label) {
+		margin: 0;
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		color: var(--ink-700);
+		max-width: 58ch;
+	}
+	.case-quote {
+		margin: 0;
+		padding: 2rem 2.25rem;
+		background: var(--navy-900);
+		border-radius: var(--radius);
+		border-left: 4px solid var(--gold-500);
+	}
+	.case-quote p {
+		margin: 0 0 1rem;
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: var(--text-xl);
+		line-height: 1.4;
+		color: var(--ink-on-dark-strong);
+	}
+	.case-quote cite {
+		font-style: normal;
+		font-size: var(--text-sm);
+		color: var(--gold-300);
+	}
+
+	/* ---------- DISCLAIMER ---------- */
+	.note-band { padding-block: clamp(2.5rem, 4vw, 3.5rem); }
+	.disclaimer {
+		margin: 0;
+		text-align: center;
+		font-size: var(--text-sm);
+		font-style: italic;
+		color: var(--ink-500);
+	}
+
+	/* ---------- CTA ---------- */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(1.85rem, 3.5vw, 2.85rem); color: var(--ink-on-dark-strong); max-width: 20ch; margin-inline: auto; }
+	.cta-inner p {
+		max-width: 56ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-on-dark);
+	}
+	.cta-row { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+</style>

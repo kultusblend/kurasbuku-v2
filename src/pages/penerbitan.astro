@@ -1,0 +1,304 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+	{
+		num: '01',
+		icon: 'pen',
+		title: 'Suntingan Tepat, Bebas Ralat',
+		desc: 'Kami meneliti setiap patah kata, nahu, dan frasa. Sama ada laporan tahunan atau buku polisi, kami pastikan setiap naskhah tajam, bebas cela, dan mengekalkan laras bahasa rasmi organisasi anda.',
+	},
+	{
+		num: '02',
+		icon: 'layout',
+		title: 'Reka Letak Kemas, Sedap Ditelaah',
+		desc: 'Susun atur bukan sekadar lambakan teks pada helaian. Kami merangka hierarki tipografi dan reka letak yang profesional agar dokumen tebal menjadi mesra pembaca, kemas, dan mudah difahami.',
+	},
+	{
+		num: '03',
+		icon: 'visual',
+		title: 'Rekaan Visual, Pemangkin Citra',
+		desc: 'Dari rekaan kulit luar hingga infografik dalaman, kami menterjemahkan data yang sarat menjadi visual yang memikat. Rekaan kami direka khusus untuk memperkukuh identiti korporat anda.',
+	},
+	{
+		num: '04',
+		icon: 'print',
+		title: 'Urusan Cetakan, Selesai Di Pintu',
+		desc: 'Lupakan pening kepala berurusan dengan kilang. Kami mengemudi urusan pencetakan sepenuhnya, dari pemilihan material kertas, kawalan mutu warna, hinggalah naskhah fizikal tiba dengan selamat di pejabat anda.',
+	},
+];
+
+const workflow = [
+	{ num: '01', title: 'Taklimat & Skop', desc: 'Kami fahami matlamat naskhah, audiens sasaran, dan jangka masa anda.' },
+	{ num: '02', title: 'Suntingan & Susun Atur', desc: 'Manuskrip disunting dan disusun atur mengikut piawai editorial.' },
+	{ num: '03', title: 'Rekaan & Semakan', desc: 'Visual dirangka, pruf dihantar untuk semakan dan kelulusan anda.' },
+	{ num: '04', title: 'Cetakan & Edaran', desc: 'Naskhah dicetak dengan kawalan mutu, dihantar siap ke pintu anda.' },
+];
+
+const usecases = [
+	'Laporan tahunan dan laporan kewangan',
+	'Buku dasar, manual, dan garis panduan',
+	'Koleksi korporat dan buku ulang tahun',
+	'Newsletter dan briefing pack berkala',
+	'Penerbitan ilmiah dan jurnal organisasi',
+	'Bahan latihan dan modul dalaman',
+];
+
+const ICON_PATHS: Record<string, string> = {
+	pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>',
+	layout: '<rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>',
+	visual: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>',
+	print: '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
+};
+---
+
+<BaseLayout
+	title="Servis Penerbitan Enterprise"
+	description="Rumah penerbitan Kuras Buku beroperasi pada kapasiti penuh. Dari suntingan manuskrip, reka letak, rekaan visual, hingga pengurusan cetakan untuk agensi dan organisasi korporat."
+>
+	{/* ---------- HERO ---------- */}
+	<section class="page-hero section-paper">
+		<div class="container">
+			<p class="eyebrow reveal">Servis Penerbitan Enterprise</p>
+			<h1 class="reveal" style="--reveal-delay: 80ms;">
+				Dari Idea Coretan,<br /><span class="serif-italic">ke Naskhah Edaran.</span>
+			</h1>
+			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
+				Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Biar kami uruskan kerumitan teknikal, anda fokus pada visi besar organisasi.
+			</p>
+			<div class="hero-ctas reveal" style="--reveal-delay: 240ms;">
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Sebut Harga</a>
+				<a href="#proses" class="btn btn-outline">Lihat Proses Kerja</a>
+			</div>
+		</div>
+	</section>
+
+	{/* ---------- SERVICES (2x2) ---------- */}
+	<section class="services section-ash">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Skop Perkhidmatan</p>
+				<h2>Empat Tonggak Penerbitan Bersepadu.</h2>
+				<p class="section-lede">
+					Ambil satu perkhidmatan secara berasingan, atau serahkan keseluruhan projek kepada kami dari hujung ke hujung.
+				</p>
+			</header>
+
+			<ol class="service-grid">
+				{services.map((s, i) => (
+					<li class="service-card reveal" style={`--reveal-delay: ${i * 90}ms;`}>
+						<div class="service-icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={ICON_PATHS[s.icon]} />
+						</div>
+						<span class="service-num" aria-hidden="true">{s.num}</span>
+						<h3>{s.title}</h3>
+						<p>{s.desc}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- WORKFLOW ---------- */}
+	<section id="proses" class="workflow section-paper">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Proses Kerja</p>
+				<h2>Empat Langkah, Satu Naskhah Sempurna.</h2>
+			</header>
+
+			<ol class="workflow-grid">
+				{workflow.map((w, i) => (
+					<li class="workflow-step reveal" style={`--reveal-delay: ${i * 90}ms;`}>
+						<span class="workflow-num">{w.num}</span>
+						<h3>{w.title}</h3>
+						<p>{w.desc}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- USE CASES ---------- */}
+	<section class="usecases section-ash">
+		<div class="container usecases-grid">
+			<div class="usecases-copy reveal">
+				<p class="eyebrow">Apa yang Boleh Kami Terbitkan</p>
+				<h2>Setiap dokumen rasmi, dilayan setaraf sebuah buku.</h2>
+				<p>
+					Tiada projek yang terlalu teknikal atau terlalu kompleks. Dari laporan setebal ratusan muka surat hingga buku ulang tahun yang penuh nilai sentimental, kami melayan setiap naskhah dengan ketelitian yang sama.
+				</p>
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">Bincang Projek Anda</a>
+			</div>
+			<ul class="usecases-list reveal" style="--reveal-delay: 120ms;">
+				{usecases.map((u) => <li>{u}</li>)}
+			</ul>
+		</div>
+	</section>
+
+	{/* ---------- CTA ---------- */}
+	<section class="cta-band section-navy">
+		<div class="container-narrow cta-inner reveal">
+			<h2>Ada projek penerbitan di tangan?</h2>
+			<p>
+				Hantar butiran ringkas projek anda. Kami akan respons dengan anggaran skop, kos, dan jangka masa dalam tempoh dua hari bekerja.
+			</p>
+			<div class="cta-row">
+				<a href="/hubungi?intent=proposal" class="btn btn-gold">Mohon Sebut Harga</a>
+				<a href="/program" class="btn btn-ghost">Lihat Program Latihan</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.page-hero { padding-block: clamp(5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem); }
+	.page-hero h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+		line-height: 1.05;
+		max-width: 14ch;
+	}
+	.page-hero h1 .serif-italic { color: var(--gold-700); }
+	.page-lede {
+		margin-top: 2rem;
+		max-width: 60ch;
+		font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.hero-ctas { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+	.section-head { max-width: 760px; margin-bottom: 3.5rem; }
+	.section-head h2 { margin-top: 1rem; font-size: clamp(2rem, 4vw, 3rem); }
+	.section-lede {
+		margin-top: 1.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+		max-width: 62ch;
+	}
+
+	/* ---------- SERVICES ---------- */
+	.service-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.75rem;
+	}
+	@media (max-width: 720px) { .service-grid { grid-template-columns: 1fr; } }
+	.service-card {
+		position: relative;
+		padding: 2.5rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-sm);
+		transition: transform var(--transition-fast), box-shadow var(--transition);
+	}
+	.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+	.service-icon {
+		width: 56px;
+		height: 56px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--navy-50);
+		color: var(--navy-800);
+		border-radius: var(--radius);
+		margin-bottom: 1.5rem;
+	}
+	.service-icon svg { width: 26px; height: 26px; }
+	.service-num {
+		position: absolute;
+		top: 2.25rem;
+		right: 2.5rem;
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: var(--gold-500);
+		opacity: 0.5;
+	}
+	.service-card h3 { font-size: var(--text-xl); line-height: 1.25; margin: 0 0 0.85rem; max-width: 22ch; }
+	.service-card p { margin: 0; color: var(--ink-500); line-height: 1.6; }
+
+	/* ---------- WORKFLOW ---------- */
+	.workflow-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.75rem;
+		counter-reset: step;
+	}
+	@media (max-width: 880px) { .workflow-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+	@media (max-width: 480px) { .workflow-grid { grid-template-columns: 1fr; } }
+	.workflow-step { position: relative; padding-top: 1.5rem; border-top: 2px solid var(--ash-200); }
+	.workflow-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--gold-500);
+		display: block;
+		margin-bottom: 0.85rem;
+	}
+	.workflow-step h3 { font-size: var(--text-lg); margin: 0 0 0.5rem; line-height: 1.25; }
+	.workflow-step p { margin: 0; font-size: var(--text-sm); color: var(--ink-500); line-height: 1.55; }
+
+	/* ---------- USE CASES ---------- */
+	.usecases-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+	@media (max-width: 880px) { .usecases-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+	.usecases-copy h2 { margin-top: 1rem; font-size: clamp(1.85rem, 3.2vw, 2.65rem); }
+	.usecases-copy p {
+		margin: 1.5rem 0 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		color: var(--ink-700);
+		max-width: 52ch;
+	}
+	.usecases-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.75rem;
+	}
+	.usecases-list li {
+		position: relative;
+		padding: 1rem 1.25rem 1rem 2.75rem;
+		background: var(--paper);
+		border-radius: var(--radius);
+		border: 1px solid var(--ash-200);
+		font-size: var(--text-base);
+		color: var(--ink-900);
+	}
+	.usecases-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 1.1rem;
+		top: 1rem;
+		color: var(--gold-700);
+		font-weight: 700;
+	}
+
+	/* ---------- CTA ---------- */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(1.85rem, 3.5vw, 2.85rem); color: var(--ink-on-dark-strong); }
+	.cta-inner p {
+		max-width: 56ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-on-dark);
+	}
+	.cta-row { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+</style>

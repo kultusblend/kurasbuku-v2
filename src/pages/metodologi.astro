@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { METHODOLOGY } from '../consts';
+
+// Deliverables per phase. SAHKAN butiran sebenar dengan klien.
+const deliverables: Record<string, string[]> = {
+	'01': [
+		'Audit dokumentasi dan aliran kerja komunikasi sedia ada',
+		'Temubual ringkas dengan pemegang taruh utama',
+		'Laporan dapatan dengan kelompangan yang dikenal pasti',
+	],
+	'02': [
+		'Kurikulum disesuaikan berdasarkan dapatan audit',
+		'Sesi praktikal dengan tugasan dan dokumen sebenar',
+		'Maklum balas peribadi dalam kohort bersaiz kecil',
+	],
+	'03': [
+		'Pelan gerak kerja pasca-latihan',
+		'Templat dan rujukan untuk amalan harian',
+		'Sokongan susulan dan semakan draf',
+	],
+};
+---
+
+<BaseLayout
+	title="Metodologi"
+	description="Metodologi Kuras Buku dibina atas asas kajian persuratan dan pengalaman lapangan perundingan komunikasi. Tiga langkah berstruktur: Penilaian, Latihan, Pelaksanaan."
+>
+	{/* ---------- HERO ---------- */}
+	<section class="page-hero section-paper">
+		<div class="container">
+			<p class="eyebrow reveal">Metodologi Kuras Buku</p>
+			<h1 class="reveal" style="--reveal-delay: 80ms;">
+				Tiga Langkah Berstruktur,<br /><span class="serif-italic">Hasil Tuntas yang Terukur.</span>
+			</h1>
+			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
+				Metodologi kami dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.
+			</p>
+		</div>
+	</section>
+
+	{/* ---------- FLOW ---------- */}
+	<section class="flow-band section-navy">
+		<div class="container">
+			<div class="flow reveal" aria-hidden="true">
+				<span class="flow-step">Penilaian</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step">Latihan</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step">Pelaksanaan</span>
+				<span class="flow-arrow">→</span>
+				<span class="flow-step flow-step-gold">Hasil Tuntas</span>
+			</div>
+		</div>
+	</section>
+
+	{/* ---------- PHASE DETAILS ---------- */}
+	{METHODOLOGY.map((step, i) => (
+		<section class={`phase ${i % 2 === 0 ? 'section-paper' : 'section-ash'}`}>
+			<div class="container phase-grid">
+				<div class="phase-intro reveal">
+					<span class="phase-num">{step.num}</span>
+					<h2>{step.title} <span class="phase-en">{step.bm}</span></h2>
+					<p class="phase-desc">{step.desc}</p>
+				</div>
+				<div class="phase-deliverables reveal" style="--reveal-delay: 120ms;">
+					<p class="deliverables-label">Apa yang anda terima</p>
+					<ul>
+						{deliverables[step.num].map((d) => <li>{d}</li>)}
+					</ul>
+				</div>
+			</div>
+		</section>
+	))}
+
+	{/* ---------- RESEARCH-BACKED ---------- */}
+	<section class="research section-paper">
+		<div class="container-narrow research-inner reveal">
+			<p class="eyebrow">Asas Kepakaran</p>
+			<h2>Mengapa metodologi ini berhasil?</h2>
+			<p>
+				Kebanyakan program latihan gagal kerana ia berhenti pada hari terakhir kelas. Metodologi kami direka agar ilmu yang dipindahkan terus berakar dalam amalan harian organisasi. Setiap langkah disandarkan pada dua perkara: kerangka akademik yang teruji dan pengalaman lapangan yang sebenar.
+			</p>
+			<p>
+				Kami bukan ahli teori yang membaca dari slide. Kami pengamal yang telah menyunting ratusan naskhah, merangka dokumen rasmi untuk pelbagai organisasi, dan memahami cabaran komunikasi dari dalam. Itulah yang membezakan diagnosis yang tepat daripada cadangan yang generik.
+			</p>
+		</div>
+	</section>
+
+	{/* ---------- CTA ---------- */}
+	<section class="cta-band section-ash">
+		<div class="container-narrow cta-inner reveal">
+			<h2>Mahukan diagnosis untuk organisasi anda?</h2>
+			<p>
+				Langkah pertama metodologi kami bermula dengan satu perbualan. Hubungi kami untuk sesi penilaian ringkas keperluan komunikasi pasukan anda.
+			</p>
+			<div class="cta-row">
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Cadangan Korporat</a>
+				<a href="/program" class="btn btn-outline">Lihat Modul Latihan</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.page-hero { padding-block: clamp(5rem, 9vw, 8rem) clamp(3rem, 6vw, 5rem); }
+	.page-hero h1 {
+		margin-top: 1.5rem;
+		font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+		line-height: 1.05;
+		max-width: 17ch;
+	}
+	.page-hero h1 .serif-italic { color: var(--gold-700); }
+	.page-lede {
+		margin-top: 2rem;
+		max-width: 62ch;
+		font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+
+	/* ---------- FLOW BAND ---------- */
+	.flow-band { padding-block: clamp(2.5rem, 5vw, 4rem); }
+	.flow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+	.flow-step {
+		font-family: var(--font-body);
+		font-size: var(--text-base);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		color: var(--ink-on-dark);
+	}
+	.flow-step-gold { color: var(--gold-300); }
+	.flow-arrow { color: var(--ink-on-dark-muted); font-size: 1.5rem; }
+
+	/* ---------- PHASE DETAILS ---------- */
+	.phase { padding-block: clamp(4rem, 7vw, 6.5rem); }
+	.phase-grid {
+		display: grid;
+		grid-template-columns: 1.3fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+	@media (max-width: 920px) { .phase-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+	.phase-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 3.5rem;
+		line-height: 1;
+		color: var(--gold-500);
+		opacity: 0.55;
+		display: block;
+		margin-bottom: 1rem;
+	}
+	.phase-intro h2 { font-size: clamp(2rem, 4vw, 3rem); }
+	.phase-en {
+		font-family: var(--font-body);
+		font-weight: 400;
+		font-size: var(--text-lg);
+		color: var(--gold-700);
+	}
+	.phase-desc {
+		margin: 1.5rem 0 0;
+		font-size: var(--text-lg);
+		line-height: 1.65;
+		color: var(--ink-700);
+		max-width: 54ch;
+	}
+	.phase-deliverables {
+		padding: 2rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		border-top: 4px solid var(--gold-600);
+	}
+	.section-paper .phase-deliverables { background: var(--ash-50); }
+	.deliverables-label {
+		margin: 0 0 1.25rem;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--ink-500);
+	}
+	.phase-deliverables ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.85rem;
+	}
+	.phase-deliverables li {
+		position: relative;
+		padding-left: 1.75rem;
+		font-size: var(--text-base);
+		color: var(--ink-700);
+		line-height: 1.5;
+	}
+	.phase-deliverables li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: var(--gold-700);
+		font-weight: 700;
+	}
+
+	/* ---------- RESEARCH ---------- */
+	.research { padding-block: clamp(4rem, 7vw, 6rem); }
+	.research-inner h2 { margin-top: 1rem; font-size: clamp(1.85rem, 3.5vw, 2.75rem); }
+	.research-inner p {
+		margin: 1.5rem 0 0;
+		font-size: var(--text-lg);
+		line-height: 1.7;
+		color: var(--ink-700);
+	}
+
+	/* ---------- CTA ---------- */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(1.85rem, 3.5vw, 2.85rem); }
+	.cta-inner p {
+		max-width: 56ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-500);
+	}
+	.cta-row { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+</style>
