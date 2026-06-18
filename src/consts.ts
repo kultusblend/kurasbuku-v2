@@ -3,7 +3,7 @@
 export const SITE_TITLE = 'Kuras Buku';
 export const SITE_ORG = 'Kuras Buku Enterprise Communications';
 export const SITE_DESCRIPTION =
-	'Program latihan komunikasi dan penerbitan untuk agensi kerajaan dan korporat. Bina kapasiti penulisan profesional, penerbitan korporat, dan komunikasi strategik di dalam organisasi anda.';
+	'Program latihan komunikasi dan penerbitan korporat untuk agensi kerajaan dan organisasi. Bina kapasiti penulisan, penerbitan, dan komunikasi strategik pasukan anda.';
 export const SITE_LANG = 'ms';
 export const SITE_LOCALE = 'ms_MY';
 

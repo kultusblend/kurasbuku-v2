@@ -1,8 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { MODULES, type ModuleKey } from '../consts';
+import { MODULES, SITE_ORG, type ModuleKey } from '../consts';
 
 const moduleEntries = Object.entries(MODULES) as [ModuleKey, (typeof MODULES)[ModuleKey]][];
+
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+// Course schema per module — eligible for Google course rich results.
+const courseSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	itemListElement: moduleEntries.map(([key, mod], i) => ({
+		'@type': 'ListItem',
+		position: i + 1,
+		item: {
+			'@type': 'Course',
+			name: mod.label,
+			description: mod.positioning,
+			url: `${siteBase}/program#${key}`,
+			inLanguage: 'ms-MY',
+			provider: {
+				'@type': 'Organization',
+				name: SITE_ORG,
+				sameAs: siteBase,
+			},
+			hasCourseInstance: {
+				'@type': 'CourseInstance',
+				courseMode: ['onsite', 'blended'],
+				courseWorkload: 'P4W',
+			},
+		},
+	})),
+};
 
 // Audience + format per module. SAHKAN butiran sebenar (jumlah sesi, mod) dengan klien.
 const moduleMeta: Record<ModuleKey, { audience: string; format: string; tempoh: string }> = {
@@ -25,9 +54,13 @@ const moduleMeta: Record<ModuleKey, { audience: string; format: string; tempoh: 
 ---
 
 <BaseLayout
-	title="Program Latihan"
+	title="Program Latihan Komunikasi Korporat & Kerajaan"
 	description="Tiga modul latihan komunikasi korporat: Penulisan Profesional & Dokumentasi, Strategi Penerbitan Korporat, dan Komunikasi Strategik. Direka khas untuk pasukan agensi kerajaan dan organisasi."
 >
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+	</Fragment>
+
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">

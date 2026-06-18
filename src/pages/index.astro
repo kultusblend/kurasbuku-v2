@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import heroTraining from '../assets/hero-training.jpg';
+import enterprisePublishing from '../assets/enterprise-publishing.jpg';
 import {
 	MODULES,
 	METHODOLOGY,
@@ -84,14 +87,13 @@ const ICON_PATHS: Record<string, string> = {
 				</dl>
 			</div>
 			<aside class="hero-aside reveal" style="--reveal-delay: 180ms;">
-				<img
-					src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80"
-					alt=""
+				<Image
+					src={heroTraining}
+					alt="Pasukan profesional dalam sesi latihan komunikasi korporat"
 					class="hero-image"
 					loading="eager"
-					decoding="async"
-					width="600"
-					height="800"
+					widths={[400, 600, 900]}
+					sizes="(max-width: 880px) 100vw, 600px"
 				/>
 				<div class="hero-badge">
 					<p class="badge-label">Kapasiti latihan tahunan</p>
@@ -207,14 +209,13 @@ const ICON_PATHS: Record<string, string> = {
 				<a href="/penerbitan" class="btn btn-outline">Lihat Profil Penerbitan</a>
 			</div>
 			<aside class="enterprise-aside reveal" style="--reveal-delay: 120ms;">
-				<img
-					src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=900&q=80"
-					alt=""
+				<Image
+					src={enterprisePublishing}
+					alt="Naskhah dan buku terbitan korporat tersusun di rak"
 					class="enterprise-image"
 					loading="lazy"
-					decoding="async"
-					width="600"
-					height="800"
+					widths={[400, 600, 900]}
+					sizes="(max-width: 880px) 100vw, 600px"
 				/>
 			</aside>
 		</div>
