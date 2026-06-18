@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { MODULES, SITE_ORG, type ModuleKey } from '../../consts';
+
+export function getStaticPaths() {
+	return (Object.keys(MODULES) as ModuleKey[]).map((slug) => ({
+		params: { slug },
+		props: { slug },
+	}));
+}
+
+const { slug } = Astro.props as { slug: ModuleKey };
+const program = MODULES[slug];
+
+const keys = Object.keys(MODULES) as ModuleKey[];
+const idx = keys.indexOf(slug);
+const next = keys[(idx + 1) % keys.length];
+
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+const courseSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Course',
+	name: program.label,
+	description: program.description,
+	url: `${siteBase}/program/${slug}`,
+	inLanguage: 'ms-MY',
+	provider: {
+		'@type': 'Organization',
+		name: SITE_ORG,
+		sameAs: siteBase,
+	},
+	hasCourseInstance: {
+		'@type': 'CourseInstance',
+		courseMode: ['onsite', 'blended'],
+	},
+	teaches: program.takeaways,
+};
+---
+
+<BaseLayout
+	title={`${program.label} | Program Latihan`}
+	description={program.description}
+>
+	<Fragment slot="head">
+		<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+	</Fragment>
+
+	{/* ---------- HERO ---------- */}
+	<section class="prog-hero section-paper">
+		<div class="container">
+			<a href="/program" class="back-link reveal">← Semua Program</a>
+			<p class="eyebrow reveal" style="--reveal-delay: 60ms;">Program Latihan</p>
+			<h1 class="reveal" style="--reveal-delay: 120ms;">{program.label}</h1>
+			<p class="prog-lede reveal" style="--reveal-delay: 200ms;">{program.description}</p>
+
+			<dl class="prog-facts reveal" style="--reveal-delay: 280ms;">
+				<div>
+					<dt>Untuk Siapa</dt>
+					<dd>{program.untukSiapa}</dd>
+				</div>
+				<div>
+					<dt>Format</dt>
+					<dd>{program.format}</dd>
+				</div>
+				<div>
+					<dt>Hasil Utama</dt>
+					<dd>{program.hasil}</dd>
+				</div>
+			</dl>
+		</div>
+	</section>
+
+	{/* ---------- MODULES ---------- */}
+	<section class="prog-modules section-ash">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Kandungan Program</p>
+				<h2>Modul yang anda pelajari.</h2>
+			</header>
+
+			<ol class="module-list">
+				{program.modules.map((m, i) => (
+					<li class="module-item reveal" style={`--reveal-delay: ${i * 70}ms;`}>
+						<span class="module-num">{String(i + 1).padStart(2, '0')}</span>
+						<div class="module-body">
+							<h3>{m.title}</h3>
+							<p>{m.desc}</p>
+						</div>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- TAKEAWAYS ---------- */}
+	<section class="prog-takeaways section-paper">
+		<div class="container takeaways-grid">
+			<header class="reveal">
+				<p class="eyebrow">Bawa Pulang</p>
+				<h2>Apa yang anda dapat.</h2>
+				<p class="takeaways-lede">
+					Setiap peserta keluar dengan hasil yang nyata, bukan sekadar nota. Inilah yang anda bawa pulang selepas program ini.
+				</p>
+			</header>
+			<ul class="takeaways-list reveal" style="--reveal-delay: 120ms;">
+				{program.takeaways.map((t) => <li>{t}</li>)}
+			</ul>
+		</div>
+	</section>
+
+	{/* ---------- CTA ---------- */}
+	<section class="cta-band section-navy">
+		<div class="container-narrow cta-inner reveal">
+			<h2>Sedia menyertai {program.label}?</h2>
+			<p>
+				Hantar permohonan atau pertanyaan anda. Kami akan hubungi anda dengan jadual, kos, dan butiran pendaftaran.
+			</p>
+			<div class="cta-row">
+				<a href={`/hubungi?program=${slug}`} class="btn btn-gold">Sertai Program Ini</a>
+				<a href={`/program/${next}`} class="btn btn-ghost">Lihat Program Seterusnya →</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.prog-hero { padding-block: clamp(4rem, 8vw, 7rem) clamp(3rem, 6vw, 5rem); }
+	.back-link {
+		display: inline-block;
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--ink-500);
+		text-decoration: none;
+		margin-bottom: 1.75rem;
+		transition: color var(--transition-fast);
+	}
+	.back-link:hover { color: var(--gold-700); }
+	.prog-hero h1 {
+		margin-top: 1rem;
+		font-size: clamp(2.25rem, 5vw, 4rem);
+		line-height: 1.05;
+		max-width: 18ch;
+	}
+	.prog-lede {
+		margin-top: 1.75rem;
+		max-width: 60ch;
+		font-size: clamp(1.0625rem, 1.4vw, 1.3rem);
+		line-height: 1.6;
+		color: var(--ink-700);
+	}
+	.prog-facts {
+		margin: 3rem 0 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		padding-top: 2.5rem;
+		border-top: 1px solid var(--ash-200);
+	}
+	@media (max-width: 760px) { .prog-facts { grid-template-columns: 1fr; gap: 1.5rem; } }
+	.prog-facts dt {
+		font-size: var(--text-xs);
+		font-weight: 600;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		color: var(--gold-700);
+		margin: 0 0 0.5rem;
+	}
+	.prog-facts dd { margin: 0; font-size: var(--text-base); line-height: 1.5; color: var(--ink-900); }
+
+	.section-head { max-width: 720px; margin-bottom: 3rem; }
+	.section-head h2 { margin-top: 1rem; font-size: clamp(1.85rem, 3.5vw, 2.75rem); }
+
+	/* Modules */
+	.module-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; }
+	.module-item {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1.75rem;
+		align-items: start;
+		padding: 2rem 2.25rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-left: 4px solid var(--gold-600);
+		border-radius: var(--radius);
+	}
+	@media (max-width: 600px) { .module-item { padding: 1.5rem; gap: 1rem; } }
+	.module-num {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 2.25rem;
+		line-height: 1;
+		color: var(--gold-500);
+		opacity: 0.6;
+	}
+	.module-body h3 { font-size: var(--text-xl); margin: 0 0 0.5rem; line-height: 1.25; }
+	.module-body p { margin: 0; color: var(--ink-700); line-height: 1.6; max-width: 60ch; }
+
+	/* Takeaways */
+	.takeaways-grid {
+		display: grid;
+		grid-template-columns: 0.9fr 1.1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+	@media (max-width: 880px) { .takeaways-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+	.prog-takeaways h2 { margin-top: 1rem; font-size: clamp(1.85rem, 3.5vw, 2.75rem); }
+	.takeaways-lede {
+		margin: 1.5rem 0 0;
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		color: var(--ink-500);
+		max-width: 44ch;
+	}
+	.takeaways-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+	.takeaways-list li {
+		position: relative;
+		padding: 1.25rem 1.5rem 1.25rem 3.25rem;
+		background: var(--ash-50);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		font-size: var(--text-base);
+		line-height: 1.5;
+		color: var(--ink-900);
+	}
+	.takeaways-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 1.25rem;
+		top: 1.25rem;
+		font-weight: 700;
+		color: var(--gold-700);
+	}
+
+	/* CTA */
+	.cta-band { padding-block: clamp(4rem, 7vw, 6rem); }
+	.cta-inner { text-align: center; }
+	.cta-inner h2 { font-size: clamp(1.75rem, 3.2vw, 2.65rem); color: var(--ink-on-dark-strong); max-width: 24ch; margin-inline: auto; }
+	.cta-inner p {
+		max-width: 54ch;
+		margin: 1.5rem auto 2.5rem;
+		font-size: var(--text-lg);
+		line-height: 1.55;
+		color: var(--ink-on-dark);
+	}
+	.cta-row { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+</style>

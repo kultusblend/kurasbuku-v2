@@ -36,13 +36,18 @@ export type ModuleKey =
 	| 'moderator'
 	| 'pentas';
 
-// Program latihan teras (6). Field `description` + `hasil` (outcome).
+// Program latihan teras (6). Butiran modul + takeaways drafted; SAHKAN dengan klien.
+export type ProgramModule = { title: string; desc: string };
 export const MODULES: Record<
 	ModuleKey,
 	{
 		label: string;
 		description: string;
 		hasil: string;
+		untukSiapa: string;
+		format: string;
+		modules: ProgramModule[];
+		takeaways: string[];
 	}
 > = {
 	persona: {
@@ -50,36 +55,120 @@ export const MODULES: Record<
 		description:
 			'Bentuk identiti digital yang konsisten dan dipercayai. Anda belajar merangka persona yang autentik, menarik pengikut yang tepat, dan mengubah kehadiran maya menjadi pengaruh yang bernilai.',
 		hasil: 'Persona digital yang jelas dan pengikut yang terarah.',
+		untukSiapa: 'Penulis, kreator, dan profesional yang mahu membina kehadiran digital yang berwibawa.',
+		format: 'Bengkel praktikal, fizikal atau hybrid.',
+		modules: [
+			{ title: 'Asas Persona Digital', desc: 'Kenal pasti nilai teras, niche, dan suara unik anda. Bezakan persona yang autentik daripada tiruan yang mudah dilupakan.' },
+			{ title: 'Strategi Kandungan & Konsistensi', desc: 'Rangka content pillar, kalendar penerbitan, dan gaya visual yang konsisten merentas platform.' },
+			{ title: 'Membina Engagement Sebenar', desc: 'Teknik menarik dan mengekalkan pengikut yang relevan, bukan sekadar mengejar nombor.' },
+			{ title: 'Pengurusan Reputasi Maya', desc: 'Mengendali kritik, mengawal naratif, dan menjaga imej dalam jangka panjang.' },
+		],
+		takeaways: [
+			'Satu pernyataan persona yang jelas dan boleh dipertahankan',
+			'Content pillar dan kalendar kandungan 90 hari',
+			'Panduan gaya visual dan nada peribadi',
+			'Strategi pertumbuhan pengikut secara organik',
+		],
 	},
 	pempengaruh: {
 		label: 'Jana Pendapatan sebagai Pempengaruh Buku',
 		description:
 			'Tukar minat membaca menjadi kerjaya. Pelajari cara memonetisasi pengaruh anda, dari kerjasama jenama hingga kandungan berbayar, tanpa menggadai kredibiliti.',
 		hasil: 'Strategi pendapatan yang mampan sebagai pempengaruh buku.',
+		untukSiapa: 'Pembaca tegar, bookstagrammer, dan pencipta kandungan buku yang mahu menjana pendapatan.',
+		format: 'Bengkel praktikal dengan kajian kes sebenar.',
+		modules: [
+			{ title: 'Ekosistem Pempengaruh Buku', desc: 'Memahami pasaran, jenis kerjasama, dan peluang pendapatan dalam dunia buku tempatan dan antarabangsa.' },
+			{ title: 'Membina Media Kit', desc: 'Rangka media kit profesional yang menarik perhatian jenama dan penerbit.' },
+			{ title: 'Strategi Monetisasi', desc: 'Affiliate, sponsored content, jualan langsung, dan produk sendiri tanpa menggadai kepercayaan audiens.' },
+			{ title: 'Rundingan & Penetapan Harga', desc: 'Cara menilai nilai diri, berunding kadar, dan menguruskan kontrak dengan yakin.' },
+		],
+		takeaways: [
+			'Media kit peribadi yang siap digunakan',
+			'Pelan monetisasi pelbagai aliran pendapatan',
+			'Templat kadar dan cadangan kerjasama',
+			'Strategi mengekalkan kepercayaan audiens',
+		],
 	},
 	resensi: {
 		label: 'Bengkel Bicara & Resensi Buku',
 		description:
 			'Kuasai seni mengulas yang tajam dan berwibawa. Anda dilatih menganalisis, menilai, dan menyampaikan resensi yang dihormati pembaca, penulis, dan penerbit.',
 		hasil: 'Keupayaan mengulas yang kritis dan dipercayai.',
+		untukSiapa: 'Peminat buku, penulis, dan bakal pengkritik yang mahu mengulas dengan berwibawa.',
+		format: 'Bengkel analisis dan latihan menulis.',
+		modules: [
+			{ title: 'Seni Membaca Secara Kritis', desc: 'Teknik membaca untuk menganalisis struktur, tema, dan kekuatan sesebuah karya, bukan sekadar menikmati.' },
+			{ title: 'Struktur Resensi Berkesan', desc: 'Rangka ulasan yang seimbang, berhujah, dan menarik untuk dibaca.' },
+			{ title: 'Bicara Buku di Khalayak', desc: 'Menyampaikan resensi secara lisan dengan yakin di majlis, podcast, atau video.' },
+			{ title: 'Etika & Integriti Pengulas', desc: 'Kekal jujur, adil, dan dihormati oleh penulis serta industri.' },
+		],
+		takeaways: [
+			'Kerangka resensi yang boleh diguna berulang',
+			'Portfolio ulasan pertama anda',
+			'Teknik penyampaian bicara buku',
+			'Kredibiliti sebagai pengulas yang dipercayai',
+		],
 	},
 	kamera: {
 		label: 'Cakap Depan Kamera',
 		description:
 			'Hilangkan kekok, kuasai lensa. Teknik praktikal untuk menyampaikan mesej dengan tenang, jelas, dan meyakinkan dalam setiap rakaman.',
 		hasil: 'Keyakinan menyampaikan depan kamera tanpa skrip.',
+		untukSiapa: 'Sesiapa yang perlu tampil dalam video, dari kreator hingga jurucakap organisasi.',
+		format: 'Bengkel hands-on dengan sesi rakaman.',
+		modules: [
+			{ title: 'Mengatasi Kekok Depan Lensa', desc: 'Psikologi keyakinan dan teknik menenangkan diri sebelum dan semasa rakaman.' },
+			{ title: 'Bahasa Badan & Suara', desc: 'Postur, kontak mata, intonasi, dan tempo yang sesuai untuk skrin.' },
+			{ title: 'Struktur Mesej yang Jelas', desc: 'Merangka poin utama dan aliran cerita yang mudah difahami audiens.' },
+			{ title: 'Teknikal Asas Rakaman', desc: 'Pencahayaan, audio, dan framing untuk menghasilkan kandungan solo yang kemas.' },
+		],
+		takeaways: [
+			'Keyakinan merakam tanpa bergantung pada skrip',
+			'Teknik penyampaian yang jelas dan tenang',
+			'Setup rakaman minimum yang berkesan',
+			'Rakaman showreel peribadi pertama anda',
+		],
 	},
 	moderator: {
 		label: 'Seni Menjadi Moderator Interaktif',
 		description:
 			'Pandu perbualan, hidupkan majlis. Belajar mengemudi sesi, mencungkil jawapan bernas, dan mengekalkan tumpuan audiens dari patah pertama hingga noktah terakhir.',
 		hasil: 'Kawalan penuh sebagai moderator yang interaktif.',
+		untukSiapa: 'Pengacara majlis, fasilitator, dan pemimpin sesi perbincangan atau panel.',
+		format: 'Bengkel praktikal dengan simulasi panel.',
+		modules: [
+			{ title: 'Peranan & Persediaan Moderator', desc: 'Memahami tanggungjawab, membuat riset, dan bersedia sebelum majlis.' },
+			{ title: 'Seni Bertanya', desc: 'Merangka soalan yang mencungkil jawapan bernas dan menghidupkan perbualan.' },
+			{ title: 'Mengurus Dinamik Majlis', desc: 'Mengawal masa, mengendali panel, dan menangani situasi yang tidak dijangka.' },
+			{ title: 'Penglibatan Audiens', desc: 'Teknik melibatkan hadirin dan mengekalkan tumpuan sepanjang sesi.' },
+		],
+		takeaways: [
+			'Kerangka persediaan moderator',
+			'Bank soalan dan teknik susulan',
+			'Keyakinan mengendali panel dan forum',
+			'Strategi penglibatan audiens',
+		],
 	},
 	pentas: {
 		label: 'Yakin di Kertas, Gigil di Pentas',
 		description:
 			'Untuk yang lancar berkarya tetapi kaku berbicara. Program ini merapatkan jurang antara pena dan pentas, membina keyakinan menyampaikan idea dengan suara anda sendiri.',
 		hasil: 'Keberanian membentangkan idea di hadapan khalayak.',
+		untukSiapa: 'Penulis dan profesional yang mahu mengatasi gementar berucap di khalayak.',
+		format: 'Bengkel intensif dengan latihan pentas.',
+		modules: [
+			{ title: 'Memahami Ketakutan Pentas', desc: 'Mengenal punca gementar dan teknik praktikal untuk menguruskannya.' },
+			{ title: 'Dari Tulisan ke Ucapan', desc: 'Menukar idea bertulis menjadi penyampaian lisan yang hidup dan tersusun.' },
+			{ title: 'Penyampaian & Kehadiran', desc: 'Suara, gerak badan, dan cara membina hubungan dengan audiens.' },
+			{ title: 'Latihan & Maklum Balas', desc: 'Sesi praktikal membentang dengan bimbingan dan penambahbaikan terus.' },
+		],
+		takeaways: [
+			'Teknik menguruskan gementar pentas',
+			'Keupayaan menukar tulisan menjadi ucapan',
+			'Penyampaian yang yakin dan berkesan',
+			'Pengalaman membentang dengan maklum balas',
+		],
 	},
 };
 
