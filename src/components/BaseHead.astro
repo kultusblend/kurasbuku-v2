@@ -9,7 +9,7 @@ import '@fontsource/playfair-display/700.css';
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import { ClientRouter } from 'astro:transitions';
-import { SITE_TITLE, SITE_LOCALE, SITE_ORG, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_LOCALE, SITE_ORG, SITE_DESCRIPTION, BUSINESS_ADDRESS_PARTS } from '../consts';
 
 const DEFAULT_OG_IMAGE = '/og-default.png';
 
@@ -62,6 +62,14 @@ const orgSchema = {
 	image: new URL('/og-default.png', Astro.url).toString(),
 	description: SITE_DESCRIPTION,
 	areaServed: { '@type': 'Country', name: 'Malaysia' },
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: BUSINESS_ADDRESS_PARTS.streetAddress,
+		addressLocality: BUSINESS_ADDRESS_PARTS.addressLocality,
+		addressRegion: BUSINESS_ADDRESS_PARTS.addressRegion,
+		postalCode: BUSINESS_ADDRESS_PARTS.postalCode,
+		addressCountry: BUSINESS_ADDRESS_PARTS.addressCountry,
+	},
 	knowsAbout: [
 		'Corporate communications training',
 		'Government policy writing',

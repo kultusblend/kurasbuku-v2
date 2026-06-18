@@ -1,7 +1,7 @@
 // Global site metadata for V2 (B2B/B2G target).
 
 export const SITE_TITLE = 'Kuras Buku';
-export const SITE_ORG = 'Kuras Buku Enterprise Communications';
+export const SITE_ORG = 'Penerbitan Kuras Buku';
 export const SITE_DESCRIPTION =
 	'Program latihan komunikasi dan penerbitan korporat untuk agensi kerajaan dan organisasi. Bina kapasiti penulisan, penerbitan, dan komunikasi strategik pasukan anda.';
 export const SITE_LANG = 'ms';
@@ -10,7 +10,17 @@ export const SITE_LOCALE = 'ms_MY';
 // Corporate verification details (visible in footer per procurement requirements)
 export const SSM_REGISTRATION = 'SSM XXXXXXXX-X (Kemaskini)';
 export const SST_NUMBER = '';
-export const BUSINESS_ADDRESS = 'Alamat akan dikemaskini';
+export const BUSINESS_ADDRESS =
+	'18-1, Jalan Puteri 3A/5, Bandar Puteri Bangi, 43000 Kajang, Selangor, Malaysia';
+
+// Structured-address parts for schema.org PostalAddress
+export const BUSINESS_ADDRESS_PARTS = {
+	streetAddress: '18-1, Jalan Puteri 3A/5, Bandar Puteri Bangi',
+	addressLocality: 'Kajang',
+	addressRegion: 'Selangor',
+	postalCode: '43000',
+	addressCountry: 'MY',
+};
 
 // CTA destinations
 export const PRIMARY_CTA_URL = '/hubungi';
