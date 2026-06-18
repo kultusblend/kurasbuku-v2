@@ -9,8 +9,8 @@ export const GET: APIRoute = ({ site }) => {
 > ${SITE_DESCRIPTION}
 
 ## Latihan
-- [Program Latihan](${base}/program): Tiga modul teras — Penulisan Profesional & Dokumentasi, Strategi Penerbitan Korporat, Komunikasi Strategik.
-- [Metodologi](${base}/metodologi): Pendekatan tiga langkah — Penilaian, Latihan, Pelaksanaan.
+- [Program Latihan](${base}/program): Enam program — Bina Persona @ Media Sosial, Jana Pendapatan sebagai Pempengaruh Buku, Bengkel Bicara & Resensi Buku, Cakap Depan Kamera, Seni Menjadi Moderator Interaktif, Yakin di Kertas Gigil di Pentas.
+- [Metodologi](${base}/metodologi): Pendekatan tiga langkah, Penilaian, Latihan, Pelaksanaan.
 
 ## Servis
 - [Servis Penerbitan Enterprise](${base}/penerbitan): Suntingan, reka letak, rekaan visual, dan urusan cetakan untuk dokumen korporat.

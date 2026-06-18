@@ -121,36 +121,21 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="modul" class="modules section-paper">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Ekosistem Latihan Korporat</p>
-				<h2>Tiga Modul Bersepadu. Satu Standard Komunikasi Mutu Tinggi.</h2>
+				<p class="eyebrow">Program Latihan Kuras Buku</p>
+				<h2>Enam Program, Satu Standard Penyampaian.</h2>
 				<p class="section-lede">
-					Pilih modul mengikut keperluan, atau gabungkan ketiga-tiganya untuk ekosistem komunikasi organisasi yang utuh dan menyeluruh.
+					Dari membina persona digital hingga menguasai pentas, setiap program dirangka untuk membina keyakinan dan keupayaan menyampaikan idea anda dengan berkesan.
 				</p>
 			</header>
 
-			<ol class="module-table">
+			<ol class="program-cards">
 				{moduleEntries.map(([key, mod], i) => (
-					<li class="module-row reveal" style={`--reveal-delay: ${i * 100}ms;`}>
-						<div class="module-num">
-							<span>{String(i + 1).padStart(2, '0')}</span>
-						</div>
-						<div class="module-content">
-							<h3 id={`modul-${key}`}>{mod.label}</h3>
-							<p class="module-positioning">{mod.positioning}</p>
-							<div class="module-meta">
-								<div class="meta-block">
-									<p class="meta-label">Outcomes</p>
-									<p class="meta-value">{mod.outcome}</p>
-								</div>
-								<div class="meta-block">
-									<p class="meta-label">Komponen utama</p>
-									<ul class="meta-list">
-										{mod.bullets.map((b) => <li>{b}</li>)}
-									</ul>
-								</div>
-							</div>
-							<a href="/hubungi?program=" class="module-cta">Mohon proposal untuk modul ini →</a>
-						</div>
+					<li class="program-card reveal" style={`--reveal-delay: ${(i % 3) * 80}ms;`}>
+						<span class="program-num">{String(i + 1).padStart(2, '0')}</span>
+						<h3 id={`modul-${key}`}>{mod.label}</h3>
+						<p class="program-desc">{mod.description}</p>
+						<p class="program-hasil"><span>Hasil</span>{mod.hasil}</p>
+						<a href={`/program#${key}`} class="program-cta">Butiran program →</a>
 					</li>
 				))}
 			</ol>
@@ -509,101 +494,69 @@ const ICON_PATHS: Record<string, string> = {
 	.section-lede.on-dark { color: var(--ink-on-dark); }
 	.eyebrow-light { color: var(--gold-300); }
 
-	/* ---------- MODULES (B2B table format) ---------- */
-	.module-table {
+	/* ---------- PROGRAMS (6-card grid) ---------- */
+	.program-cards {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1.5rem;
 	}
-	.module-row {
-		display: grid;
-		grid-template-columns: 120px 1fr;
-		gap: 2rem;
-		padding: 2.5rem 2.5rem 2.5rem 2rem;
+	@media (max-width: 920px) { .program-cards { grid-template-columns: 1fr 1fr; } }
+	@media (max-width: 600px) { .program-cards { grid-template-columns: 1fr; } }
+	.program-card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 2.25rem 2rem;
 		background: var(--ash-50);
-		border-left: 4px solid var(--gold-600);
+		border: 1px solid var(--ash-200);
+		border-top: 4px solid var(--gold-600);
 		border-radius: var(--radius);
 		transition: transform var(--transition-fast), box-shadow var(--transition);
 	}
-	.module-row:hover {
-		transform: translateY(-2px);
-		box-shadow: var(--shadow);
-	}
-	@media (max-width: 720px) {
-		.module-row { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 1.25rem; }
-	}
-	.module-num {
+	.program-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+	.program-num {
 		font-family: var(--font-display);
 		font-weight: 700;
-		font-size: 4.5rem;
-		line-height: 0.9;
+		font-size: 1.75rem;
+		line-height: 1;
 		color: var(--gold-500);
-		opacity: 0.5;
+		opacity: 0.6;
+		margin-bottom: 1rem;
 	}
-	.module-content h3 {
-		font-size: var(--text-2xl);
-		margin: 0 0 0.75rem;
-		line-height: 1.15;
+	.program-card h3 {
+		font-size: var(--text-xl);
+		line-height: 1.2;
+		margin: 0 0 0.85rem;
+		min-height: 2.4em;
 	}
-	.module-positioning {
-		font-size: var(--text-lg);
-		line-height: 1.5;
+	.program-desc {
+		font-size: var(--text-base);
+		line-height: 1.6;
 		color: var(--ink-700);
 		margin: 0 0 1.5rem;
-		max-width: 64ch;
+		flex-grow: 1;
 	}
-	.module-meta {
-		display: grid;
-		grid-template-columns: 1fr 1.4fr;
-		gap: 1.5rem;
-		padding-block: 1.5rem;
+	.program-hasil {
+		font-size: var(--text-sm);
+		line-height: 1.5;
+		color: var(--ink-900);
+		margin: 0 0 1.5rem;
+		padding-top: 1.25rem;
 		border-top: 1px solid var(--ash-200);
-		border-bottom: 1px solid var(--ash-200);
-		margin-bottom: 1.5rem;
 	}
-	@media (max-width: 720px) { .module-meta { grid-template-columns: 1fr; } }
-	.meta-block { display: flex; flex-direction: column; gap: 0.5rem; }
-	.meta-label {
-		font-family: var(--font-body);
+	.program-hasil span {
+		display: block;
 		font-size: var(--text-xs);
 		font-weight: 600;
 		letter-spacing: var(--tracking-wider);
 		text-transform: uppercase;
-		color: var(--ink-500);
-		margin: 0;
+		color: var(--gold-700);
+		margin-bottom: 0.4rem;
 	}
-	.meta-value {
-		margin: 0;
-		font-size: var(--text-sm);
-		line-height: 1.55;
-		color: var(--ink-900);
-	}
-	.meta-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 0.4rem;
-	}
-	.meta-list li {
-		position: relative;
-		padding-left: 1.25rem;
-		font-size: var(--text-sm);
-		color: var(--ink-700);
-	}
-	.meta-list li::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0.65em;
-		width: 8px;
-		height: 1px;
-		background: var(--gold-600);
-	}
-	.module-cta {
+	.program-cta {
 		font-family: var(--font-body);
 		font-size: var(--text-sm);
 		font-weight: 600;
@@ -611,7 +564,7 @@ const ICON_PATHS: Record<string, string> = {
 		text-decoration: none;
 		transition: color var(--transition-fast);
 	}
-	.module-cta:hover { color: var(--gold-700); }
+	.program-cta:hover { color: var(--gold-700); }
 
 	/* ---------- METHODOLOGY ---------- */
 	.method-grid {

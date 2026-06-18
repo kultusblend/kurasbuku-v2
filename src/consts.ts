@@ -28,55 +28,58 @@ export const PROPOSAL_CTA_URL = '/hubungi?intent=proposal';
 export const INTAKE_FORM_ENDPOINT = '';
 
 // Modules adapted for organizational positioning
-export type ModuleKey = 'penulisan' | 'penerbitan' | 'strategik';
+export type ModuleKey =
+	| 'persona'
+	| 'pempengaruh'
+	| 'resensi'
+	| 'kamera'
+	| 'moderator'
+	| 'pentas';
 
+// Program latihan teras (6). Field `description` + `hasil` (outcome).
 export const MODULES: Record<
 	ModuleKey,
 	{
 		label: string;
-		positioning: string;
-		outcome: string;
-		bullets: string[];
+		description: string;
+		hasil: string;
 	}
 > = {
-	penulisan: {
-		label: 'Penulisan Profesional & Dokumentasi',
-		positioning:
-			'Latihan intensif merangka kertas putih (white papers), dokumen dasar, dan laporan korporat. Ubah data yang kompleks menjadi naratif yang jelas, padat, dan memikat.',
-		outcome:
-			'Komunikasi organisasi yang jelas, bebas ralat, dan berstruktur tinggi.',
-		bullets: [
-			'Struktur kertas putih dan dokumen polisi',
-			'Standard editorial untuk laporan kerajaan',
-			'Templat dan workflow penulisan jabatan',
-			'Editorial review framework',
-		],
+	persona: {
+		label: 'Bina Persona @ Media Sosial',
+		description:
+			'Bentuk identiti digital yang konsisten dan dipercayai. Anda belajar merangka persona yang autentik, menarik pengikut yang tepat, dan mengubah kehadiran maya menjadi pengaruh yang bernilai.',
+		hasil: 'Persona digital yang jelas dan pengikut yang terarah.',
 	},
-	penerbitan: {
-		label: 'Strategi Penerbitan Korporat',
-		positioning:
-			'Kuasai rantaian pengeluaran penerbitan dalaman. Dari surat berita hingga laporan tahunan, kami terapkan standard industri bagi memastikan hasil cetakan dan digital bertaraf premium.',
-		outcome:
-			'Kitaran produksi diperkemas dan kualiti visual serta editorial dipertingkatkan.',
-		bullets: [
-			'Workflow penerbitan end-to-end',
-			'Annual report production standards',
-			'Newsletter dan briefing pack templates',
-			'Style guide dan brand voice manual',
-		],
+	pempengaruh: {
+		label: 'Jana Pendapatan sebagai Pempengaruh Buku',
+		description:
+			'Tukar minat membaca menjadi kerjaya. Pelajari cara memonetisasi pengaruh anda, dari kerjasama jenama hingga kandungan berbayar, tanpa menggadai kredibiliti.',
+		hasil: 'Strategi pendapatan yang mampan sebagai pempengaruh buku.',
 	},
-	strategik: {
-		label: 'Komunikasi Strategik',
-		positioning:
-			'Selaraskan suara pasukan, tangani media dengan taktikal, dan bina reputasi kebal. Komunikasi bukan sekadar melontar mesej, tetapi memastikan ia membumi dan memberi impak.',
-		outcome:
-			'Naratif awam yang padu dan penglibatan stakeholder yang lebih baik.',
-		bullets: [
-			'Messaging framework untuk eksekutif',
-			'Media relations dan press handling',
-			'Crisis communications playbook',
-			'Stakeholder engagement strategy',
-		],
+	resensi: {
+		label: 'Bengkel Bicara & Resensi Buku',
+		description:
+			'Kuasai seni mengulas yang tajam dan berwibawa. Anda dilatih menganalisis, menilai, dan menyampaikan resensi yang dihormati pembaca, penulis, dan penerbit.',
+		hasil: 'Keupayaan mengulas yang kritis dan dipercayai.',
+	},
+	kamera: {
+		label: 'Cakap Depan Kamera',
+		description:
+			'Hilangkan kekok, kuasai lensa. Teknik praktikal untuk menyampaikan mesej dengan tenang, jelas, dan meyakinkan dalam setiap rakaman.',
+		hasil: 'Keyakinan menyampaikan depan kamera tanpa skrip.',
+	},
+	moderator: {
+		label: 'Seni Menjadi Moderator Interaktif',
+		description:
+			'Pandu perbualan, hidupkan majlis. Belajar mengemudi sesi, mencungkil jawapan bernas, dan mengekalkan tumpuan audiens dari patah pertama hingga noktah terakhir.',
+		hasil: 'Kawalan penuh sebagai moderator yang interaktif.',
+	},
+	pentas: {
+		label: 'Yakin di Kertas, Gigil di Pentas',
+		description:
+			'Untuk yang lancar berkarya tetapi kaku berbicara. Program ini merapatkan jurang antara pena dan pentas, membina keyakinan menyampaikan idea dengan suara anda sendiri.',
+		hasil: 'Keberanian membentangkan idea di hadapan khalayak.',
 	},
 };
 
@@ -117,11 +120,14 @@ export const TRUSTED_BY = [
 
 // Lead gen form options
 export const PROGRAM_OPTIONS = [
-	{ value: 'penulisan', label: 'Penulisan Profesional & Dokumentasi' },
-	{ value: 'penerbitan', label: 'Strategi Penerbitan Korporat' },
-	{ value: 'strategik', label: 'Komunikasi Strategik' },
+	{ value: 'persona', label: 'Bina Persona @ Media Sosial' },
+	{ value: 'pempengaruh', label: 'Jana Pendapatan sebagai Pempengaruh Buku' },
+	{ value: 'resensi', label: 'Bengkel Bicara & Resensi Buku' },
+	{ value: 'kamera', label: 'Cakap Depan Kamera' },
+	{ value: 'moderator', label: 'Seni Menjadi Moderator Interaktif' },
+	{ value: 'pentas', label: 'Yakin di Kertas, Gigil di Pentas' },
 	{ value: 'enterprise-publishing', label: 'Servis Penerbitan Enterprise' },
-	{ value: 'custom', label: 'Custom Program (Bincang Lanjut)' },
+	{ value: 'custom', label: 'Program Khusus (Bincang Lanjut)' },
 ];
 
 export const PAX_OPTIONS = [
@@ -139,7 +145,7 @@ export const CASE_STUDIES = [
 		quote:
 			'Latihan Kuras Buku menyusun semula proses pelaporan jabatan kami. Editing time turun 40% dan kualiti dokumen lebih konsisten.',
 		attribution: 'Pengarah, Sebuah Agensi Kerajaan Persekutuan',
-		module: 'penulisan',
+		tag: 'Latihan Penulisan',
 	},
 	{
 		metric: '3X',
@@ -147,7 +153,7 @@ export const CASE_STUDIES = [
 		quote:
 			'Sebelum program, newsletter kami terbit setiap suku. Selepas latihan strategi penerbitan, kami konsisten terbit setiap bulan tanpa tambah pasukan.',
 		attribution: 'Head of Communications, GLC Tenaga',
-		module: 'penerbitan',
+		tag: 'Strategi Penerbitan',
 	},
 	{
 		metric: '12 mins',
@@ -155,6 +161,6 @@ export const CASE_STUDIES = [
 		quote:
 			'Crisis playbook yang dibangunkan dengan Kuras Buku tolong kami respons wartawan dalam 12 minit purata, dari sebelum ini berjam.',
 		attribution: 'Director of Corporate Affairs, Korporat Tersenarai',
-		module: 'strategik',
+		tag: 'Komunikasi Strategik',
 	},
 ];

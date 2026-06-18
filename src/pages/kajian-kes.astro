@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { CASE_STUDIES, MODULES, type ModuleKey } from '../consts';
+import { CASE_STUDIES } from '../consts';
 
 // Naratif lanjutan untuk setiap kajian kes. CONTOH ILUSTRASI, bukan rekod sebenar.
 // SAHKAN dengan klien sebelum guna untuk tender.
@@ -52,7 +52,7 @@ const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
 				<aside class="case-metric-side reveal">
 					<p class="case-metric">{cs.metric}</p>
 					<p class="case-metric-label">{cs.label}</p>
-					<span class="case-tag">{MODULES[cs.module as ModuleKey]?.label ?? 'Komunikasi'}</span>
+					<span class="case-tag">{cs.tag}</span>
 				</aside>
 
 				<div class="case-body reveal" style="--reveal-delay: 120ms;">
