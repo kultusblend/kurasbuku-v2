@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {
+      "num": "01",
+      "title": "Penilaian",
+      "bm": "(Assess)",
+      "desc": "Kenal pasti kelompangan komunikasi sedia ada. Kami mengaudit aliran kerja dan sasaran mesej organisasi anda."
+    },
+    {
+      "num": "02",
+      "title": "Latihan",
+      "bm": "(Train)",
+      "desc": "Pemindahan ilmu secara taktikal. Latihan praktikal dirangka bagi merapatkan jurang kemahiran menerusi modul yang disesuaikan."
+    },
+    {
+      "num": "03",
+      "title": "Pelaksanaan",
+      "bm": "(Implement)",
+      "desc": "Merencana gerak kerja pasca-latihan. Kami bantu anda menterjemah setiap modul menjadi amalan harian yang nyata."
+    }
+  ]
+}

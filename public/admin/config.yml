@@ -1,0 +1,134 @@
+# Sveltia CMS — Penerbitan Kuras Buku (V2)
+# Login via GitHub OAuth proxy (shared Cloudflare Worker).
+# Editor (Hafiz) must be a collaborator on kultusblend/kurasbuku-v2.
+
+backend:
+  name: github
+  repo: kultusblend/kurasbuku-v2
+  branch: main
+  base_url: https://sveltia-auth-sekolahpenulisan.azreehanifiah.workers.dev
+  auth_endpoint: auth
+
+site_url: https://kurasv2.pages.dev
+display_url: https://kurasv2.pages.dev
+logo_url: /logo.png
+
+media_folder: public/uploads
+public_folder: /uploads
+
+# Local editing during dev: run `npx @sveltia/cms-proxy-server` then open /admin/
+local_backend: true
+
+editor:
+  preview: false
+
+i18n:
+  locales: [ms]
+  default_locale: ms
+
+collections:
+  # ---------- TETAPAN LAMAN ----------
+  - name: tetapan
+    label: Tetapan Laman
+    icon: settings
+    files:
+      - name: site
+        label: Maklumat Syarikat & Laman
+        file: src/content/data/site.json
+        description: Nama, alamat, SSM, dan butiran hubungan yang dipapar di seluruh laman.
+        fields:
+          - { label: Nama Laman (jenama), name: title, widget: string }
+          - { label: Nama Syarikat (rasmi), name: org, widget: string }
+          - { label: Penerangan Laman (SEO), name: description, widget: text, hint: 'Untuk Google + perkongsian sosial. Sasaran 150-160 aksara.' }
+          - { label: No. SSM, name: ssmNumber, widget: string }
+          - { label: Alamat (penuh, satu baris), name: address, widget: text }
+          - { label: 'Alamat: Jalan', name: addressStreet, widget: string }
+          - { label: 'Alamat: Bandar', name: addressLocality, widget: string }
+          - { label: 'Alamat: Negeri', name: addressRegion, widget: string }
+          - { label: 'Alamat: Poskod', name: addressPostcode, widget: string }
+          - { label: E-mel Hubungan, name: contactEmail, widget: string }
+          - { label: Pautan WhatsApp, name: whatsapp, widget: string, hint: 'Contoh: https://wa.me/60123456789' }
+
+  # ---------- PROGRAM LATIHAN ----------
+  - name: program
+    label: Program Latihan
+    icon: school
+    files:
+      - name: programs
+        label: Semua Program (6)
+        file: src/content/data/programs.json
+        description: Tajuk, penerangan, modul, dan hasil setiap program latihan.
+        fields:
+          - label: Senarai Program
+            name: programs
+            widget: list
+            label_singular: Program
+            summary: '{{fields.label}}'
+            fields:
+              - { label: 'Kunci URL (jangan ubah)', name: key, widget: string, hint: 'Slug untuk /program/<kunci>. Jangan ubah selepas dilancarkan.' }
+              - { label: Tajuk Program, name: label, widget: string }
+              - { label: Penerangan, name: description, widget: text }
+              - { label: Hasil Utama (satu ayat), name: hasil, widget: string }
+              - { label: Untuk Siapa, name: untukSiapa, widget: text }
+              - { label: Format, name: format, widget: string }
+              - label: Modul
+                name: modules
+                widget: list
+                label_singular: Modul
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Tajuk Modul, name: title, widget: string }
+                  - { label: Penerangan Modul, name: desc, widget: text }
+              - label: Apa Yang Peserta Dapat
+                name: takeaways
+                widget: list
+                label_singular: Hasil
+                field: { label: Hasil, name: item, widget: string }
+
+  # ---------- KANDUNGAN LAIN ----------
+  - name: kandungan
+    label: Kandungan Lain
+    icon: description
+    files:
+      - name: methodology
+        label: Metodologi (3 langkah)
+        file: src/content/data/methodology.json
+        fields:
+          - label: Langkah
+            name: steps
+            widget: list
+            label_singular: Langkah
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Nombor, name: num, widget: string }
+              - { label: Tajuk (BM), name: title, widget: string }
+              - { label: Label Inggeris, name: bm, widget: string, hint: 'Contoh: (Assess)' }
+              - { label: Penerangan, name: desc, widget: text }
+
+      - name: caseStudies
+        label: Kajian Kes
+        file: src/content/data/case-studies.json
+        fields:
+          - label: Kajian Kes
+            name: cases
+            widget: list
+            label_singular: Kajian Kes
+            summary: '{{fields.label}}'
+            fields:
+              - { label: Metrik (besar), name: metric, widget: string, hint: 'Contoh: 40%, 3X, 12 mins' }
+              - { label: Label Metrik, name: label, widget: string }
+              - { label: Tag, name: tag, widget: string }
+              - { label: Petikan, name: quote, widget: text }
+              - { label: Sumber Petikan, name: attribution, widget: string }
+              - { label: Cabaran, name: cabaran, widget: text }
+              - { label: Pendekatan, name: pendekatan, widget: text }
+
+      - name: trustedBy
+        label: Logo Klien / Rakan
+        file: src/content/data/trusted-by.json
+        fields:
+          - label: Senarai Nama
+            name: logos
+            widget: list
+            label_singular: Nama
+            field: { label: Nama, name: item, widget: string }
