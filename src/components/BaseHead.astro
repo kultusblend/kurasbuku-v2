@@ -107,6 +107,8 @@ const websiteSchema = {
 const segments = Astro.url.pathname.split('/').filter(Boolean);
 const crumbLabel = (seg: string) =>
 	seg.charAt(0).toUpperCase() + seg.slice(1).replace(/-/g, ' ');
+// Short name for the current-page crumb: drop any ": descriptor" tail.
+const crumbName = headline.split(/\s*:\s*/)[0];
 const breadcrumbSchema =
 	segments.length > 0
 		? {
@@ -117,7 +119,7 @@ const breadcrumbSchema =
 					...segments.map((seg, i) => ({
 						'@type': 'ListItem',
 						position: i + 2,
-						name: i === segments.length - 1 ? headline : crumbLabel(seg),
+						name: i === segments.length - 1 ? crumbName : crumbLabel(seg),
 						item:
 							i === segments.length - 1
 								? canonicalURL.toString()

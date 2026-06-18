@@ -1,0 +1,2 @@
+# Canonicalise to apex domain (www -> kurasbuku.com)
+https://www.kurasbuku.com/*  https://kurasbuku.com/:splat  301!

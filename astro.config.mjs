@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 import { remarkLazyImages } from './src/lib/remark-lazy-images.mjs';
 
 export default defineConfig({
-	site: process.env.SITE_URL ?? 'https://kurasv2.pages.dev',
+	site: process.env.SITE_URL ?? 'https://kurasbuku.com',
 	integrations: [
 		mdx(),
 		sitemap({

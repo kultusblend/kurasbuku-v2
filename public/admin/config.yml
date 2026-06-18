@@ -296,6 +296,7 @@ collections:
           - { label: 'Alamat: Poskod', name: addressPostcode, widget: string }
           - { label: E-mel Hubungan, name: contactEmail, widget: string }
           - { label: Pautan WhatsApp, name: whatsapp, widget: string, hint: 'Contoh: https://wa.me/60123456789' }
+          - { label: Endpoint Borang, name: formEndpoint, widget: string, required: false, hint: 'URL Formspree/Web3Forms untuk terima borang. Kosong = borang tak hantar ke mana-mana.' }
 
   # ---------- PROGRAM LATIHAN ----------
   - name: program

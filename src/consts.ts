@@ -35,7 +35,9 @@ export const SITE_WHATSAPP = siteData.whatsapp;
 // CTA destinations
 export const PRIMARY_CTA_URL = '/hubungi';
 export const PROPOSAL_CTA_URL = '/hubungi?intent=proposal';
-export const INTAKE_FORM_ENDPOINT = '';
+// Form action URL (Formspree/Web3Forms). Editable in CMS (Tetapan Laman).
+// Empty = form does nothing (action="#"). Paste endpoint to go live.
+export const INTAKE_FORM_ENDPOINT = siteData.formEndpoint ?? '';
 
 // Program keys (literal union for type-safety; labels/content come from JSON)
 export type ModuleKey =

@@ -11,6 +11,7 @@ import {
 	PROGRAM_OPTIONS,
 	PAX_OPTIONS,
 	SITE_DESCRIPTION,
+	INTAKE_FORM_ENDPOINT,
 } from '../consts';
 import copy from '../content/data/pages/home.json';
 
@@ -240,7 +241,7 @@ const ICON_PATHS: Record<string, string> = {
 				</ul>
 			</header>
 
-			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="post" action="#">
+			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="post" action={INTAKE_FORM_ENDPOINT || '#'}>
 				<div class="row-2">
 					<div class="field">
 						<label for="lf-name">{copy.leadgen.labelName}</label>
