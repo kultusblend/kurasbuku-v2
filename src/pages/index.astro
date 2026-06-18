@@ -11,6 +11,45 @@ import {
 } from '../consts';
 
 const moduleEntries = Object.entries(MODULES);
+
+// Legacy & Execution services (2x2 grid). Minimalist line icons.
+const legacyServices = [
+	{
+		num: '01',
+		icon: 'pen',
+		title: 'Suntingan Tepat, Bebas Ralat',
+		desc:
+			'Kami meneliti setiap patah kata, nahu, dan frasa. Sama ada laporan tahunan atau buku polisi, kami pastikan setiap naskhah tajam, bebas cela, dan mengekalkan laras bahasa rasmi organisasi anda.',
+	},
+	{
+		num: '02',
+		icon: 'layout',
+		title: 'Reka Letak Kemas, Sedap Ditelaah',
+		desc:
+			'Susun atur bukan sekadar lambakan teks pada helaian. Kami merangka hierarki tipografi dan reka letak yang profesional agar dokumen tebal menjadi mesra pembaca, kemas, dan mudah difahami.',
+	},
+	{
+		num: '03',
+		icon: 'visual',
+		title: 'Rekaan Visual, Pemangkin Citra',
+		desc:
+			'Dari rekaan kulit luar hingga infografik dalaman, kami menterjemahkan data yang sarat menjadi visual yang memikat. Rekaan kami tidak sekadar cantik, tetapi direka khusus untuk memperkukuh identiti korporat anda.',
+	},
+	{
+		num: '04',
+		icon: 'print',
+		title: 'Urusan Cetakan, Selesai Di Pintu',
+		desc:
+			'Lupakan pening kepala berurusan dengan kilang. Kami mengemudi urusan pencetakan sepenuhnya, dari pemilihan material kertas, kawalan mutu warna, hinggalah naskhah fizikal tiba dengan selamat di pejabat anda.',
+	},
+];
+
+const ICON_PATHS: Record<string, string> = {
+	pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>',
+	layout: '<rect x="3" y="3" width="18" height="18" rx="1.5"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>',
+	visual: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>',
+	print: '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
+};
 ---
 
 <BaseLayout title="Kuras Buku: Latihan Komunikasi Korporat & Kerajaan" description={SITE_DESCRIPTION}>
@@ -181,8 +220,43 @@ const moduleEntries = Object.entries(MODULES);
 		</div>
 	</section>
 
-	{/* ---------- 6. CASE STUDIES ---------- */}
-	<section id="kajian-kes" class="case-studies section-ash">
+	{/* ---------- 6. LEGACY & EXECUTION (2x2 grid) ---------- */}
+	<section class="legacy-services section-ash">
+		<div class="container">
+			<header class="section-head reveal">
+				<p class="eyebrow">Bukti Kepakaran Akar Umbi</p>
+				<h2>Akar Kami, Kepakaran Anda: Servis Penerbitan Bersepadu.</h2>
+				<p class="section-lede">
+					Sebelum melatih pasukan anda, kami terlebih dahulu mengotorkan tangan di lapangan. Sebagai sebuah rumah penerbitan yang aktif, kami kekal menawarkan perkhidmatan teknikal dari hujung ke hujung. Sama ada anda perlukan latihan atau pelaksanaan penuh, jentera kami sentiasa bersedia.
+				</p>
+			</header>
+
+			<ol class="legacy-grid">
+				{legacyServices.map((s, i) => (
+					<li class="legacy-card reveal" style={`--reveal-delay: ${i * 90}ms;`}>
+						<div class="legacy-icon" aria-hidden="true">
+							<svg
+								class="legacy-svg"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								set:html={ICON_PATHS[s.icon]}
+							/>
+						</div>
+						<span class="legacy-num" aria-hidden="true">{s.num}</span>
+						<h3>{s.title}</h3>
+						<p>{s.desc}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	{/* ---------- 7. CASE STUDIES ---------- */}
+	<section id="kajian-kes" class="case-studies section-paper">
 		<div class="container">
 			<header class="section-head reveal">
 				<p class="eyebrow">Hasil yang Diukur</p>
@@ -659,6 +733,64 @@ const moduleEntries = Object.entries(MODULES);
 		box-shadow: var(--shadow);
 	}
 
+	/* ---------- LEGACY & EXECUTION (2x2 grid) ---------- */
+	.legacy-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.75rem;
+	}
+	@media (max-width: 720px) { .legacy-grid { grid-template-columns: 1fr; } }
+	.legacy-card {
+		position: relative;
+		padding: 2.5rem;
+		background: var(--paper);
+		border: 1px solid var(--ash-200);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow-sm);
+		transition: transform var(--transition-fast), box-shadow var(--transition);
+	}
+	.legacy-card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow);
+	}
+	.legacy-icon {
+		width: 56px;
+		height: 56px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--navy-50);
+		color: var(--navy-800);
+		border-radius: var(--radius);
+		margin-bottom: 1.5rem;
+	}
+	.legacy-svg { width: 26px; height: 26px; }
+	.legacy-num {
+		position: absolute;
+		top: 2.25rem;
+		right: 2.5rem;
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: var(--gold-500);
+		opacity: 0.5;
+	}
+	.legacy-card h3 {
+		font-size: var(--text-xl);
+		line-height: 1.25;
+		margin: 0 0 0.85rem;
+		max-width: 22ch;
+	}
+	.legacy-card p {
+		margin: 0;
+		color: var(--ink-500);
+		line-height: 1.6;
+		font-size: var(--text-base);
+	}
+
 	/* ---------- CASE STUDIES ---------- */
 	.case-grid {
 		list-style: none;
@@ -672,7 +804,7 @@ const moduleEntries = Object.entries(MODULES);
 	@media (max-width: 620px) { .case-grid { grid-template-columns: 1fr; } }
 	.case-card {
 		padding: 2.5rem;
-		background: var(--paper);
+		background: var(--ash-50);
 		border-radius: var(--radius);
 		box-shadow: var(--shadow-sm);
 		border-top: 4px solid var(--gold-600);
