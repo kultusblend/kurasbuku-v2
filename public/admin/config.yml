@@ -127,6 +127,98 @@ collections:
               - { label: Teks butang hantar, name: submit, widget: string }
               - { label: Nota bawah borang, name: note, widget: text }
 
+      - name: program
+        label: Halaman Program (katalog)
+        file: src/content/data/pages/program.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: Tag hero, name: heroTags, widget: list, field: { label: Tag, name: item, widget: string } }
+          - { label: 'CTA: tajuk', name: ctaHeading, widget: string }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
+
+      - name: penerbitan
+        label: Halaman Penerbitan
+        file: src/content/data/pages/penerbitan.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: 'Hero butang utama', name: ctaPrimary, widget: string }
+          - { label: 'Hero butang kedua', name: ctaSecondary, widget: string }
+          - { label: 'Servis: eyebrow', name: servicesEyebrow, widget: string }
+          - { label: 'Servis: tajuk', name: servicesHeading, widget: string }
+          - { label: 'Servis: penerangan', name: servicesLede, widget: text }
+          - { label: 'Proses: eyebrow', name: workflowEyebrow, widget: string }
+          - { label: 'Proses: tajuk', name: workflowHeading, widget: string }
+          - { label: 'Use case: eyebrow', name: usecasesEyebrow, widget: string }
+          - { label: 'Use case: tajuk', name: usecasesHeading, widget: string }
+          - { label: 'Use case: penerangan', name: usecasesBody, widget: text }
+          - { label: 'Use case: butang', name: usecasesCta, widget: string }
+          - { label: 'CTA bawah: tajuk', name: ctaBandHeading, widget: string }
+          - { label: 'CTA bawah: penerangan', name: ctaBandBody, widget: text }
+          - { label: 'CTA bawah: butang utama', name: ctaBandPrimary, widget: string }
+          - { label: 'CTA bawah: butang kedua', name: ctaBandSecondary, widget: string }
+
+      - name: metodologiPage
+        label: Halaman Metodologi
+        file: src/content/data/pages/metodologi.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: 'Asas: eyebrow', name: researchEyebrow, widget: string }
+          - { label: 'Asas: tajuk', name: researchHeading, widget: string }
+          - { label: 'Asas: perenggan 1', name: researchBody1, widget: text }
+          - { label: 'Asas: perenggan 2', name: researchBody2, widget: text }
+          - { label: 'CTA: tajuk', name: ctaHeading, widget: string }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
+
+      - name: kajianKesPage
+        label: Halaman Kajian Kes
+        file: src/content/data/pages/kajian-kes.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: 'Label: Cabaran', name: labelCabaran, widget: string }
+          - { label: 'Label: Pendekatan', name: labelPendekatan, widget: string }
+          - { label: Nota kerahsiaan, name: disclaimer, widget: text }
+          - { label: 'CTA: tajuk', name: ctaHeading, widget: string }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
+
+      - name: artikelPage
+        label: Halaman Wawasan & Artikel
+        file: src/content/data/pages/artikel.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: 'Tumpuan: eyebrow', name: topicsEyebrow, widget: string }
+          - { label: 'Tumpuan: tajuk', name: topicsHeading, widget: string }
+          - { label: 'Tumpuan: penerangan', name: topicsLede, widget: text }
+          - { label: 'CTA: tajuk', name: ctaHeading, widget: string }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
+
   # ---------- TETAPAN LAMAN ----------
   - name: tetapan
     label: Tetapan Laman

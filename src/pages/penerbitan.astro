@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import copy from '../content/data/pages/penerbitan.json';
 
 const services = [
 	{
@@ -53,22 +54,22 @@ const ICON_PATHS: Record<string, string> = {
 ---
 
 <BaseLayout
-	title="Servis Penerbitan Enterprise"
+	title={copy.metaTitle}
 	description="Rumah penerbitan Penerbitan Kuras Buku beroperasi pada kapasiti penuh. Dari suntingan manuskrip, reka letak, rekaan visual, hingga pengurusan cetakan untuk agensi dan organisasi korporat."
 >
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Servis Penerbitan Enterprise</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Dari Idea Coretan,<br /><span class="serif-italic">ke Naskhah Edaran.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
-				Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Biar kami uruskan kerumitan teknikal, anda fokus pada visi besar organisasi.
+				{copy.heroSub}
 			</p>
 			<div class="hero-ctas reveal" style="--reveal-delay: 240ms;">
-				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Sebut Harga</a>
-				<a href="#proses" class="btn btn-outline">Lihat Proses Kerja</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">{copy.ctaPrimary}</a>
+				<a href="#proses" class="btn btn-outline">{copy.ctaSecondary}</a>
 			</div>
 		</div>
 	</section>
@@ -77,10 +78,10 @@ const ICON_PATHS: Record<string, string> = {
 	<section class="services section-ash">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Skop Perkhidmatan</p>
-				<h2>Empat Tonggak Penerbitan Bersepadu.</h2>
+				<p class="eyebrow">{copy.servicesEyebrow}</p>
+				<h2>{copy.servicesHeading}</h2>
 				<p class="section-lede">
-					Ambil satu perkhidmatan secara berasingan, atau serahkan keseluruhan projek kepada kami dari hujung ke hujung.
+					{copy.servicesLede}
 				</p>
 			</header>
 
@@ -103,8 +104,8 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="proses" class="workflow section-paper">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Proses Kerja</p>
-				<h2>Empat Langkah, Satu Naskhah Sempurna.</h2>
+				<p class="eyebrow">{copy.workflowEyebrow}</p>
+				<h2>{copy.workflowHeading}</h2>
 			</header>
 
 			<ol class="workflow-grid">
@@ -123,12 +124,12 @@ const ICON_PATHS: Record<string, string> = {
 	<section class="usecases section-ash">
 		<div class="container usecases-grid">
 			<div class="usecases-copy reveal">
-				<p class="eyebrow">Apa yang Boleh Kami Terbitkan</p>
-				<h2>Setiap dokumen rasmi, dilayan setaraf sebuah buku.</h2>
+				<p class="eyebrow">{copy.usecasesEyebrow}</p>
+				<h2>{copy.usecasesHeading}</h2>
 				<p>
-					Tiada projek yang terlalu teknikal atau terlalu kompleks. Dari laporan setebal ratusan muka surat hingga buku ulang tahun yang penuh nilai sentimental, kami melayan setiap naskhah dengan ketelitian yang sama.
+					{copy.usecasesBody}
 				</p>
-				<a href="/hubungi?intent=proposal" class="btn btn-primary">Bincang Projek Anda</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">{copy.usecasesCta}</a>
 			</div>
 			<ul class="usecases-list reveal" style="--reveal-delay: 120ms;">
 				{usecases.map((u) => <li>{u}</li>)}
@@ -139,13 +140,13 @@ const ICON_PATHS: Record<string, string> = {
 	{/* ---------- CTA ---------- */}
 	<section class="cta-band section-navy">
 		<div class="container-narrow cta-inner reveal">
-			<h2>Ada projek penerbitan di tangan?</h2>
+			<h2>{copy.ctaBandHeading}</h2>
 			<p>
-				Hantar butiran ringkas projek anda. Kami akan respons dengan anggaran skop, kos, dan jangka masa dalam tempoh dua hari bekerja.
+				{copy.ctaBandBody}
 			</p>
 			<div class="cta-row">
-				<a href="/hubungi?intent=proposal" class="btn btn-gold">Mohon Sebut Harga</a>
-				<a href="/program" class="btn btn-ghost">Lihat Program Latihan</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-gold">{copy.ctaBandPrimary}</a>
+				<a href="/program" class="btn btn-ghost">{copy.ctaBandSecondary}</a>
 			</div>
 		</div>
 	</section>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { MODULES, SITE_ORG, type ModuleKey } from '../consts';
+import copy from '../content/data/pages/program.json';
 
 const moduleEntries = Object.entries(MODULES) as [ModuleKey, (typeof MODULES)[ModuleKey]][];
 
@@ -34,7 +35,7 @@ const courseSchema = {
 ---
 
 <BaseLayout
-	title="Program Latihan Komunikasi & Penyampaian"
+	title={copy.metaTitle}
 	description="Enam program latihan Penerbitan Kuras Buku: persona media sosial, pempengaruh buku, resensi buku, cakap depan kamera, moderator interaktif, dan keyakinan pentas."
 >
 	<Fragment slot="head">
@@ -44,17 +45,15 @@ const courseSchema = {
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Program Latihan</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Enam Program,<br /><span class="serif-italic">Satu Suara yang Yakin.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
-				Setiap program dirangka untuk membina keyakinan dan keupayaan menyampaikan idea, sama ada di skrin, di kertas, mahupun di pentas. Ambil satu mengikut keperluan, atau gabungkan untuk transformasi penuh.
+				{copy.heroSub}
 			</p>
 			<ul class="hero-tags reveal" style="--reveal-delay: 240ms;">
-				<li>Boleh disesuaikan mengikut keperluan</li>
-				<li>Bengkel praktikal, bukan kuliah</li>
-				<li>On-site atau hybrid</li>
+				{copy.heroTags.map((t) => <li>{t}</li>)}
 			</ul>
 		</div>
 	</section>
@@ -82,13 +81,13 @@ const courseSchema = {
 	{/* ---------- CTA ---------- */}
 	<section class="cta-band section-navy">
 		<div class="container-narrow cta-inner reveal">
-			<h2>Tidak pasti program yang sesuai untuk pasukan anda?</h2>
+			<h2>{copy.ctaHeading}</h2>
 			<p>
-				Mulakan dengan sesi perbincangan ringkas. Kami bantu kenal pasti keperluan anda dan cadangkan kombinasi program yang paling berkesan.
+				{copy.ctaBody}
 			</p>
 			<div class="cta-row">
-				<a href="/hubungi?intent=proposal" class="btn btn-gold">Mohon Cadangan</a>
-				<a href="/metodologi" class="btn btn-ghost">Lihat Metodologi Kami</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-gold">{copy.ctaPrimary}</a>
+				<a href="/metodologi" class="btn btn-ghost">{copy.ctaSecondary}</a>
 			</div>
 		</div>
 	</section>

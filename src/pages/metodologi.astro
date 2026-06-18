@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { METHODOLOGY } from '../consts';
+import copy from '../content/data/pages/metodologi.json';
 
 // Deliverables per phase. SAHKAN butiran sebenar dengan klien.
 const deliverables: Record<string, string[]> = {
@@ -23,18 +24,18 @@ const deliverables: Record<string, string[]> = {
 ---
 
 <BaseLayout
-	title="Metodologi Latihan Komunikasi Berstruktur"
+	title={copy.metaTitle}
 	description="Metodologi Penerbitan Kuras Buku dibina atas asas kajian persuratan dan pengalaman lapangan perundingan komunikasi. Tiga langkah berstruktur: Penilaian, Latihan, Pelaksanaan."
 >
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Metodologi Penerbitan Kuras Buku</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Tiga Langkah Berstruktur,<br /><span class="serif-italic">Hasil Tuntas yang Terukur.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
-				Metodologi kami dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.
+				{copy.heroSub}
 			</p>
 		</div>
 	</section>
@@ -76,13 +77,13 @@ const deliverables: Record<string, string[]> = {
 	{/* ---------- RESEARCH-BACKED ---------- */}
 	<section class="research section-paper">
 		<div class="container-narrow research-inner reveal">
-			<p class="eyebrow">Asas Kepakaran</p>
-			<h2>Mengapa metodologi ini berhasil?</h2>
+			<p class="eyebrow">{copy.researchEyebrow}</p>
+			<h2>{copy.researchHeading}</h2>
 			<p>
-				Kebanyakan program latihan gagal kerana ia berhenti pada hari terakhir kelas. Metodologi kami direka agar ilmu yang dipindahkan terus berakar dalam amalan harian organisasi. Setiap langkah disandarkan pada dua perkara: kerangka akademik yang teruji dan pengalaman lapangan yang sebenar.
+				{copy.researchBody1}
 			</p>
 			<p>
-				Kami bukan ahli teori yang membaca dari slide. Kami pengamal yang telah menyunting ratusan naskhah, merangka dokumen rasmi untuk pelbagai organisasi, dan memahami cabaran komunikasi dari dalam. Itulah yang membezakan diagnosis yang tepat daripada cadangan yang generik.
+				{copy.researchBody2}
 			</p>
 		</div>
 	</section>
@@ -90,13 +91,13 @@ const deliverables: Record<string, string[]> = {
 	{/* ---------- CTA ---------- */}
 	<section class="cta-band section-ash">
 		<div class="container-narrow cta-inner reveal">
-			<h2>Mahukan diagnosis untuk organisasi anda?</h2>
+			<h2>{copy.ctaHeading}</h2>
 			<p>
-				Langkah pertama metodologi kami bermula dengan satu perbualan. Hubungi kami untuk sesi penilaian ringkas keperluan komunikasi pasukan anda.
+				{copy.ctaBody}
 			</p>
 			<div class="cta-row">
-				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Cadangan Korporat</a>
-				<a href="/program" class="btn btn-outline">Lihat Modul Latihan</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">{copy.ctaPrimary}</a>
+				<a href="/program" class="btn btn-outline">{copy.ctaSecondary}</a>
 			</div>
 		</div>
 	</section>

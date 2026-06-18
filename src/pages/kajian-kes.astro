@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CASE_STUDIES } from '../consts';
+import copy from '../content/data/pages/kajian-kes.json';
 
 // Naratif lanjutan untuk setiap kajian kes. CONTOH ILUSTRASI, bukan rekod sebenar.
 // SAHKAN dengan klien sebelum guna untuk tender.
@@ -29,18 +30,18 @@ const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
 ---
 
 <BaseLayout
-	title="Kajian Kes Latihan & Penerbitan Organisasi"
+	title={copy.metaTitle}
 	description="Hasil sebenar dari latihan dan penerbitan Penerbitan Kuras Buku untuk agensi kerajaan dan organisasi korporat. Diukur dengan metrik, bukan janji."
 >
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Kajian Kes</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Hasil yang Diukur,<br /><span class="serif-italic">Bukan Janji yang Dilaung.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
-				Klien kami dinilai melalui perubahan yang nyata dan boleh diukur. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar, dirumuskan menerusi metrik dan kisah di sebaliknya.
+				{copy.heroSub}
 			</p>
 		</div>
 	</section>
@@ -57,11 +58,11 @@ const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
 
 				<div class="case-body reveal" style="--reveal-delay: 120ms;">
 					<div class="case-block">
-						<p class="case-block-label">Cabaran</p>
+						<p class="case-block-label">{copy.labelCabaran}</p>
 						<p>{cs.cabaran}</p>
 					</div>
 					<div class="case-block">
-						<p class="case-block-label">Pendekatan</p>
+						<p class="case-block-label">{copy.labelPendekatan}</p>
 						<p>{cs.pendekatan}</p>
 					</div>
 					<blockquote class="case-quote">
@@ -77,7 +78,7 @@ const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
 	<section class="note-band section-paper">
 		<div class="container-narrow reveal">
 			<p class="disclaimer">
-				Catatan: Identiti klien dirahsiakan atas dasar kerahsiaan perjanjian. Butiran lanjut boleh dikongsi semasa sesi perundingan rasmi.
+				{copy.disclaimer}
 			</p>
 		</div>
 	</section>
@@ -85,13 +86,13 @@ const cases = CASE_STUDIES.map((cs, i) => ({ ...cs, ...narratives[i] }));
 	{/* ---------- CTA ---------- */}
 	<section class="cta-band section-navy">
 		<div class="container-narrow cta-inner reveal">
-			<h2>Sedia menulis kisah kejayaan anda sendiri?</h2>
+			<h2>{copy.ctaHeading}</h2>
 			<p>
-				Setiap kajian kes bermula dengan satu organisasi yang berani melabur dalam keupayaan komunikasi pasukannya. Jadikan organisasi anda yang seterusnya.
+				{copy.ctaBody}
 			</p>
 			<div class="cta-row">
-				<a href="/hubungi?intent=proposal" class="btn btn-gold">Mohon Cadangan Korporat</a>
-				<a href="/program" class="btn btn-ghost">Lihat Modul Latihan</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-gold">{copy.ctaPrimary}</a>
+				<a href="/program" class="btn btn-ghost">{copy.ctaSecondary}</a>
 			</div>
 		</div>
 	</section>

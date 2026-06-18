@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { MODULES } from '../../consts';
+import copy from '../../content/data/pages/artikel.json';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft).catch(() => []);
 const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -15,18 +16,18 @@ const topics = [
 ---
 
 <BaseLayout
-	title="Wawasan & Artikel: Komunikasi Organisasi"
+	title={copy.metaTitle}
 	description="Wawasan dari Penerbitan Kuras Buku tentang penulisan profesional, penerbitan korporat, dan komunikasi strategik untuk agensi kerajaan dan organisasi."
 >
 	{/* ---------- HERO ---------- */}
 	<section class="page-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Wawasan & Artikel</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Pemikiran di Sebalik<br /><span class="serif-italic">Setiap Kata yang Tersusun.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="page-lede reveal" style="--reveal-delay: 160ms;">
-				Wawasan, panduan, dan pandangan dari pasukan kami tentang seni dan disiplin komunikasi organisasi. Kami berkongsi ilmu yang sama yang kami bawa ke bilik latihan.
+				{copy.heroSub}
 			</p>
 		</div>
 	</section>
@@ -57,10 +58,10 @@ const topics = [
 			<section class="topics section-ash">
 				<div class="container">
 					<header class="section-head reveal">
-						<p class="eyebrow">Bidang Tumpuan</p>
-						<h2>Tiga bidang yang akan kami terokai.</h2>
+						<p class="eyebrow">{copy.topicsEyebrow}</p>
+						<h2>{copy.topicsHeading}</h2>
 						<p class="section-lede">
-							Koleksi wawasan pertama kami sedang disiapkan. Setiap artikel akan menyelami salah satu daripada tiga bidang teras kepakaran kami.
+							{copy.topicsLede}
 						</p>
 					</header>
 
@@ -79,13 +80,13 @@ const topics = [
 			{/* ---------- CTA ---------- */}
 			<section class="cta-band section-paper">
 				<div class="container-narrow cta-inner reveal">
-					<h2>Mahu dimaklumkan apabila wawasan pertama terbit?</h2>
+					<h2>{copy.ctaHeading}</h2>
 					<p>
-						Sementara menunggu, pasukan kami sedia membincangkan keperluan komunikasi organisasi anda secara langsung. Itu wawasan yang paling peribadi.
+						{copy.ctaBody}
 					</p>
 					<div class="cta-row">
-						<a href="/hubungi?intent=proposal" class="btn btn-primary">Hubungi Pasukan Kami</a>
-						<a href="/program" class="btn btn-outline">Lihat Program Latihan</a>
+						<a href="/hubungi?intent=proposal" class="btn btn-primary">{copy.ctaPrimary}</a>
+						<a href="/program" class="btn btn-outline">{copy.ctaSecondary}</a>
 					</div>
 				</div>
 			</section>
