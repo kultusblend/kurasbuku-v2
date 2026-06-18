@@ -41,7 +41,9 @@ const imageURL =
 		? new URL(image, Astro.url).toString()
 		: new URL(image.src, Astro.url).toString();
 
-const headline = title.replace(/\s*\|\s*Penerbitan Kuras Buku$/, '');
+// Clean page name: first segment before any " | " (strips both the
+// "| Program Latihan" middle and the "| Penerbitan Kuras Buku" suffix).
+const headline = title.split(/\s*\|\s*/)[0];
 
 // Staging guard: any *.pages.dev host gets noindex so it never competes
 // with the production domain. Set SITE_URL=https://kurasbuku.com on the
@@ -100,8 +102,11 @@ const websiteSchema = {
 	publisher: { '@id': `${siteBase}/#organization` },
 };
 
-// BreadcrumbList for non-home pages: Utama > Current page
+// BreadcrumbList: Utama > [intermediate segments] > Current page.
+// e.g. /program/kamera -> Utama > Program > Cakap Depan Kamera
 const segments = Astro.url.pathname.split('/').filter(Boolean);
+const crumbLabel = (seg: string) =>
+	seg.charAt(0).toUpperCase() + seg.slice(1).replace(/-/g, ' ');
 const breadcrumbSchema =
 	segments.length > 0
 		? {
@@ -109,12 +114,15 @@ const breadcrumbSchema =
 				'@type': 'BreadcrumbList',
 				itemListElement: [
 					{ '@type': 'ListItem', position: 1, name: 'Utama', item: siteBase + '/' },
-					{
+					...segments.map((seg, i) => ({
 						'@type': 'ListItem',
-						position: 2,
-						name: headline,
-						item: canonicalURL.toString(),
-					},
+						position: i + 2,
+						name: i === segments.length - 1 ? headline : crumbLabel(seg),
+						item:
+							i === segments.length - 1
+								? canonicalURL.toString()
+								: `${siteBase}/${segments.slice(0, i + 1).join('/')}/`,
+					})),
 				],
 			}
 		: null;

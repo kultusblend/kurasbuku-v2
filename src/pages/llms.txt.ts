@@ -1,15 +1,19 @@
 import type { APIRoute } from 'astro';
-import { SITE_ORG, SITE_DESCRIPTION } from '../consts';
+import { SITE_ORG, SITE_DESCRIPTION, MODULES, type ModuleKey } from '../consts';
 
 // llms.txt — structured index for AI search engines (llmstxt.org).
 export const GET: APIRoute = ({ site }) => {
 	const base = (site?.toString() ?? 'https://kurasv2.pages.dev/').replace(/\/$/, '');
+	const programLinks = (Object.keys(MODULES) as ModuleKey[])
+		.map((key) => `- [${MODULES[key].label}](${base}/program/${key}): ${MODULES[key].hasil}`)
+		.join('\n');
 	const body = `# ${SITE_ORG}
 
 > ${SITE_DESCRIPTION}
 
 ## Latihan
-- [Program Latihan](${base}/program): Enam program — Bina Persona @ Media Sosial, Jana Pendapatan sebagai Pempengaruh Buku, Bengkel Bicara & Resensi Buku, Cakap Depan Kamera, Seni Menjadi Moderator Interaktif, Yakin di Kertas Gigil di Pentas.
+- [Program Latihan](${base}/program): Enam program latihan komunikasi dan penyampaian.
+${programLinks}
 - [Metodologi](${base}/metodologi): Pendekatan tiga langkah, Penilaian, Latihan, Pelaksanaan.
 
 ## Servis
