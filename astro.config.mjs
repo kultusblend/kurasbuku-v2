@@ -14,7 +14,7 @@ export default defineConfig({
 		}),
 	],
 	image: {
-		domains: ['images.unsplash.com', 'media.kurasbuku.com'],
+		domains: ['media.kurasbuku.com'],
 	},
 	markdown: {
 		remarkPlugins: [remarkLazyImages],
