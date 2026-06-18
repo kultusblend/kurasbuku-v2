@@ -12,40 +12,10 @@ import {
 	PAX_OPTIONS,
 	SITE_DESCRIPTION,
 } from '../consts';
+import copy from '../content/data/pages/home.json';
 
 const moduleEntries = Object.entries(MODULES);
-
-// Legacy & Execution services (2x2 grid). Minimalist line icons.
-const legacyServices = [
-	{
-		num: '01',
-		icon: 'pen',
-		title: 'Suntingan Tepat, Bebas Ralat',
-		desc:
-			'Kami meneliti setiap patah kata, nahu, dan frasa. Sama ada laporan tahunan atau buku polisi, kami pastikan setiap naskhah tajam, bebas cela, dan mengekalkan laras bahasa rasmi organisasi anda.',
-	},
-	{
-		num: '02',
-		icon: 'layout',
-		title: 'Reka Letak Kemas, Sedap Ditelaah',
-		desc:
-			'Susun atur bukan sekadar lambakan teks pada helaian. Kami merangka hierarki tipografi dan reka letak yang profesional agar dokumen tebal menjadi mesra pembaca, kemas, dan mudah difahami.',
-	},
-	{
-		num: '03',
-		icon: 'visual',
-		title: 'Rekaan Visual, Pemangkin Citra',
-		desc:
-			'Dari rekaan kulit luar hingga infografik dalaman, kami menterjemahkan data yang sarat menjadi visual yang memikat. Rekaan kami tidak sekadar cantik, tetapi direka khusus untuk memperkukuh identiti korporat anda.',
-	},
-	{
-		num: '04',
-		icon: 'print',
-		title: 'Urusan Cetakan, Selesai Di Pintu',
-		desc:
-			'Lupakan pening kepala berurusan dengan kilang. Kami mengemudi urusan pencetakan sepenuhnya, dari pemilihan material kertas, kawalan mutu warna, hinggalah naskhah fizikal tiba dengan selamat di pejabat anda.',
-	},
-];
+const legacyServices = copy.legacy.services;
 
 const ICON_PATHS: Record<string, string> = {
 	pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>',
@@ -55,49 +25,43 @@ const ICON_PATHS: Record<string, string> = {
 };
 ---
 
-<BaseLayout title="Penerbitan Kuras Buku: Latihan Komunikasi, Penyampaian & Penerbitan" description={SITE_DESCRIPTION}>
+<BaseLayout title={copy.metaTitle} description={SITE_DESCRIPTION}>
 	{/* ---------- 1. HERO ---------- */}
 	<section class="hero section-paper">
 		<div class="container hero-grid">
 			<div class="hero-copy">
-				<p class="eyebrow reveal">Latihan Komunikasi & Penyampaian</p>
+				<p class="eyebrow reveal">{copy.hero.eyebrow}</p>
 				<h1 class="reveal" style="--reveal-delay: 80ms;">
-					Tunjang Komunikasi,<br /><span class="serif-italic">Pemangkin Suara Anda.</span>
+					{copy.hero.headlineLine1}<br /><span class="serif-italic">{copy.hero.headlineAccent}</span>
 				</h1>
 				<p class="hero-sub reveal" style="--reveal-delay: 160ms;">
-					Program latihan untuk individu, profesional, dan organisasi. Dari membina persona dan suara peribadi, hingga melengkapkan pasukan anda dengan kemahiran menulis, bercakap, dan berkomunikasi dengan penuh yakin.
+					{copy.hero.sub}
 				</p>
 				<div class="hero-ctas reveal" style="--reveal-delay: 240ms;">
-					<a href="/program" class="btn btn-primary">Sertai Program</a>
-					<a href="/hubungi?intent=proposal" class="btn btn-outline">Mohon Cadangan Korporat</a>
+					<a href="/program" class="btn btn-primary">{copy.hero.ctaPrimary}</a>
+					<a href="/hubungi?intent=proposal" class="btn btn-outline">{copy.hero.ctaSecondary}</a>
 				</div>
 				<dl class="hero-stats reveal" style="--reveal-delay: 320ms;">
-					<div>
-						<dt>Sejak</dt>
-						<dd>2015</dd>
-					</div>
-					<div>
-						<dt>Pengalaman</dt>
-						<dd>10 tahun</dd>
-					</div>
-					<div>
-						<dt>Penerbitan</dt>
-						<dd>100+ buku</dd>
-					</div>
+					{copy.hero.stats.map((s) => (
+						<div>
+							<dt>{s.label}</dt>
+							<dd>{s.value}</dd>
+						</div>
+					))}
 				</dl>
 			</div>
 			<aside class="hero-aside reveal" style="--reveal-delay: 180ms;">
 				<Image
 					src={heroTraining}
-					alt="Jurulatih membimbing peserta dalam sesi latihan komunikasi korporat"
+					alt={copy.hero.imageAlt}
 					class="hero-image"
 					loading="eager"
 					widths={[400, 600, 900, 1200]}
 					sizes="(max-width: 880px) 100vw, 600px"
 				/>
 				<div class="hero-badge">
-					<p class="badge-label">Kapasiti latihan tahunan</p>
-					<p class="badge-value">800+ <span>peserta</span></p>
+					<p class="badge-label">{copy.hero.badgeLabel}</p>
+					<p class="badge-value">{copy.hero.badgeValue} <span>{copy.hero.badgeUnit}</span></p>
 				</div>
 			</aside>
 		</div>
@@ -106,7 +70,7 @@ const ICON_PATHS: Record<string, string> = {
 	{/* ---------- 2. TRUST INDICATORS ---------- */}
 	<section class="trust section-ash" aria-label="Klien dan rakan kongsi">
 		<div class="container">
-			<p class="trust-label reveal">Dipercayai Individu dan Organisasi Terkemuka</p>
+			<p class="trust-label reveal">{copy.trustLabel}</p>
 			<ul class="trust-logos">
 				{TRUSTED_BY.map((name, i) => (
 					<li class="trust-logo reveal" style={`--reveal-delay: ${i * 60}ms;`} aria-label={name}>
@@ -121,10 +85,10 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="modul" class="modules section-paper">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Program Latihan Penerbitan Kuras Buku</p>
-				<h2>Enam Program, Satu Standard Penyampaian.</h2>
+				<p class="eyebrow">{copy.programs.eyebrow}</p>
+				<h2>{copy.programs.heading}</h2>
 				<p class="section-lede">
-					Dari membina persona digital hingga menguasai pentas, setiap program dirangka untuk membina keyakinan dan keupayaan menyampaikan idea anda dengan berkesan.
+					{copy.programs.lede}
 				</p>
 			</header>
 
@@ -135,7 +99,7 @@ const ICON_PATHS: Record<string, string> = {
 						<h3 id={`modul-${key}`}>{mod.label}</h3>
 						<p class="program-desc">{mod.description}</p>
 						<p class="program-hasil"><span>Hasil</span>{mod.hasil}</p>
-						<a href={`/program/${key}`} class="program-cta">Butiran program →</a>
+						<a href={`/program/${key}`} class="program-cta">{copy.programs.cardCta}</a>
 					</li>
 				))}
 			</ol>
@@ -146,10 +110,10 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="metodologi" class="methodology section-navy">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow eyebrow-light">Metodologi Penerbitan Kuras Buku</p>
-				<h2>Tiga Langkah Berstruktur. Hasil Tuntas yang Terukur.</h2>
+				<p class="eyebrow eyebrow-light">{copy.methodology.eyebrow}</p>
+				<h2>{copy.methodology.heading}</h2>
 				<p class="section-lede on-dark">
-					Metodologi Penerbitan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.
+					{copy.methodology.lede}
 				</p>
 			</header>
 
@@ -164,13 +128,12 @@ const ICON_PATHS: Record<string, string> = {
 			</ol>
 
 			<div class="method-flow" aria-hidden="true">
-				<span class="flow-step">Penilaian</span>
-				<span class="flow-arrow">→</span>
-				<span class="flow-step">Latihan</span>
-				<span class="flow-arrow">→</span>
-				<span class="flow-step">Pelaksanaan</span>
-				<span class="flow-arrow">→</span>
-				<span class="flow-step flow-step-gold">Hasil Tuntas</span>
+				{copy.methodology.flow.map((step, i) => (
+					<>
+						<span class={`flow-step${i === copy.methodology.flow.length - 1 ? ' flow-step-gold' : ''}`}>{step}</span>
+						{i < copy.methodology.flow.length - 1 && <span class="flow-arrow">→</span>}
+					</>
+				))}
 			</div>
 		</div>
 	</section>
@@ -179,24 +142,20 @@ const ICON_PATHS: Record<string, string> = {
 	<section class="enterprise section-paper">
 		<div class="container enterprise-grid">
 			<div class="enterprise-copy reveal">
-				<p class="eyebrow">Servis Tambahan</p>
-				<h2>Penerbitan Korporat Menyeluruh: Dari Idea Coretan ke Naskhah Edaran.</h2>
+				<p class="eyebrow">{copy.enterprise.eyebrow}</p>
+				<h2>{copy.enterprise.heading}</h2>
 				<p>
-					Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Dari suntingan manuskrip yang jitu, reka letak berwibawa, hingga pengurusan cetakan pukal. Biar kami uruskan kerumitan teknikal, anda fokus pada visi besar organisasi.
+					{copy.enterprise.body}
 				</p>
 				<ul class="enterprise-list">
-					<li>Suntingan manuskrip profesional</li>
-					<li>Susun atur dan reka bentuk muka surat</li>
-					<li>Cetakan kuantiti rendah hingga tinggi</li>
-					<li>Pengurusan ISBN dan deposit perpustakaan</li>
-					<li>Pengedaran B2B dan e-commerce</li>
+					{copy.enterprise.list.map((item) => <li>{item}</li>)}
 				</ul>
-				<a href="/penerbitan" class="btn btn-outline">Lihat Profil Penerbitan</a>
+				<a href="/penerbitan" class="btn btn-outline">{copy.enterprise.cta}</a>
 			</div>
 			<aside class="enterprise-aside reveal" style="--reveal-delay: 120ms;">
 				<Image
 					src={enterprisePublishing}
-					alt="Bengkel penulisan untuk audiens korporat dan agensi kerajaan"
+					alt={copy.enterprise.imageAlt}
 					class="enterprise-image"
 					loading="lazy"
 					widths={[400, 600, 688]}
@@ -210,10 +169,10 @@ const ICON_PATHS: Record<string, string> = {
 	<section class="legacy-services section-ash">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Bukti Kepakaran Akar Umbi</p>
-				<h2>Akar Kami, Kepakaran Anda: Servis Penerbitan Bersepadu.</h2>
+				<p class="eyebrow">{copy.legacy.eyebrow}</p>
+				<h2>{copy.legacy.heading}</h2>
 				<p class="section-lede">
-					Sebelum melatih pasukan anda, kami terlebih dahulu mengotorkan tangan di lapangan. Sebagai sebuah rumah penerbitan yang aktif, kami kekal menawarkan perkhidmatan teknikal dari hujung ke hujung. Sama ada anda perlukan latihan atau pelaksanaan penuh, jentera kami sentiasa bersedia.
+					{copy.legacy.lede}
 				</p>
 			</header>
 
@@ -245,10 +204,10 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="kajian-kes" class="case-studies section-paper">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Hasil yang Diukur</p>
-				<h2>Kajian kes organisasi.</h2>
+				<p class="eyebrow">{copy.cases.eyebrow}</p>
+				<h2>{copy.cases.heading}</h2>
 				<p class="section-lede">
-					Klien kami diukur dengan metric, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar.
+					{copy.cases.lede}
 				</p>
 			</header>
 
@@ -271,51 +230,49 @@ const ICON_PATHS: Record<string, string> = {
 	<section id="intake" class="lead-gen section-paper">
 		<div class="container-narrow lead-grid">
 			<header class="reveal">
-				<p class="eyebrow">Borang Permohonan</p>
-				<h2>Sedia melonjakkan keupayaan komunikasi pasukan anda?</h2>
+				<p class="eyebrow">{copy.leadgen.eyebrow}</p>
+				<h2>{copy.leadgen.heading}</h2>
 				<p>
-					Rintis transformasi hari ini. Hubungi kami untuk merangka modul latihan dan penerbitan yang paling selari dengan aspirasi organisasi anda.
+					{copy.leadgen.body}
 				</p>
 				<ul class="trust-list">
-					<li>Proposal khas mengikut keperluan organisasi anda</li>
-					<li>Kompatibel dengan klaim HRD Corp</li>
-					<li>Boleh dijalankan secara on-site atau hybrid</li>
+					{copy.leadgen.points.map((p) => <li>{p}</li>)}
 				</ul>
 			</header>
 
 			<form class="lead-form reveal" style="--reveal-delay: 120ms;" method="post" action="#">
 				<div class="row-2">
 					<div class="field">
-						<label for="lf-name">Nama penuh</label>
+						<label for="lf-name">{copy.leadgen.labelName}</label>
 						<input id="lf-name" name="name" type="text" required autocomplete="name" />
 					</div>
 					<div class="field">
-						<label for="lf-email">E-mel kerja</label>
+						<label for="lf-email">{copy.leadgen.labelEmail}</label>
 						<input id="lf-email" name="email" type="email" required autocomplete="email" />
 					</div>
 				</div>
 
 				<div class="row-2">
 					<div class="field">
-						<label for="lf-org">Organisasi / Agensi</label>
+						<label for="lf-org">{copy.leadgen.labelOrg}</label>
 						<input id="lf-org" name="organization" type="text" required autocomplete="organization" />
 					</div>
 					<div class="field">
-						<label for="lf-position">Jawatan</label>
+						<label for="lf-position">{copy.leadgen.labelPosition}</label>
 						<input id="lf-position" name="position" type="text" autocomplete="organization-title" />
 					</div>
 				</div>
 
 				<div class="row-2">
 					<div class="field">
-						<label for="lf-pax">Anggaran bilangan peserta</label>
+						<label for="lf-pax">{copy.leadgen.labelPax}</label>
 						<select id="lf-pax" name="pax" required>
 							<option value="">Pilih…</option>
 							{PAX_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
 						</select>
 					</div>
 					<div class="field">
-						<label for="lf-program">Program berminat</label>
+						<label for="lf-program">{copy.leadgen.labelProgram}</label>
 						<select id="lf-program" name="program" required>
 							<option value="">Pilih…</option>
 							{PROGRAM_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
@@ -324,12 +281,12 @@ const ICON_PATHS: Record<string, string> = {
 				</div>
 
 				<div class="field">
-					<label for="lf-message">Keperluan khusus (pilihan)</label>
-					<textarea id="lf-message" name="message" rows="4" placeholder="Cth: latihan untuk pasukan 25 orang, sesi on-site di KL, fokus pada penulisan laporan tahunan…"></textarea>
+					<label for="lf-message">{copy.leadgen.labelMessage}</label>
+					<textarea id="lf-message" name="message" rows="4" placeholder={copy.leadgen.messagePlaceholder}></textarea>
 				</div>
 
-				<button type="submit" class="btn btn-primary lead-submit">Hantar Permohonan</button>
-				<p class="form-note">Maklumat anda hanya digunakan untuk respons proposal. Tiada senarai mel atau pemasaran tambahan.</p>
+				<button type="submit" class="btn btn-primary lead-submit">{copy.leadgen.submit}</button>
+				<p class="form-note">{copy.leadgen.note}</p>
 			</form>
 		</div>
 	</section>

@@ -1,0 +1,83 @@
+{
+  "metaTitle": "Penerbitan Kuras Buku: Latihan Komunikasi, Penyampaian & Penerbitan",
+  "hero": {
+    "eyebrow": "Latihan Komunikasi & Penyampaian",
+    "headlineLine1": "Tunjang Komunikasi,",
+    "headlineAccent": "Pemangkin Suara Anda.",
+    "sub": "Program latihan untuk individu, profesional, dan organisasi. Dari membina persona dan suara peribadi, hingga melengkapkan pasukan anda dengan kemahiran menulis, bercakap, dan berkomunikasi dengan penuh yakin.",
+    "ctaPrimary": "Sertai Program",
+    "ctaSecondary": "Mohon Cadangan Korporat",
+    "stats": [
+      { "label": "Sejak", "value": "2015" },
+      { "label": "Pengalaman", "value": "10 tahun" },
+      { "label": "Penerbitan", "value": "100+ buku" }
+    ],
+    "badgeLabel": "Kapasiti latihan tahunan",
+    "badgeValue": "800+",
+    "badgeUnit": "peserta",
+    "imageAlt": "Jurulatih membimbing peserta dalam sesi latihan komunikasi korporat"
+  },
+  "trustLabel": "Dipercayai Individu dan Organisasi Terkemuka",
+  "programs": {
+    "eyebrow": "Program Latihan Penerbitan Kuras Buku",
+    "heading": "Enam Program, Satu Standard Penyampaian.",
+    "lede": "Dari membina persona digital hingga menguasai pentas, setiap program dirangka untuk membina keyakinan dan keupayaan menyampaikan idea anda dengan berkesan.",
+    "cardCta": "Butiran program →"
+  },
+  "methodology": {
+    "eyebrow": "Metodologi Penerbitan Kuras Buku",
+    "heading": "Tiga Langkah Berstruktur. Hasil Tuntas yang Terukur.",
+    "lede": "Metodologi Penerbitan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.",
+    "flow": ["Penilaian", "Latihan", "Pelaksanaan", "Hasil Tuntas"]
+  },
+  "enterprise": {
+    "eyebrow": "Servis Tambahan",
+    "heading": "Penerbitan Korporat Menyeluruh: Dari Idea Coretan ke Naskhah Edaran.",
+    "body": "Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Dari suntingan manuskrip yang jitu, reka letak berwibawa, hingga pengurusan cetakan pukal. Biar kami uruskan kerumitan teknikal, anda fokus pada visi besar organisasi.",
+    "list": [
+      "Suntingan manuskrip profesional",
+      "Susun atur dan reka bentuk muka surat",
+      "Cetakan kuantiti rendah hingga tinggi",
+      "Pengurusan ISBN dan deposit perpustakaan",
+      "Pengedaran B2B dan e-commerce"
+    ],
+    "cta": "Lihat Profil Penerbitan",
+    "imageAlt": "Bengkel penulisan untuk audiens korporat dan agensi kerajaan"
+  },
+  "legacy": {
+    "eyebrow": "Bukti Kepakaran Akar Umbi",
+    "heading": "Akar Kami, Kepakaran Anda: Servis Penerbitan Bersepadu.",
+    "lede": "Sebelum melatih pasukan anda, kami terlebih dahulu mengotorkan tangan di lapangan. Sebagai sebuah rumah penerbitan yang aktif, kami kekal menawarkan perkhidmatan teknikal dari hujung ke hujung. Sama ada anda perlukan latihan atau pelaksanaan penuh, jentera kami sentiasa bersedia.",
+    "services": [
+      { "num": "01", "icon": "pen", "title": "Suntingan Tepat, Bebas Ralat", "desc": "Kami meneliti setiap patah kata, nahu, dan frasa. Sama ada laporan tahunan atau buku polisi, kami pastikan setiap naskhah tajam, bebas cela, dan mengekalkan laras bahasa rasmi organisasi anda." },
+      { "num": "02", "icon": "layout", "title": "Reka Letak Kemas, Sedap Ditelaah", "desc": "Susun atur bukan sekadar lambakan teks pada helaian. Kami merangka hierarki tipografi dan reka letak yang profesional agar dokumen tebal menjadi mesra pembaca, kemas, dan mudah difahami." },
+      { "num": "03", "icon": "visual", "title": "Rekaan Visual, Pemangkin Citra", "desc": "Dari rekaan kulit luar hingga infografik dalaman, kami menterjemahkan data yang sarat menjadi visual yang memikat. Rekaan kami tidak sekadar cantik, tetapi direka khusus untuk memperkukuh identiti korporat anda." },
+      { "num": "04", "icon": "print", "title": "Urusan Cetakan, Selesai Di Pintu", "desc": "Lupakan pening kepala berurusan dengan kilang. Kami mengemudi urusan pencetakan sepenuhnya, dari pemilihan material kertas, kawalan mutu warna, hinggalah naskhah fizikal tiba dengan selamat di pejabat anda." }
+    ]
+  },
+  "cases": {
+    "eyebrow": "Hasil yang Diukur",
+    "heading": "Kajian kes organisasi.",
+    "lede": "Klien kami diukur dengan metric, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar."
+  },
+  "leadgen": {
+    "eyebrow": "Borang Permohonan",
+    "heading": "Sedia melonjakkan keupayaan komunikasi pasukan anda?",
+    "body": "Rintis transformasi hari ini. Hubungi kami untuk merangka modul latihan dan penerbitan yang paling selari dengan aspirasi organisasi anda.",
+    "points": [
+      "Proposal khas mengikut keperluan organisasi anda",
+      "Kompatibel dengan klaim HRD Corp",
+      "Boleh dijalankan secara on-site atau hybrid"
+    ],
+    "labelName": "Nama penuh",
+    "labelEmail": "E-mel kerja",
+    "labelOrg": "Organisasi / Agensi",
+    "labelPosition": "Jawatan",
+    "labelPax": "Anggaran bilangan peserta",
+    "labelProgram": "Program berminat",
+    "labelMessage": "Keperluan khusus (pilihan)",
+    "messagePlaceholder": "Cth: latihan untuk pasukan 25 orang, sesi on-site di KL, fokus pada penulisan laporan tahunan…",
+    "submit": "Hantar Permohonan",
+    "note": "Maklumat anda hanya digunakan untuk respons proposal. Tiada senarai mel atau pemasaran tambahan."
+  }
+}

@@ -27,6 +27,106 @@ i18n:
   default_locale: ms
 
 collections:
+  # ---------- HALAMAN ----------
+  - name: halaman
+    label: Halaman (Ayat & Tajuk)
+    icon: web
+    files:
+      - name: home
+        label: Laman Utama
+        file: src/content/data/pages/home.json
+        description: Semua ayat di laman utama, mengikut bahagian.
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - label: Hero (bahagian atas)
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow (label kecil), name: eyebrow, widget: string }
+              - { label: 'Tajuk besar: baris 1', name: headlineLine1, widget: string }
+              - { label: 'Tajuk besar: baris emas', name: headlineAccent, widget: string }
+              - { label: Sub-tajuk, name: sub, widget: text }
+              - { label: Butang utama, name: ctaPrimary, widget: string }
+              - { label: Butang kedua, name: ctaSecondary, widget: string }
+              - label: Statistik (3)
+                name: stats
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Nilai, name: value, widget: string }
+              - { label: Label badge, name: badgeLabel, widget: string }
+              - { label: Nilai badge, name: badgeValue, widget: string }
+              - { label: Unit badge, name: badgeUnit, widget: string }
+              - { label: 'Alt gambar (untuk SEO/akses)', name: imageAlt, widget: string }
+          - { label: Label bar logo klien, name: trustLabel, widget: string }
+          - label: Seksyen Program
+            name: programs
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: lede, widget: text }
+              - { label: Teks pautan kad, name: cardCta, widget: string }
+          - label: Seksyen Metodologi
+            name: methodology
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: lede, widget: text }
+              - { label: Aliran (4 langkah), name: flow, widget: list, field: { label: Langkah, name: item, widget: string } }
+          - label: Seksyen Penerbitan Enterprise
+            name: enterprise
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: body, widget: text }
+              - { label: Senarai servis, name: list, widget: list, field: { label: Servis, name: item, widget: string } }
+              - { label: Teks butang, name: cta, widget: string }
+              - { label: Alt gambar, name: imageAlt, widget: string }
+          - label: Seksyen Akar Kepakaran (4 servis)
+            name: legacy
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: lede, widget: text }
+              - label: Servis
+                name: services
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Nombor, name: num, widget: string }
+                  - { label: 'Ikon (pen/layout/visual/print)', name: icon, widget: string }
+                  - { label: Tajuk, name: title, widget: string }
+                  - { label: Penerangan, name: desc, widget: text }
+          - label: Seksyen Kajian Kes (tajuk)
+            name: cases
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: lede, widget: text }
+          - label: Borang Permohonan
+            name: leadgen
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Tajuk, name: heading, widget: string }
+              - { label: Penerangan, name: body, widget: text }
+              - { label: Poin kepercayaan, name: points, widget: list, field: { label: Poin, name: item, widget: string } }
+              - { label: 'Label: Nama', name: labelName, widget: string }
+              - { label: 'Label: E-mel', name: labelEmail, widget: string }
+              - { label: 'Label: Organisasi', name: labelOrg, widget: string }
+              - { label: 'Label: Jawatan', name: labelPosition, widget: string }
+              - { label: 'Label: Bilangan peserta', name: labelPax, widget: string }
+              - { label: 'Label: Program', name: labelProgram, widget: string }
+              - { label: 'Label: Mesej', name: labelMessage, widget: string }
+              - { label: Placeholder mesej, name: messagePlaceholder, widget: text }
+              - { label: Teks butang hantar, name: submit, widget: string }
+              - { label: Nota bawah borang, name: note, widget: text }
+
   # ---------- TETAPAN LAMAN ----------
   - name: tetapan
     label: Tetapan Laman
