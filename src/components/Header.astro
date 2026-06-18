@@ -86,8 +86,12 @@ const navItems = [
 	.brand-name {
 		font-family: var(--font-display);
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		letter-spacing: var(--tracking-snug);
+		white-space: nowrap;
+	}
+	@media (max-width: 400px) {
+		.brand-name { font-size: 1.05rem; }
 	}
 
 	.primary-nav ul {

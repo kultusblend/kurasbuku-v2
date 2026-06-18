@@ -5,7 +5,7 @@ import type { APIRoute } from 'astro';
 // Sitemap directive always points to the current host.
 export const GET: APIRoute = ({ site }) => {
 	const base = (site?.toString() ?? 'https://kurasv2.pages.dev/').replace(/\/$/, '');
-	const body = `# Kuras Buku Enterprise Communications
+	const body = `# Penerbitan Kuras Buku
 User-agent: *
 Allow: /
 

@@ -1,6 +1,6 @@
 // Global site metadata for V2 (B2B/B2G target).
 
-export const SITE_TITLE = 'Kuras Buku';
+export const SITE_TITLE = 'Penerbitan Kuras Buku';
 export const SITE_ORG = 'Penerbitan Kuras Buku';
 export const SITE_DESCRIPTION =
 	'Program latihan komunikasi dan penyampaian untuk individu, profesional, dan organisasi. Bina persona, kuasai kamera dan pentas, dan sampaikan idea anda dengan penuh yakin.';
@@ -232,7 +232,7 @@ export const CASE_STUDIES = [
 		metric: '40%',
 		label: 'Pengurangan masa editing',
 		quote:
-			'Latihan Kuras Buku menyusun semula proses pelaporan jabatan kami. Editing time turun 40% dan kualiti dokumen lebih konsisten.',
+			'Latihan Penerbitan Kuras Buku menyusun semula proses pelaporan jabatan kami. Editing time turun 40% dan kualiti dokumen lebih konsisten.',
 		attribution: 'Pengarah, Sebuah Agensi Kerajaan Persekutuan',
 		tag: 'Latihan Penulisan',
 	},
@@ -248,7 +248,7 @@ export const CASE_STUDIES = [
 		metric: '12 mins',
 		label: 'Purata response time media',
 		quote:
-			'Crisis playbook yang dibangunkan dengan Kuras Buku tolong kami respons wartawan dalam 12 minit purata, dari sebelum ini berjam.',
+			'Crisis playbook yang dibangunkan dengan Penerbitan Kuras Buku tolong kami respons wartawan dalam 12 minit purata, dari sebelum ini berjam.',
 		attribution: 'Director of Corporate Affairs, Korporat Tersenarai',
 		tag: 'Komunikasi Strategik',
 	},

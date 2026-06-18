@@ -41,7 +41,7 @@ const imageURL =
 		? new URL(image, Astro.url).toString()
 		: new URL(image.src, Astro.url).toString();
 
-const headline = title.replace(/\s*\|\s*Kuras Buku$/, '');
+const headline = title.replace(/\s*\|\s*Penerbitan Kuras Buku$/, '');
 
 // Staging guard: any *.pages.dev host gets noindex so it never competes
 // with the production domain. Set SITE_URL=https://kurasbuku.com on the
