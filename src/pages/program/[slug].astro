@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { MODULES, SITE_ORG, type ModuleKey } from '../../consts';
+import copy from '../../content/data/pages/program-detail.json';
 
 export function getStaticPaths() {
 	return (Object.keys(MODULES) as ModuleKey[]).map((slug) => ({
@@ -49,8 +50,8 @@ const courseSchema = {
 	{/* ---------- HERO ---------- */}
 	<section class="prog-hero section-paper">
 		<div class="container">
-			<a href="/program" class="back-link reveal">← Semua Program</a>
-			<p class="eyebrow reveal" style="--reveal-delay: 60ms;">Program Latihan</p>
+			<a href="/program" class="back-link reveal">{copy.backLink}</a>
+			<p class="eyebrow reveal" style="--reveal-delay: 60ms;">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 120ms;">{program.label}</h1>
 			<p class="prog-lede reveal" style="--reveal-delay: 200ms;">{program.description}</p>
 
@@ -75,8 +76,8 @@ const courseSchema = {
 	<section class="prog-modules section-ash">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Kandungan Program</p>
-				<h2>Modul yang anda pelajari.</h2>
+				<p class="eyebrow">{copy.modulesEyebrow}</p>
+				<h2>{copy.modulesHeading}</h2>
 			</header>
 
 			<ol class="module-list">
@@ -97,10 +98,10 @@ const courseSchema = {
 	<section class="prog-takeaways section-paper">
 		<div class="container takeaways-grid">
 			<header class="reveal">
-				<p class="eyebrow">Bawa Pulang</p>
-				<h2>Apa yang anda dapat.</h2>
+				<p class="eyebrow">{copy.takeawaysEyebrow}</p>
+				<h2>{copy.takeawaysHeading}</h2>
 				<p class="takeaways-lede">
-					Setiap peserta keluar dengan hasil yang nyata, bukan sekadar nota. Inilah yang anda bawa pulang selepas program ini.
+					{copy.takeawaysLede}
 				</p>
 			</header>
 			<ul class="takeaways-list reveal" style="--reveal-delay: 120ms;">
@@ -114,11 +115,11 @@ const courseSchema = {
 		<div class="container-narrow cta-inner reveal">
 			<h2>Sedia menyertai {program.label}?</h2>
 			<p>
-				Hantar permohonan atau pertanyaan anda. Kami akan hubungi anda dengan jadual, kos, dan butiran pendaftaran.
+				{copy.ctaBody}
 			</p>
 			<div class="cta-row">
-				<a href={`/hubungi?program=${slug}`} class="btn btn-gold">Sertai Program Ini</a>
-				<a href={`/program/${next}`} class="btn btn-ghost">Lihat Program Seterusnya →</a>
+				<a href={`/hubungi?program=${slug}`} class="btn btn-gold">{copy.ctaPrimary}</a>
+				<a href={`/program/${next}`} class="btn btn-ghost">{copy.ctaNext}</a>
 			</div>
 		</div>
 	</section>

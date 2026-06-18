@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import copy from '../content/data/pages/tentang.json';
 
 // Milestones — illustrative arc. SAHKAN tarikh sebenar dengan klien sebelum live.
 const milestones = [
@@ -57,18 +58,18 @@ const stats = [
 ---
 
 <BaseLayout
-	title="Tentang Kami: Rumah Penerbitan & Akademi Komunikasi"
+	title={copy.metaTitle}
 	description="Penerbitan Kuras Buku bermula sebagai rumah penerbitan pada 2015 dan kini sebuah akademi komunikasi untuk agensi kerajaan dan organisasi korporat. Inilah perjalanan, falsafah, dan kepakaran kami."
 >
 	{/* ---------- HERO ---------- */}
 	<section class="about-hero section-paper">
 		<div class="container">
-			<p class="eyebrow reveal">Tentang Kami</p>
+			<p class="eyebrow reveal">{copy.heroEyebrow}</p>
 			<h1 class="reveal" style="--reveal-delay: 80ms;">
-				Berakar di Dunia Persuratan,<br /><span class="serif-italic">Berkembang ke Ruang Korporat.</span>
+				{copy.heroLine1}<br /><span class="serif-italic">{copy.heroAccent}</span>
 			</h1>
 			<p class="about-lede reveal" style="--reveal-delay: 160ms;">
-				Penerbitan Kuras Buku bermula sebagai rumah penerbitan pada 2015. Hari ini, kami sebuah akademi komunikasi yang melengkapkan agensi kerajaan dan organisasi korporat dengan kemahiran menulis, menerbit, dan berkomunikasi pada tahap tertinggi.
+				{copy.heroSub}
 			</p>
 		</div>
 	</section>
@@ -77,8 +78,8 @@ const stats = [
 	<section class="story section-ash">
 		<div class="container story-grid">
 			<div class="story-copy reveal">
-				<p class="eyebrow">Perjalanan Kami</p>
-				<h2>Sepuluh Tahun Mengasah Kata, Membentuk Naratif.</h2>
+				<p class="eyebrow">{copy.journeyEyebrow}</p>
+				<h2>{copy.journeyHeading}</h2>
 				<p>
 					Kami memulakan langkah dengan satu keyakinan ringkas: setiap idea yang berbaloi disampaikan layak mendapat naskhah yang berwibawa. Dari sebuah rumah penerbitan kecil, kami mengasah kemahiran teknikal di lapangan, satu manuskrip demi satu manuskrip.
 				</p>
@@ -108,8 +109,8 @@ const stats = [
 	<section class="philosophy section-paper">
 		<div class="container">
 			<header class="section-head reveal">
-				<p class="eyebrow">Falsafah Kami</p>
-				<h2>Tiga Pegangan yang Membezakan Kami.</h2>
+				<p class="eyebrow">{copy.philosophyEyebrow}</p>
+				<h2>{copy.philosophyHeading}</h2>
 				<p class="section-lede">
 					Cara kerja kami bukan kebetulan. Inilah prinsip yang dijaga sepanjang perjalanan, dan inilah yang anda boleh harapkan apabila bekerja dengan kami.
 				</p>
@@ -131,8 +132,8 @@ const stats = [
 	<section class="stats-band section-navy">
 		<div class="container">
 			<header class="stats-head reveal">
-				<p class="eyebrow eyebrow-light">Rekod Kami</p>
-				<h2>Pengalaman yang berbicara melalui hasil.</h2>
+				<p class="eyebrow eyebrow-light">{copy.recordEyebrow}</p>
+				<h2>{copy.recordHeading}</h2>
 			</header>
 			<dl class="stats-grid">
 				{stats.map((s, i) => (
@@ -148,13 +149,13 @@ const stats = [
 	{/* ---------- CTA ---------- */}
 	<section class="cta-band section-paper">
 		<div class="container-narrow cta-inner reveal">
-			<h2>Sedia memulakan perbualan?</h2>
+			<h2>{copy.ctaHeading}</h2>
 			<p>
-				Sama ada anda memerlukan latihan untuk pasukan dalaman atau pelaksanaan penerbitan sepenuhnya, langkah pertama bermula dengan satu perbualan ringkas.
+				{copy.ctaBody}
 			</p>
 			<div class="cta-row">
-				<a href="/hubungi?intent=proposal" class="btn btn-primary">Mohon Cadangan Korporat</a>
-				<a href="/#modul" class="btn btn-outline">Teroka Modul Latihan</a>
+				<a href="/hubungi?intent=proposal" class="btn btn-primary">{copy.ctaPrimary}</a>
+				<a href="/#modul" class="btn btn-outline">{copy.ctaSecondary}</a>
 			</div>
 		</div>
 	</section>

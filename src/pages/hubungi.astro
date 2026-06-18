@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import copy from '../content/data/pages/hubungi.json';
 import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS } from '../consts';
 ---
 
-<BaseLayout title="Hubungi Kami: Mohon Cadangan Korporat" description="Hantar permohonan untuk cadangan latihan korporat atau penerbitan enterprise. Pasukan kami akan respons dalam tempoh 2 hari bekerja.">
+<BaseLayout title={copy.metaTitle} description="Hantar permohonan untuk cadangan latihan korporat atau penerbitan enterprise. Pasukan kami akan respons dalam tempoh 2 hari bekerja.">
 	<section class="hubungi-page section-paper">
 		<div class="container-narrow">
 			<header class="page-head reveal">
-				<p class="eyebrow">Borang Korporat</p>
-				<h1>Mulakan perbualan.</h1>
+				<p class="eyebrow">{copy.heroEyebrow}</p>
+				<h1>{copy.heroHeading}</h1>
 				<p class="lede">
-					Hantar maklumat ringkas tentang keperluan organisasi anda. Pasukan kami akan respons dengan proposal khas, anggaran kos, dan jadual kohort dalam tempoh dua hari bekerja.
+					{copy.heroSub}
 				</p>
 			</header>
 
@@ -93,7 +94,7 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS } from
 				</form>
 
 				<aside class="contact-aside reveal" style="--reveal-delay: 160ms;">
-					<h2>Maklumat perhubungan</h2>
+					<h2>{copy.contactHeading}</h2>
 					<dl>
 						<div>
 							<dt>E-mel rasmi</dt>

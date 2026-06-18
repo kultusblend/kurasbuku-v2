@@ -1,20 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import copy from '../content/data/pages/notfound.json';
 ---
 
-<BaseLayout title="Halaman tidak ditemui" description="Halaman yang anda cari tidak wujud atau telah dialihkan.">
+<BaseLayout title={copy.metaTitle} description="Halaman yang anda cari tidak wujud atau telah dialihkan.">
 	<section class="not-found section-paper">
 		<div class="container-narrow not-found-inner">
-			<p class="error-code">404</p>
-			<h1>Halaman tidak ditemui.</h1>
-			<p>Halaman yang anda cari mungkin telah dialihkan, dipadam, atau tidak pernah wujud. Berikut adalah beberapa pautan yang mungkin membantu.</p>
+			<p class="error-code">{copy.errorCode}</p>
+			<h1>{copy.heading}</h1>
+			<p>{copy.body}</p>
 			<ul class="suggest-list">
 				<li><a href="/">Halaman Utama</a> — gambaran keseluruhan program</li>
 				<li><a href="/program">Program Latihan</a> — tiga modul utama</li>
 				<li><a href="/penerbitan">Enterprise Publishing</a> — servis penerbitan korporat</li>
 				<li><a href="/hubungi">Hubungi Kami</a> — borang proposal</li>
 			</ul>
-			<a href="/" class="btn btn-primary not-found-cta">Kembali ke utama</a>
+			<a href="/" class="btn btn-primary not-found-cta">{copy.ctaButton}</a>
 		</div>
 	</section>
 </BaseLayout>

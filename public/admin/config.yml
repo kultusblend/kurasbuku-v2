@@ -219,6 +219,62 @@ collections:
           - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
           - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
 
+      - name: tentangPage
+        label: Halaman Tentang
+        file: src/content/data/pages/tentang.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Hero tajuk baris 1', name: heroLine1, widget: string }
+          - { label: 'Hero tajuk baris emas', name: heroAccent, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: 'Perjalanan: eyebrow', name: journeyEyebrow, widget: string }
+          - { label: 'Perjalanan: tajuk', name: journeyHeading, widget: string }
+          - { label: 'Falsafah: eyebrow', name: philosophyEyebrow, widget: string }
+          - { label: 'Falsafah: tajuk', name: philosophyHeading, widget: string }
+          - { label: 'Rekod: eyebrow', name: recordEyebrow, widget: string }
+          - { label: 'Rekod: tajuk', name: recordHeading, widget: string }
+          - { label: 'CTA: tajuk', name: ctaHeading, widget: string }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang kedua', name: ctaSecondary, widget: string }
+
+      - name: hubungiPage
+        label: Halaman Hubungi
+        file: src/content/data/pages/hubungi.json
+        fields:
+          - { label: Tajuk Meta (SEO), name: metaTitle, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: Hero tajuk, name: heroHeading, widget: string }
+          - { label: Hero sub, name: heroSub, widget: text }
+          - { label: Tajuk maklumat perhubungan, name: contactHeading, widget: string }
+
+      - name: programDetail
+        label: Halaman Butiran Program (kongsi 6)
+        file: src/content/data/pages/program-detail.json
+        description: Tajuk seksyen yang dikongsi oleh kesemua 6 halaman butiran program.
+        fields:
+          - { label: Pautan kembali, name: backLink, widget: string }
+          - { label: Hero eyebrow, name: heroEyebrow, widget: string }
+          - { label: 'Modul: eyebrow', name: modulesEyebrow, widget: string }
+          - { label: 'Modul: tajuk', name: modulesHeading, widget: string }
+          - { label: 'Bawa pulang: eyebrow', name: takeawaysEyebrow, widget: string }
+          - { label: 'Bawa pulang: tajuk', name: takeawaysHeading, widget: string }
+          - { label: 'Bawa pulang: penerangan', name: takeawaysLede, widget: text }
+          - { label: 'CTA: penerangan', name: ctaBody, widget: text }
+          - { label: 'CTA: butang utama', name: ctaPrimary, widget: string }
+          - { label: 'CTA: butang seterusnya', name: ctaNext, widget: string }
+
+      - name: notfound
+        label: Halaman 404
+        file: src/content/data/pages/notfound.json
+        fields:
+          - { label: Tajuk Meta, name: metaTitle, widget: string }
+          - { label: Kod ralat, name: errorCode, widget: string }
+          - { label: Tajuk, name: heading, widget: string }
+          - { label: Penerangan, name: body, widget: text }
+          - { label: Teks butang, name: ctaButton, widget: string }
+
   # ---------- TETAPAN LAMAN ----------
   - name: tetapan
     label: Tetapan Laman
