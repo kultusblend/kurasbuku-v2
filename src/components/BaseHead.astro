@@ -41,6 +41,11 @@ const imageURL =
 		? new URL(image, Astro.url).toString()
 		: new URL(image.src, Astro.url).toString();
 
+// og:image:type must match the actual file (social scrapers care).
+const ogExt = (imageURL.split('?')[0].split('.').pop() || '').toLowerCase();
+const ogType =
+	ogExt === 'jpg' || ogExt === 'jpeg' ? 'image/jpeg' : ogExt === 'webp' ? 'image/webp' : 'image/png';
+
 // Clean page name: first segment before any " | " (strips both the
 // "| Program Latihan" middle and the "| Penerbitan Kuras Buku" suffix).
 const headline = title.split(/\s*\|\s*/)[0];
@@ -178,7 +183,7 @@ const articleSchema =
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={imageURL} />
-<meta property="og:image:type" content="image/png" />
+<meta property="og:image:type" content={ogType} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={headline} />

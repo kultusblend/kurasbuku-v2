@@ -15,6 +15,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const { title, description, pubDate, updatedDate, tags, module, tldr, heroImage } = post.data;
+// On-page hero uses the webp; OG/social uses a 1200x630 JPG (renders on FB/WhatsApp/LinkedIn).
+const ogImage = heroImage ? `/images/og/${post.id}.jpg` : undefined;
 
 const author = post.data.author ? await getEntry(post.data.author) : null;
 const authorName = author?.data.name ?? 'Penerbitan Kuras Buku';
@@ -39,7 +41,7 @@ const related = all
 <BaseLayout
 	title={title}
 	description={description}
-	image={heroImage}
+	image={ogImage}
 	article={true}
 	pubDate={pubDate}
 	updatedDate={updatedDate}
