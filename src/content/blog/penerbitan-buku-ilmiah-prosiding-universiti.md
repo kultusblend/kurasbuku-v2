@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [buku ilmiah, prosiding, penerbitan akademik, universiti, monograf, jurnal]
 tldr: "Penerbitan buku ilmiah dan prosiding bukan sekadar formaliti akademik, ia bukti nyata sumbangan ilmu sesebuah institusi. Artikel ini menjelaskan jenis penerbitan, proses yang terlibat, dan bagaimana penerbit profesional boleh membantu fakulti dan pusat penyelidikan menguruskan keluaran akademik mereka."
-draft: true
+draft: false
 ---
 
 Di universiti dan institusi pengajian tinggi (IPT), penyelidikan bukan tamat apabila kajian selesai dijalankan. Ia hanya lengkap apabila hasil penyelidikan itu dikongsi, didokumentasikan, dan boleh diakses oleh komuniti ilmiah yang lebih luas. Di sinilah penerbitan buku ilmiah dan prosiding memainkan peranan yang tidak boleh dipandang ringan. Namun bagi banyak fakulti dan pusat penyelidikan, proses menghasilkan penerbitan akademik yang berkualiti sering menjadi cabaran tersendiri, terutama apabila ia perlu diuruskan selari dengan kewajipan pengajaran dan penyelidikan harian.

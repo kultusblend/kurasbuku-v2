@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [kos penerbitan, bajet buku, penerbitan korporat, kos menerbitkan buku, penerbitan malaysia, buku korporat]
 tldr: "Kos menerbitkan buku korporat bergantung pada banyak faktor, dari skop kandungan hingga kuantiti cetakan. Artikel ini membantu anda memahami komponen kos dan cara merancang belanjawan yang realistik."
-draft: true
+draft: false
 ---
 
 Soalan yang hampir selalu ditanya setiap kali organisasi mula serius tentang penerbitan buku korporat: **"Berapa kos sebenarnya?"**

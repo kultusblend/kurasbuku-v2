@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [penerbitan korporat, buku korporat, penerbitan buku, isbn malaysia, laporan tahunan, buku peringatan]
 tldr: "Penerbitan buku korporat bukan sekadar mencetak katalog. Artikel ini merangkumi jenis buku, proses penerbitan, dan pertimbangan utama sebelum organisasi anda mula."
-draft: true
+draft: false
 ---
 
 Ramai organisasi, sama ada syarikat swasta, agensi kerajaan, mahupun universiti, mempunyai buku yang perlu diterbitkan tetapi tidak tahu dari mana hendak bermula. Proses penerbitan buku korporat melibatkan lebih daripada sekadar menyuruh seseorang menulis dan menghantar ke percetakan. Ia memerlukan perancangan yang teliti, pasukan yang tepat, dan pemahaman tentang apa yang pembaca sasaran benar-benar perlukan.

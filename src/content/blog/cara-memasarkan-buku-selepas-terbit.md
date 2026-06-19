@@ -6,7 +6,7 @@ module: strategik
 author: hafiz-latiff
 tags: [pemasaran buku, jualan buku, promosi buku, pemasaran penulis, pelancaran buku, strategi buku]
 tldr: "Menerbitkan buku hanyalah permulaan. Strategi pemasaran yang berkesan bermula sebelum buku siap cetak dan berterusan jauh selepas hari pelancaran."
-draft: true
+draft: false
 ---
 
 Ramai penulis menyangka kerja keras mereka tamat bila buku akhirnya siap dicetak. Hakikatnya, detik buku keluar dari percetakan adalah detik kerja sebenar bermula. Pemasaran buku adalah disiplin tersendiri, dan tanpa strategi yang jelas, buku terbaik sekalipun boleh hilang begitu sahaja di rak kedai atau laman e-dagang tanpa sempat dibaca oleh orang yang memerlukannya.

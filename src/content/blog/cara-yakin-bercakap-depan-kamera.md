@@ -6,7 +6,7 @@ module: komunikasi
 author: hafiz-latiff
 tags: [bercakap depan kamera, yakin depan kamera, public speaking, video, komunikasi, personal branding]
 tldr: "Ramai profesional gugup depan kamera kerana tiada maklum balas segera dan terlalu sedar diri. Artikel ini membimbing anda langkah demi langkah: dari persediaan, teknik penyampaian, hingga cara membina keyakinan secara berperingkat."
-draft: true
+draft: false
 ---
 
 Bayangkan anda diminta merakam video untuk LinkedIn, atau membentangkan laporan melalui rakaman skrin. Anda tekan butang rekod, dan tiba-tiba, semua yang anda rancang terbang entah ke mana. Mulut rasa kering, mata tak tahu hala, dan suara pula terasa janggal di telinga sendiri.

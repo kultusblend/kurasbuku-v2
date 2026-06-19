@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [proses penerbitan, manuskrip, penerbitan buku, isbn malaysia, reka bentuk buku, edaran buku]
 tldr: "Proses penerbitan buku melibatkan 7 langkah utama dari kemaskini manuskrip hingga edaran. Ketahui apa yang perlu dilakukan di setiap peringkat supaya buku anda siap dengan betul dan sampai ke tangan pembaca."
-draft: true
+draft: false
 ---
 
 Ramai penulis yang berjaya menyiapkan manuskrip, kemudian terhenti. Mereka tidak tahu apa langkah seterusnya. Proses penerbitan buku kelihatan rumit dan panjang, terutama bagi yang baru pertama kali mahu menerbitkan karya sendiri.

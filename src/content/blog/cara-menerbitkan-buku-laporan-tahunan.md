@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [laporan tahunan, annual report, penerbitan korporat, buku korporat, reka bentuk korporat, naratif organisasi]
 tldr: "Laporan tahunan yang berimpak bukan sekadar dokumen pematuhan, ia adalah alat naratif dan reputasi. Ketahui elemen penting, proses penerbitan, dan cara menjadikannya dokumen yang benar-benar bercerita."
-draft: true
+draft: false
 ---
 
 Ramai organisasi menghasilkan laporan tahunan kerana **terpaksa**, bukan kerana **ingin**. Hasilnya mudah diteka: dokumen yang tebal, penuh nombor, tetapi tidak ada siapa yang benar-benar membacanya. Ia dihantar kepada pemegang saham atau kementerian, difailkan, dan dilupakan.

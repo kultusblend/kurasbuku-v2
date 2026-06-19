@@ -6,7 +6,7 @@ module: penulisan
 author: hafiz-latiff
 tags: [kursus penulisan, bengkel penulisan, belajar menulis, penulisan profesional, kemahiran komunikasi, kursus bahasa]
 tldr: "Memilih kursus penulisan yang berbaloi memerlukan lebih daripada sekadar melihat harga. Artikel ini membimbing anda menilai kepakaran fasilitator, struktur program, dan tanda amaran yang perlu dielakkan."
-draft: true
+draft: false
 ---
 
 Ramai yang mendaftar kursus penulisan dengan semangat tinggi, tetapi pulang tanpa sebarang perubahan nyata pada tulisan mereka. Bukan kerana mereka tidak berusaha, tetapi kerana kursus yang mereka pilih tidak sesuai dengan keperluan, tahap, atau matlamat mereka.

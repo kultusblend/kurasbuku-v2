@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [terbit buku sendiri, self publishing, penulis baharu, menerbitkan buku, cara terbitkan buku, penerbitan malaysia]
 tldr: "Panduan lengkap untuk penulis baharu yang ingin menerbitkan buku pertama di Malaysia, dari idea hingga ke rak kedai buku, termasuk pilihan self-publishing dan penerbit tradisional."
-draft: true
+draft: false
 ---
 
 Ramai yang menyimpan impian untuk menerbitkan buku. Idea sudah ada, pengalaman sudah cukup, cerita menunggu untuk dikongsi. Namun setiap kali langkah pertama hendak diambil, muncul persoalan yang sama: dari mana nak mulakan?

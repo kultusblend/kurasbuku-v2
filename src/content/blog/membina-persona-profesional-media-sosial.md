@@ -6,7 +6,7 @@ module: komunikasi
 author: hafiz-latiff
 tags: [persona media sosial, personal branding, jenama peribadi, media sosial, komunikasi profesional, pembinaan imej]
 tldr: "Persona profesional di media sosial bukan sekadar akaun cantik, ia adalah gambaran autentik nilai dan kepakaran anda yang membuka peluang kerjaya. Artikel ini membimbing anda membinanya langkah demi langkah."
-draft: true
+draft: false
 ---
 
 Anda mungkin sudah ada akaun di LinkedIn, Instagram, atau Facebook. Tetapi ada bezanya antara sekadar hadir di media sosial dengan benar-benar membina **persona profesional** yang memberi kesan. Ramai orang menggunakan media sosial bertahun-tahun tanpa sedar mereka melepaskan peluang besar kerana tiada hala tuju yang jelas dalam cara mereka tampil secara dalam talian.

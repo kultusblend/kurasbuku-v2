@@ -6,7 +6,7 @@ module: komunikasi
 author: hafiz-latiff
 tags: [moderator, majlis, forum, pengacaraan, komunikasi, fasilitasi]
 tldr: "Moderator yang baik bukan sekadar pengacara, tetapi pemandu aliran perbincangan. Panduan ini merangkumi persediaan, kemahiran semasa sesi, dan etika yang perlu dipegang."
-draft: true
+draft: false
 ---
 
 Ramai yang beranggapan menjadi moderator majlis adalah tugas ringan: buka sesi, perkenalkan panelis, baca soalan, tutup majlis. Hakikatnya, moderator yang efektif menentukan sama ada satu forum atau panel menjadi pengalaman yang bermakna atau hanya acara yang dihadam tanpa kesan. Jika anda diberi tanggungjawab sebagai moderator dan tidak tahu dari mana hendak bermula, panduan ini untuk anda.

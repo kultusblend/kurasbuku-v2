@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [buku peringatan, buku ulang tahun, commemorative book, penerbitan korporat, sejarah organisasi, warisan korporat]
 tldr: "Buku peringatan ulang tahun syarikat adalah dokumen warisan yang merakam perjalanan organisasi, memperkukuh identiti, dan menghubungkan semua pihak berkepentingan. Artikel ini membimbing anda memahami nilai, kandungan, dan proses penghasilannya."
-draft: true
+draft: false
 ---
 
 Setiap organisasi mempunyai cerita. Ada yang bermula dari sebuah pejabat kecil, ada yang lahir daripada semangat sekumpulan individu yang percaya kepada satu visi. Apabila sesebuah syarikat atau agensi mencapai ulang tahun yang bermakna, sama ada ke-10, ke-25, atau ke-50, soalan yang selalu timbul ialah: bagaimana kita rakamkan perjalanan ini untuk generasi akan datang?

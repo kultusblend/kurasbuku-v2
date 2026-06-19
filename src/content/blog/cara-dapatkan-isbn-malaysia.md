@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [isbn, penerbitan buku, perpustakaan negara malaysia, self-publishing, penerbitan malaysia, buku]
 tldr: "ISBN di Malaysia dikeluarkan PERCUMA oleh Perpustakaan Negara Malaysia (PNM). Artikel ini membimbing anda langkah demi langkah cara memohon, termasuk perbezaan ISBN untuk format cetak dan e-book."
-draft: true
+draft: false
 ---
 
 Ramai penulis yang baru terjun ke dunia penerbitan menyangka bahawa mendapatkan ISBN adalah proses yang rumit dan mahal. Hakikatnya, **ISBN di Malaysia dikeluarkan secara percuma** oleh Perpustakaan Negara Malaysia (PNM). Yang perlu anda ada ialah maklumat buku yang lengkap dan sedikit kesabaran untuk mengikuti prosesnya dengan betul.

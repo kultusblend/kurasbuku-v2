@@ -6,7 +6,7 @@ module: penerbitan
 author: hafiz-latiff
 tags: [self publishing, penerbit tradisional, terbit buku sendiri, penerbitan malaysia, royalti buku, cara terbit buku]
 tldr: "Self-publishing beri kawalan penuh dan keuntungan lebih tinggi, tetapi penerbit tradisional tawarkan sokongan editorial dan jaringan pengedaran yang lebih luas. Pilihan bergantung pada matlamat, bajet, dan jenis buku anda."
-draft: true
+draft: false
 ---
 
 Anda ada manuskrip di tangan. Soalan besar pun timbul: adakah anda perlu hantar ke penerbit tradisional, atau terbit sendiri? Kedua-dua laluan ada kelebihan dan cabarannya tersendiri. Bagi ramai penulis Malaysia, kekeliruan ini boleh menyebabkan manuskrip tersadai bertahun lamanya tanpa kepastian.

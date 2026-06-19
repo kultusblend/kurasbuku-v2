@@ -6,7 +6,7 @@ module: penulisan
 author: hafiz-latiff
 tags: [teknik penulisan, penulisan berkesan, kemahiran menulis, penulisan profesional, suara aktif, penulisan korporat]
 tldr: "Artikel ini mendedahkan teknik penulisan profesional yang sering diabaikan, dengan contoh sebelum/selepas yang jelas. Sesuai untuk individu mahupun profesional korporat yang mahu menulis dengan lebih berkesan."
-draft: true
+draft: false
 ---
 
 Ramai orang boleh menulis. Tapi tidak ramai yang menulis dengan berkesan.
