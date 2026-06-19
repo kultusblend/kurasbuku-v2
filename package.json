@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "pagefind": "^1.5.2",
-    "png-to-ico": "^3.0.1"
+    "png-to-ico": "^3.0.1",
+    "satori": "^0.26.0"
   }
 }
