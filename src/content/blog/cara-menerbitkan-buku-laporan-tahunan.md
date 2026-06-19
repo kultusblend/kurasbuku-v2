@@ -1,6 +1,6 @@
 ---
 title: "Cara Menerbitkan Buku Laporan Tahunan yang Berimpak"
-description: "Panduan lengkap menerbitkan buku laporan tahunan korporat yang berkesan: elemen penting, proses, reka bentuk, dan tip menjadikannya lebih daripada sekadar dokumen pematuhan."
+description: "Cara menerbitkan buku laporan tahunan korporat yang berkesan: elemen penting, proses, reka bentuk, dan tip naratif yang berimpak."
 pubDate: 2026-04-15
 heroImage: /images/blog/cara-menerbitkan-buku-laporan-tahunan.webp
 module: penerbitan

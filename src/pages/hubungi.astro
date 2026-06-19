@@ -171,16 +171,16 @@ import { TRAINING_OPTIONS, PUBLISHING_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BU
 
 <script>
 	function setupHubungiForm() {
-		const form = document.querySelector('.hubungi-form');
+		const form = document.querySelector<HTMLFormElement>('.hubungi-form');
 		if (!form) return;
-		const sel = form.querySelector('#hf-type');
+		const sel = form.querySelector<HTMLSelectElement>('#hf-type');
 		if (!sel || sel.dataset.bound) return;
 		sel.dataset.bound = '1';
 		const groups = {
-			penerbitan: form.querySelector('[data-group="penerbitan"]'),
-			latihan: form.querySelector('[data-group="latihan"]'),
+			penerbitan: form.querySelector<HTMLFieldSetElement>('[data-group="penerbitan"]'),
+			latihan: form.querySelector<HTMLFieldSetElement>('[data-group="latihan"]'),
 		};
-		const subject = form.querySelector('input[name="subject"]');
+		const subject = form.querySelector<HTMLInputElement>('input[name="subject"]');
 		const setG = (g, on) => { if (g) { g.hidden = !on; g.disabled = !on; } };
 		function apply() {
 			const v = sel.value;
@@ -201,7 +201,7 @@ import { TRAINING_OPTIONS, PUBLISHING_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BU
 		else if (intent === 'proposal') { sel.value = 'penerbitan'; }
 		apply();
 		if (program) {
-			const ps = form.querySelector('#hf-program');
+			const ps = form.querySelector<HTMLSelectElement>('#hf-program');
 			if (ps && [...ps.options].some((o) => o.value === program)) ps.value = program;
 		}
 	}

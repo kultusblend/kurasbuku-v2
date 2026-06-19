@@ -155,7 +155,7 @@ a:hover {
 	text-decoration-color: var(--gold-700);
 }
 a:focus-visible {
-	outline: 2px solid var(--gold-500);
+	outline: 2px solid var(--gold-700);
 	outline-offset: 3px;
 	border-radius: 2px;
 }
@@ -314,7 +314,7 @@ section { padding-block: clamp(4rem, 8vw, 7rem); position: relative; }
 
 :focus { outline: none; }
 :focus-visible {
-	outline: 2px solid var(--gold-500);
+	outline: 2px solid var(--gold-700);
 	outline-offset: 3px;
 }
 

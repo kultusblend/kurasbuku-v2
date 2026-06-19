@@ -1,6 +1,6 @@
 ---
 title: "Penerbitan Buku Ilmiah dan Prosiding untuk Universiti"
-description: "Panduan lengkap penerbitan buku ilmiah, prosiding persidangan, dan monograf untuk universiti dan pusat penyelidikan di Malaysia. Proses, standard, dan peranan penerbit profesional."
+description: "Panduan penerbitan buku ilmiah, prosiding, dan monograf untuk universiti di Malaysia: proses, standard, dan peranan penerbit profesional."
 pubDate: 2026-05-13
 heroImage: /images/blog/penerbitan-buku-ilmiah-prosiding-universiti.webp
 module: penerbitan

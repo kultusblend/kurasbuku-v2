@@ -36,17 +36,4 @@ const blog = defineCollection({
 		}),
 });
 
-const pages = defineCollection({
-	loader: glob({ base: './src/content/pages', pattern: '**/*.{md,mdx}' }),
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			heroImage: z.union([image(), z.string().url()]).optional(),
-			slug: z.preprocess(emptyToUndefined, z.string().optional()),
-			updatedDate: z.preprocess(emptyToUndefined, z.coerce.date().optional()),
-			draft: z.boolean().default(false),
-		}),
-});
-
-export const collections = { blog, authors, pages };
+export const collections = { blog, authors };

@@ -1,6 +1,6 @@
 ---
 title: "Self-Publishing vs Penerbit Tradisional: Mana Sesuai untuk Anda?"
-description: "Perbandingan lengkap self-publishing vs penerbit tradisional: kawalan kreatif, royalti, kos, masa ke pasaran, dan kredibiliti. Buat keputusan bijak sebelum terbit buku."
+description: "Self-publishing vs penerbit tradisional: bandingkan kawalan kreatif, royalti, kos, masa ke pasaran, dan kredibiliti sebelum terbit buku."
 pubDate: 2026-05-27
 heroImage: /images/blog/self-publishing-vs-penerbit-tradisional.webp
 module: penerbitan

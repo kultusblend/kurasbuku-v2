@@ -58,6 +58,7 @@ const ICON_PATHS: Record<string, string> = {
 					alt={copy.hero.imageAlt}
 					class="hero-image"
 					loading="eager"
+					fetchpriority="high"
 					widths={[400, 600, 900, 1200]}
 					sizes="(max-width: 880px) 100vw, 600px"
 				/>
@@ -83,7 +84,7 @@ const ICON_PATHS: Record<string, string> = {
 				</ul>
 				<ul class="trust-group" aria-hidden="true">
 					{TRUSTED_BY.map((logo) => (
-						<li class="trust-logo"><img src={logo.file} alt="" aria-hidden="true" loading="eager" decoding="async" /></li>
+						<li class="trust-logo"><img src={logo.file} alt="" aria-hidden="true" loading="lazy" decoding="async" /></li>
 					))}
 				</ul>
 			</div>
