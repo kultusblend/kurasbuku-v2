@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import copy from '../content/data/pages/hubungi.json';
-import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3FORMS_KEY, WEB3FORMS_ACTION } from '../consts';
+import { TRAINING_OPTIONS, PUBLISHING_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3FORMS_KEY, WEB3FORMS_ACTION } from '../consts';
 ---
 
 <BaseLayout title={copy.metaTitle} description="Hantar permohonan untuk cadangan latihan korporat atau penerbitan enterprise. Pasukan kami akan respons dalam tempoh 2 hari bekerja.">
@@ -17,14 +17,14 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3F
 
 			<div class="hubungi-grid">
 				<form class="hubungi-form reveal" style="--reveal-delay: 80ms;" method="POST" action={WEB3FORMS_KEY ? WEB3FORMS_ACTION : '#'}>
-						{WEB3FORMS_KEY && (
-							<>
-								<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
-								<input type="hidden" name="subject" value="Mohon Cadangan Korporat — kurasbuku.com" />
-								<input type="hidden" name="from_name" value="Borang Hubungi Kuras Buku" />
-								<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-							</>
-						)}
+					{WEB3FORMS_KEY && (
+						<>
+							<input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+							<input type="hidden" name="subject" value="Pertanyaan Baharu (kurasbuku.com)" />
+							<input type="hidden" name="from_name" value="Borang Hubungi Kuras Buku" />
+							<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+						</>
+					)}
 					<fieldset class="form-section">
 						<legend>Maklumat anda</legend>
 						<div class="row-2">
@@ -55,45 +55,75 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3F
 							<label for="hf-org">Nama organisasi / agensi</label>
 							<input id="hf-org" name="organization" type="text" required autocomplete="organization" />
 						</div>
-						<div class="row-2">
-							<div class="field">
-								<label for="hf-sector">Sektor</label>
-								<select id="hf-sector" name="sector">
-									<option value="">Pilih…</option>
-									<option value="kerajaan">Kerajaan Persekutuan</option>
-									<option value="kerajaan-negeri">Kerajaan Negeri</option>
-									<option value="glc">GLC / Statutory Body</option>
-									<option value="korporat">Korporat Swasta</option>
-									<option value="universiti">Universiti / Pendidikan</option>
-									<option value="ngo">NGO / Pertubuhan</option>
-								</select>
-							</div>
-							<div class="field">
-								<label for="hf-pax">Anggaran peserta</label>
-								<select id="hf-pax" name="pax" required>
-									<option value="">Pilih…</option>
-									{PAX_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
-								</select>
-							</div>
+						<div class="field">
+							<label for="hf-sector">Sektor</label>
+							<select id="hf-sector" name="sector">
+								<option value="">Pilih…</option>
+								<option value="kerajaan">Kerajaan Persekutuan</option>
+								<option value="kerajaan-negeri">Kerajaan Negeri</option>
+								<option value="glc">GLC / Statutory Body</option>
+								<option value="korporat">Korporat Swasta</option>
+								<option value="universiti">Universiti / Pendidikan</option>
+								<option value="ngo">NGO / Pertubuhan</option>
+								<option value="individu">Individu</option>
+							</select>
 						</div>
 					</fieldset>
 
 					<fieldset class="form-section">
-						<legend>Program & jadual</legend>
+						<legend>Apa yang anda perlukan?</legend>
+						<div class="field">
+							<label for="hf-type">Jenis perkhidmatan</label>
+							<select id="hf-type" name="jenis_perkhidmatan" required>
+								<option value="">Pilih…</option>
+								<option value="penerbitan">Servis Penerbitan</option>
+								<option value="latihan">Program Latihan</option>
+							</select>
+						</div>
+					</fieldset>
+
+					<fieldset class="form-section conditional" data-group="penerbitan" hidden disabled>
+						<legend>Maklumat penerbitan</legend>
+						<div class="field">
+							<label for="hf-pubtype">Jenis penerbitan</label>
+							<select id="hf-pubtype" name="jenis_penerbitan" required>
+								<option value="">Pilih…</option>
+								{PUBLISHING_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
+							</select>
+						</div>
+						<div class="field">
+							<label for="hf-pubqty">Anggaran kuantiti naskhah (pilihan)</label>
+							<input id="hf-pubqty" name="anggaran_kuantiti" type="text" placeholder="Cth: 300 naskhah, atau belum pasti" />
+						</div>
+					</fieldset>
+
+					<fieldset class="form-section conditional" data-group="latihan" hidden disabled>
+						<legend>Maklumat latihan</legend>
 						<div class="field">
 							<label for="hf-program">Program berminat</label>
 							<select id="hf-program" name="program" required>
 								<option value="">Pilih…</option>
-								{PROGRAM_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
+								{TRAINING_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
 							</select>
 						</div>
+						<div class="field">
+							<label for="hf-pax">Anggaran peserta</label>
+							<select id="hf-pax" name="pax" required>
+								<option value="">Pilih…</option>
+								{PAX_OPTIONS.map((opt) => <option value={opt.value}>{opt.label}</option>)}
+							</select>
+						</div>
+					</fieldset>
+
+					<fieldset class="form-section">
+						<legend>Jadual & keperluan</legend>
 						<div class="field">
 							<label for="hf-timeline">Jadual yang dicadangkan (pilihan)</label>
 							<input id="hf-timeline" name="timeline" type="text" placeholder="Cth: Q3 2026, atau dalam 6 minggu" />
 						</div>
 						<div class="field">
 							<label for="hf-message">Keperluan khusus atau soalan</label>
-							<textarea id="hf-message" name="message" rows="5" placeholder="Ceritakan tentang konteks organisasi, cabaran komunikasi semasa, atau apa-apa keperluan khas…"></textarea>
+							<textarea id="hf-message" name="message" rows="5" placeholder="Ceritakan tentang konteks organisasi, skop projek, atau apa-apa keperluan khas…"></textarea>
 						</div>
 					</fieldset>
 
@@ -139,6 +169,46 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3F
 	</section>
 </BaseLayout>
 
+<script>
+	function setupHubungiForm() {
+		const form = document.querySelector('.hubungi-form');
+		if (!form) return;
+		const sel = form.querySelector('#hf-type');
+		if (!sel || sel.dataset.bound) return;
+		sel.dataset.bound = '1';
+		const groups = {
+			penerbitan: form.querySelector('[data-group="penerbitan"]'),
+			latihan: form.querySelector('[data-group="latihan"]'),
+		};
+		const subject = form.querySelector('input[name="subject"]');
+		const setG = (g, on) => { if (g) { g.hidden = !on; g.disabled = !on; } };
+		function apply() {
+			const v = sel.value;
+			setG(groups.penerbitan, v === 'penerbitan');
+			setG(groups.latihan, v === 'latihan');
+			if (subject) {
+				subject.value =
+					v === 'penerbitan' ? 'Pertanyaan Servis Penerbitan (kurasbuku.com)'
+						: v === 'latihan' ? 'Pertanyaan Program Latihan (kurasbuku.com)'
+							: 'Pertanyaan Baharu (kurasbuku.com)';
+			}
+		}
+		sel.addEventListener('change', apply);
+		const params = new URLSearchParams(location.search);
+		const program = params.get('program');
+		const intent = params.get('intent');
+		if (program) { sel.value = 'latihan'; }
+		else if (intent === 'proposal') { sel.value = 'penerbitan'; }
+		apply();
+		if (program) {
+			const ps = form.querySelector('#hf-program');
+			if (ps && [...ps.options].some((o) => o.value === program)) ps.value = program;
+		}
+	}
+	document.addEventListener('astro:page-load', setupHubungiForm);
+	setupHubungiForm();
+</script>
+
 <style>
 	.hubungi-page { padding-block: clamp(5rem, 9vw, 8rem); }
 	.page-head { max-width: 760px; margin: 0 auto 4rem; text-align: center; }
@@ -176,6 +246,8 @@ import { PROGRAM_OPTIONS, PAX_OPTIONS, SSM_REGISTRATION, BUSINESS_ADDRESS, WEB3F
 		flex-direction: column;
 		gap: 1.25rem;
 	}
+	/* Conditional groups: class+attribute specificity beats .form-section's display:flex */
+	.conditional[hidden] { display: none; }
 	.form-section legend {
 		font-family: var(--font-display);
 		font-weight: 700;

@@ -96,6 +96,23 @@ export const PAX_OPTIONS = [
 	{ value: '50-plus', label: '50+ peserta' },
 ];
 
+// Hubungi form, branching by service type.
+// Training path: the 6 programs + a custom option.
+export const TRAINING_OPTIONS = [
+	...programsData.programs.map((p) => ({ value: p.key, label: p.label })),
+	{ value: 'latihan-khusus', label: 'Program Latihan Khusus (Bincang Lanjut)' },
+];
+
+// Publishing path: types of corporate / personal publishing work.
+export const PUBLISHING_OPTIONS = [
+	{ value: 'laporan-tahunan', label: 'Buku Laporan Tahunan' },
+	{ value: 'buku-korporat', label: 'Buku Korporat / Coffee Table Book' },
+	{ value: 'buku-peringatan', label: 'Buku Peringatan / Ulang Tahun Syarikat' },
+	{ value: 'buku-ilmiah', label: 'Buku Ilmiah / Prosiding (Universiti)' },
+	{ value: 'terbit-sendiri', label: 'Terbitkan Buku Sendiri' },
+	{ value: 'penerbitan-lain', label: 'Lain-lain (Bincang Lanjut)' },
+];
+
 // Case studies (metrics-led)
 export const CASE_STUDIES = caseStudiesData.cases;
 
