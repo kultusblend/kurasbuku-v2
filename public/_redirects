@@ -1,2 +1,27 @@
 # Canonicalise to apex domain (www -> kurasbuku.com)
 https://www.kurasbuku.com/*  https://kurasbuku.com/:splat  301!
+
+# ---- Legacy WordPress URLs (WP -> Astro migration, 2026) ----
+# Recovered from the Wayback Machine. Map each old page to its closest V2
+# page so old inbound links / indexed URLs 301 instead of hitting a 404.
+# Targets use trailing slash to match Astro's canonical form (avoids a
+# second 308 hop).
+
+# Printing / book portfolio -> publishing
+/percetakan            /penerbitan/   301
+/percetakan/*          /penerbitan/   301
+/portfolio             /penerbitan/   301
+/portfolio/*           /penerbitan/   301
+/ptta-portfolio        /penerbitan/   301
+/ptta-portfolio/*      /penerbitan/   301
+
+# Blog -> insights hub
+/blog                  /artikel/      301
+/blog/*                /artikel/      301
+
+# WordPress author archives -> about
+/author/*              /tentang/      301
+
+# WordPress defaults / login -> home
+/sample-page           /              301
+/wp-login.php          /              301
