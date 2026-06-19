@@ -8,7 +8,6 @@ tags: [kursus penulisan, bengkel penulisan, belajar menulis, penulisan profesion
 tldr: "Memilih kursus penulisan yang berbaloi memerlukan lebih daripada sekadar melihat harga. Artikel ini membimbing anda menilai kepakaran fasilitator, struktur program, dan tanda amaran yang perlu dielakkan."
 draft: false
 ---
-
 Ramai yang mendaftar kursus penulisan dengan semangat tinggi, tetapi pulang tanpa sebarang perubahan nyata pada tulisan mereka. Bukan kerana mereka tidak berusaha, tetapi kerana kursus yang mereka pilih tidak sesuai dengan keperluan, tahap, atau matlamat mereka.
 
 Memilih **kursus penulisan** yang betul adalah pelaburan, bukan perbelanjaan. Artikel ini akan membantu anda menilai pilihan dengan lebih teliti supaya setiap ringgit dan jam yang anda luangkan membawa pulangan yang sebenar.
@@ -38,7 +37,7 @@ Meliputi penulisan laporan, e-mel korporat, cadangan projek, kandungan media sos
 
 ### Penerbitan dan Persediaan Manuskrip
 
-Kursus ini mengajar cara mengatur manuskrip, memahami proses editorial, dan bersedia untuk penerbitan sama ada secara tradisional atau self-publishing. Jika anda sudah menulis tetapi tidak tahu langkah seterusnya, ini kursus yang anda perlukan.
+Kursus ini mengajar cara mengatur manuskrip, memahami proses editorial, dan bersedia untuk penerbitan sama ada secara tradisional atau *self-publishing*. Jika anda sudah menulis tetapi tidak tahu langkah seterusnya, ini kursus yang anda perlukan.
 
 ### Public Speaking dan Persembahan
 
@@ -76,7 +75,7 @@ Bengkel penulisan dengan 50 peserta tidak sama dengan kelas intensif 15 orang. S
 
 ## Tanda Amaran (Red Flags) Kursus yang Lemah
 
-Bukan semua kursus yang mahal adalah baik, dan bukan semua yang murah adalah lemah. Ini tanda-tanda yang perlu buat anda berhati-hati:
+Bukan semua kursus yang mahal adalah baik, dan bukan semua yang murah adalah lemah. Ini tanda-tanda yang perlu anda berhati-hati:
 
 - **Tiada maklumat tentang fasilitator**: Nama sahaja tanpa kelayakan, pengalaman, atau portfolio yang boleh disahkan.
 - **Janji yang terlalu besar**: "Jadi penulis profesional dalam 3 hari" atau "Terbitkan buku anda dalam sebulan tanpa usaha." Kemahiran memerlukan masa.
@@ -88,13 +87,13 @@ Bukan semua kursus yang mahal adalah baik, dan bukan semua yang murah adalah lem
 
 Jangan malu untuk bertanya. Penganjur yang serius akan gembira menjawab soalan-soalan ini:
 
-1. Apakah kelayakan dan pengalaman fasilitator dalam bidang penulisan?
-2. Apakah hasil pembelajaran yang spesifik pada akhir program?
-3. Berapa nisbah masa untuk latihan menulis berbanding ceramah?
-4. Bagaimana maklum balas diberikan kepada peserta?
-5. Adakah ada sokongan atau komuniti selepas program tamat?
-6. Bolehkah anda berhubung dengan alumni terdahulu untuk mendapat pandangan mereka?
-7. Apakah polisi pembayaran balik jika program tidak memenuhi jangkaan anda?
+1.  Apakah kelayakan dan pengalaman fasilitator dalam bidang penulisan?
+2.  Apakah hasil pembelajaran yang spesifik pada akhir program?
+3.  Berapa nisbah masa untuk latihan menulis berbanding ceramah?
+4.  Bagaimana maklum balas diberikan kepada peserta?
+5.  Adakah ada sokongan atau komuniti selepas program tamat?
+6.  Bolehkah anda berhubung dengan alumni terdahulu untuk mendapat pandangan mereka?
+7.  Apakah polisi pembayaran balik jika program tidak memenuhi jangkaan anda?
 
 Jawapan kepada soalan-soalan ini akan memberikan gambaran yang lebih jelas tentang sama ada program berkenaan serius atau sekadar mengambil peluang.
 

@@ -24,7 +24,8 @@ const blog = defineCollection({
 			description: z.string(),
 			pubDate: z.coerce.date(),
 			updatedDate: z.preprocess(emptyToUndefined, z.coerce.date().optional()),
-			heroImage: z.union([image(), z.string().url()]).optional(),
+			// Public path (e.g. /images/blog/slug.webp) or absolute URL.
+			heroImage: z.preprocess(emptyToUndefined, z.string().optional()),
 			author: reference('authors').optional(),
 			tags: z.array(z.string()).default([]),
 			module: z
