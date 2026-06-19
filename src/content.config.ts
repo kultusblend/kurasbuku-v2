@@ -28,7 +28,7 @@ const blog = defineCollection({
 			author: reference('authors').optional(),
 			tags: z.array(z.string()).default([]),
 			module: z
-				.enum(['penulisan', 'penerbitan', 'strategik', 'umum'])
+				.enum(['penulisan', 'penerbitan', 'komunikasi', 'strategik', 'umum'])
 				.default('umum'),
 			tldr: z.string().optional(),
 			draft: z.boolean().default(false),

@@ -27,6 +27,69 @@ i18n:
   default_locale: ms
 
 collections:
+  # ---------- ARTIKEL (BLOG) ----------
+  - name: blog
+    label: Artikel
+    label_singular: Artikel
+    icon: article
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    summary: '{{title}}'
+    sortable_fields: [pubDate, title]
+    media_folder: /public/uploads/artikel
+    public_folder: /uploads/artikel
+    fields:
+      - { label: Tajuk, name: title, widget: string }
+      - { label: Penerangan (SEO meta, ~155 aksara), name: description, widget: text }
+      - { label: Tarikh terbit, name: pubDate, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: Tarikh kemaskini, name: updatedDate, widget: datetime, format: 'YYYY-MM-DD', date_format: 'YYYY-MM-DD', time_format: false, required: false }
+      - label: Kategori
+        name: module
+        widget: select
+        default: umum
+        options:
+          - { label: Penerbitan, value: penerbitan }
+          - { label: Penulisan, value: penulisan }
+          - { label: 'Komunikasi & Penyampaian', value: komunikasi }
+          - { label: 'Strategi & Pemasaran', value: strategik }
+          - { label: Umum, value: umum }
+      - label: Penulis
+        name: author
+        widget: relation
+        collection: authors
+        search_fields: [name]
+        value_field: '{{slug}}'
+        display_fields: [name]
+        default: hafiz-latiff
+        required: false
+      - { label: Tag (kata kunci SEO), name: tags, widget: list, required: false }
+      - { label: Ringkasan / TLDR, name: tldr, widget: text, required: false }
+      - { label: Gambar utama, name: heroImage, widget: image, required: false }
+      - { label: 'Draf (jangan terbit lagi)', name: draft, widget: boolean, default: true }
+      - { label: Kandungan, name: body, widget: markdown }
+
+  # ---------- PENULIS ----------
+  - name: authors
+    label: Penulis
+    label_singular: Penulis
+    icon: person
+    folder: src/content/authors
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    format: frontmatter
+    summary: '{{name}}'
+    fields:
+      - { label: Nama, name: name, widget: string }
+      - { label: Peranan, name: role, widget: string, required: false }
+      - { label: Kelayakan, name: credentials, widget: string, required: false }
+      - { label: E-mel, name: email, widget: string, required: false }
+      - { label: Avatar, name: avatar, widget: image, required: false }
+      - { label: Bio, name: bio, widget: text }
+
   # ---------- HALAMAN ----------
   - name: halaman
     label: Halaman (Ayat & Tajuk)

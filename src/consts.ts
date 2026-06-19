@@ -98,3 +98,21 @@ export const PAX_OPTIONS = [
 
 // Case studies (metrics-led)
 export const CASE_STUDIES = caseStudiesData.cases;
+
+// Blog category labels (keyed by the `module` enum in content.config.ts)
+export const ARTICLE_CATEGORIES: Record<string, string> = {
+	penerbitan: 'Penerbitan',
+	penulisan: 'Penulisan',
+	komunikasi: 'Komunikasi & Penyampaian',
+	strategik: 'Strategi & Pemasaran',
+	umum: 'Umum',
+};
+
+// Per-category CTA target (where an article funnels the reader next)
+export const ARTICLE_CTA: Record<string, { href: string; label: string }> = {
+	penerbitan: { href: '/penerbitan', label: 'Lihat Servis Penerbitan' },
+	penulisan: { href: '/program', label: 'Lihat Program Latihan' },
+	komunikasi: { href: '/program', label: 'Lihat Program Latihan' },
+	strategik: { href: '/program', label: 'Lihat Program Latihan' },
+	umum: { href: '/hubungi', label: 'Hubungi Kami' },
+};

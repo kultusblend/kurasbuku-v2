@@ -1,17 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { MODULES } from '../../consts';
+import { ARTICLE_CATEGORIES } from '../../consts';
 import copy from '../../content/data/pages/artikel.json';
 
-const allPosts = await getCollection('blog', ({ data }) => !data.draft).catch(() => []);
+const allPosts = await getCollection('blog', ({ data }) =>
+	import.meta.env.PROD ? !data.draft : true
+).catch(() => []);
 const posts = allPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const formatter = new Intl.DateTimeFormat('ms-MY', { year: 'numeric', month: 'long', day: 'numeric' });
 
 const topics = [
-	{ key: 'penulisan', label: 'Penulisan & Dokumentasi', desc: 'Teknik merangka kertas putih, dokumen dasar, dan laporan korporat yang jelas.' },
-	{ key: 'penerbitan', label: 'Penerbitan Korporat', desc: 'Workflow penerbitan dalaman, standard editorial, dan produksi bertaraf premium.' },
-	{ key: 'strategik', label: 'Komunikasi Strategik', desc: 'Messaging, perhubungan media, dan pembinaan reputasi organisasi.' },
+	{ key: 'penerbitan', label: 'Penerbitan Buku', desc: 'Daripada laporan tahunan dan buku korporat hingga menerbitkan buku pertama anda sendiri.' },
+	{ key: 'penulisan', label: 'Kemahiran Penulisan', desc: 'Teknik menulis berkesan, memilih kursus penulisan, dan membina disiplin sebagai penulis.' },
+	{ key: 'komunikasi', label: 'Komunikasi & Penyampaian', desc: 'Yakin bercakap depan kamera, menjadi moderator majlis, dan membina persona profesional.' },
 ];
 ---
 
@@ -40,7 +42,7 @@ const topics = [
 						<li class="article-card reveal" style={`--reveal-delay: ${i * 80}ms;`}>
 							<a href={`/artikel/${post.id}/`}>
 								<p class="article-meta">
-									<span class="article-topic">{MODULES[post.data.module as keyof typeof MODULES]?.label ?? 'Umum'}</span>
+									<span class="article-topic">{ARTICLE_CATEGORIES[post.data.module] ?? 'Umum'}</span>
 									<time datetime={post.data.pubDate.toISOString()}>{formatter.format(post.data.pubDate)}</time>
 								</p>
 								<h2>{post.data.title}</h2>
