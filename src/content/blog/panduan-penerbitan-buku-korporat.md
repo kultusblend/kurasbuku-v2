@@ -2,6 +2,7 @@
 title: "Panduan Lengkap Penerbitan Buku Korporat di Malaysia"
 description: "Panduan menyeluruh penerbitan buku korporat di Malaysia: jenis buku, proses dari konsep ke edaran, kos, jangka masa, dan bila perlu penerbit profesional."
 pubDate: 2026-04-08
+heroImage: /images/blog/panduan-penerbitan-buku-korporat.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [penerbitan korporat, buku korporat, penerbitan buku, isbn malaysia, laporan tahunan, buku peringatan]

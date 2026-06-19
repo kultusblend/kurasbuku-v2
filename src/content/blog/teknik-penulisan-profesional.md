@@ -2,6 +2,7 @@
 title: "Teknik Penulisan Profesional yang Ramai Terlepas Pandang"
 description: "Pelajari teknik penulisan profesional yang praktikal: dari bina hook pembuka, susun rangka, guna suara aktif, hingga sunting tanpa belas kasihan. Sesuai untuk individu dan profesional korporat."
 pubDate: 2026-06-11
+heroImage: /images/blog/teknik-penulisan-profesional.webp
 module: penulisan
 author: hafiz-latiff
 tags: [teknik penulisan, penulisan berkesan, kemahiran menulis, penulisan profesional, suara aktif, penulisan korporat]

@@ -2,6 +2,7 @@
 title: "Panduan Menerbitkan Buku Pertama Anda di Malaysia"
 description: "Cara terbitkan buku sendiri di Malaysia: pilihan laluan, langkah manuskrip ke cetakan, kos, ISBN, pemasaran, dan kesilapan lazim penulis baharu."
 pubDate: 2026-05-20
+heroImage: /images/blog/panduan-menerbitkan-buku-pertama.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [terbit buku sendiri, self publishing, penulis baharu, menerbitkan buku, cara terbitkan buku, penerbitan malaysia]

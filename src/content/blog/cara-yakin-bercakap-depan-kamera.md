@@ -2,6 +2,7 @@
 title: "Cara Yakin Bercakap Depan Kamera"
 description: "Panduan praktikal cara yakin bercakap depan kamera: persediaan, teknik penyampaian, cara atasi gementar, dan peralatan asas untuk profesional Malaysia."
 pubDate: 2026-06-13
+heroImage: /images/blog/cara-yakin-bercakap-depan-kamera.webp
 module: komunikasi
 author: hafiz-latiff
 tags: [bercakap depan kamera, yakin depan kamera, public speaking, video, komunikasi, personal branding]

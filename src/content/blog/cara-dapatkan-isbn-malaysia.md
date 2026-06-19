@@ -2,6 +2,7 @@
 title: "Cara Dapatkan ISBN di Malaysia: Langkah demi Langkah"
 description: "Panduan lengkap cara dapatkan ISBN di Malaysia secara percuma melalui Perpustakaan Negara Malaysia, termasuk langkah permohonan, format berbeza, dan soalan lazim."
 pubDate: 2026-04-22
+heroImage: /images/blog/cara-dapatkan-isbn-malaysia.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [isbn, penerbitan buku, perpustakaan negara malaysia, self-publishing, penerbitan malaysia, buku]

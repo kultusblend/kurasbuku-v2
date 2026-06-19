@@ -2,6 +2,7 @@
 title: "Berapa Kos untuk Menerbitkan Buku Korporat?"
 description: "Faktor yang mempengaruhi kos menerbitkan buku korporat di Malaysia, dari penulisan hingga cetakan. Panduan belanjawan praktikal untuk organisasi dan syarikat."
 pubDate: 2026-04-29
+heroImage: /images/blog/kos-menerbitkan-buku-korporat.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [kos penerbitan, bajet buku, penerbitan korporat, kos menerbitkan buku, penerbitan malaysia, buku korporat]

@@ -2,6 +2,7 @@
 title: "Cara Memasarkan Buku Selepas Diterbitkan"
 description: "Cara memasarkan buku selepas diterbitkan: strategi praktikal dari bina kehadiran, media sosial, majlis pelancaran hingga jualan langsung untuk penulis Malaysia."
 pubDate: 2026-06-06
+heroImage: /images/blog/cara-memasarkan-buku-selepas-terbit.webp
 module: strategik
 author: hafiz-latiff
 tags: [pemasaran buku, jualan buku, promosi buku, pemasaran penulis, pelancaran buku, strategi buku]

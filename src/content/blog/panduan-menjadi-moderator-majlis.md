@@ -2,6 +2,7 @@
 title: "Panduan Menjadi Moderator Majlis dan Forum"
 description: "Panduan lengkap cara jadi moderator majlis dan forum: peranan, persediaan, kemahiran semasa sesi, mengurus situasi sukar, dan etika moderator profesional."
 pubDate: 2026-06-15
+heroImage: /images/blog/panduan-menjadi-moderator-majlis.webp
 module: komunikasi
 author: hafiz-latiff
 tags: [moderator, majlis, forum, pengacaraan, komunikasi, fasilitasi]

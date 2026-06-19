@@ -2,6 +2,7 @@
 title: "Membina Persona Profesional di Media Sosial"
 description: "Pelajari cara membina persona media sosial yang kuat untuk personal branding yang berkesan: langkah praktikal, kesilapan yang perlu dielak, dan cara mengukur kemajuan."
 pubDate: 2026-06-17
+heroImage: /images/blog/membina-persona-profesional-media-sosial.webp
 module: komunikasi
 author: hafiz-latiff
 tags: [persona media sosial, personal branding, jenama peribadi, media sosial, komunikasi profesional, pembinaan imej]

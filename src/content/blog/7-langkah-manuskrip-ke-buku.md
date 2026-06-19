@@ -2,6 +2,7 @@
 title: "7 Langkah daripada Manuskrip ke Buku Bercetak"
 description: "Panduan lengkap proses penerbitan buku dari manuskrip ke buku bercetak: penyuntingan, ISBN, reka bentuk, proofreading, cetakan, dan edaran. Ikut 7 langkah ini."
 pubDate: 2026-06-03
+heroImage: /images/blog/7-langkah-manuskrip-ke-buku.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [proses penerbitan, manuskrip, penerbitan buku, isbn malaysia, reka bentuk buku, edaran buku]

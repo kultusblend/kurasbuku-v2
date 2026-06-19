@@ -2,6 +2,7 @@
 title: "Kursus Penulisan: Cara Pilih yang Betul-betul Berbaloi"
 description: "Panduan memilih kursus penulisan yang tepat di Malaysia. Ketahui kriteria penting, jenis kursus, red flags, dan soalan yang perlu ditanya sebelum mendaftar."
 pubDate: 2026-06-09
+heroImage: /images/blog/cara-pilih-kursus-penulisan.webp
 module: penulisan
 author: hafiz-latiff
 tags: [kursus penulisan, bengkel penulisan, belajar menulis, penulisan profesional, kemahiran komunikasi, kursus bahasa]

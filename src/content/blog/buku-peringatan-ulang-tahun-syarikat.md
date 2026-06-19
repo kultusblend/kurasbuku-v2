@@ -2,6 +2,7 @@
 title: "Buku Peringatan Ulang Tahun Syarikat: Merakam Sejarah Organisasi"
 description: "Panduan lengkap menerbitkan buku peringatan ulang tahun syarikat: kandungan, proses, cabaran dan cara membina warisan organisasi yang berkekalan."
 pubDate: 2026-05-06
+heroImage: /images/blog/buku-peringatan-ulang-tahun-syarikat.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [buku peringatan, buku ulang tahun, commemorative book, penerbitan korporat, sejarah organisasi, warisan korporat]
