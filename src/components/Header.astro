@@ -17,7 +17,6 @@ const navItems = [
 	<div class="container header-row">
 		<a href="/" class="brand" aria-label={`Halaman utama ${SITE_TITLE}`}>
 			<img src="/logo.png" alt="" class="brand-logo" width="48" height="41" />
-			<span class="brand-name">{SITE_TITLE}</span>
 		</a>
 
 		<nav class="primary-nav" aria-label="Navigasi utama">
@@ -83,16 +82,6 @@ const navItems = [
 		display: block;
 		width: auto;
 		height: 38px;
-	}
-	.brand-name {
-		font-family: var(--font-display);
-		font-weight: 700;
-		font-size: 1.25rem;
-		letter-spacing: var(--tracking-snug);
-		white-space: nowrap;
-	}
-	@media (max-width: 400px) {
-		.brand-name { font-size: 1.05rem; }
 	}
 
 	.primary-nav ul {
