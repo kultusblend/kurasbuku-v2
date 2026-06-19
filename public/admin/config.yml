@@ -375,9 +375,14 @@ collections:
       - name: trustedBy
         label: Logo Klien / Rakan
         file: src/content/data/trusted-by.json
+        media_folder: /public/logos
+        public_folder: /logos
         fields:
-          - label: Senarai Nama
+          - label: Senarai Logo
             name: logos
             widget: list
-            label_singular: Nama
-            field: { label: Nama, name: item, widget: string }
+            label_singular: Logo
+            summary: '{{fields.name}}'
+            fields:
+              - { label: Nama organisasi, name: name, widget: string }
+              - { label: Fail logo, name: file, widget: image }

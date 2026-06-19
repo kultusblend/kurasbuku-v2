@@ -77,13 +77,13 @@ const ICON_PATHS: Record<string, string> = {
 		<div class="trust-marquee reveal">
 			<div class="trust-track">
 				<ul class="trust-group">
-					{TRUSTED_BY.map((name) => (
-						<li class="trust-logo"><span>{name}</span></li>
+					{TRUSTED_BY.map((logo) => (
+						<li class="trust-logo"><img src={logo.file} alt={logo.name} loading="eager" decoding="async" /></li>
 					))}
 				</ul>
 				<ul class="trust-group" aria-hidden="true">
-					{TRUSTED_BY.map((name) => (
-						<li class="trust-logo"><span>{name}</span></li>
+					{TRUSTED_BY.map((logo) => (
+						<li class="trust-logo"><img src={logo.file} alt="" aria-hidden="true" loading="eager" decoding="async" /></li>
 					))}
 				</ul>
 			</div>
@@ -446,19 +446,23 @@ const ICON_PATHS: Record<string, string> = {
 	}
 	.trust-logo {
 		flex: 0 0 auto;
-		font-family: var(--font-display);
-		font-weight: 700;
-		font-size: 1.125rem;
-		white-space: nowrap;
-		text-align: center;
-		color: var(--ink-300);
-		padding: 1rem 1.75rem;
-		border: 1px dashed var(--ash-300);
-		border-radius: var(--radius);
-		filter: grayscale(1);
-		transition: color var(--transition-fast), border-color var(--transition-fast);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 64px;
+		padding: 0 2rem;
 	}
-	.trust-logo:hover { color: var(--ink-500); border-color: var(--ash-300); }
+	.trust-logo img {
+		max-height: 50px;
+		max-width: 180px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		filter: grayscale(1);
+		opacity: 0.6;
+		transition: opacity var(--transition-fast), filter var(--transition-fast);
+	}
+	.trust-logo img:hover { filter: grayscale(0); opacity: 1; }
 	@keyframes trust-scroll {
 		to { transform: translateX(calc(-50% - 0.75rem)); }
 	}

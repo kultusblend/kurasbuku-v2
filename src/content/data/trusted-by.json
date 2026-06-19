@@ -1,14 +1,14 @@
 {
   "logos": [
-    "Universiti Malaysia Kelantan",
-    "Universiti Malaysia Sabah",
-    "DBP",
-    "ITBM",
-    "Kota Buku",
-    "Universiti Sains Islam Malaysia",
-    "Universiti Malaya",
-    "KKM",
-    "IKIM",
-    "Majlis Sukan Negara"
+    { "name": "Universiti Malaysia Kelantan", "file": "/logos/umk.png" },
+    { "name": "Universiti Malaysia Sabah", "file": "/logos/ums.png" },
+    { "name": "Dewan Bahasa dan Pustaka", "file": "/logos/dbp.png" },
+    { "name": "Institut Terjemahan & Buku Malaysia", "file": "/logos/itbm.png" },
+    { "name": "Perbadanan Kota Buku", "file": "/logos/kota-buku.png" },
+    { "name": "Universiti Sains Islam Malaysia", "file": "/logos/usim.png" },
+    { "name": "Universiti Malaya", "file": "/logos/um.png" },
+    { "name": "Kementerian Kesihatan Malaysia", "file": "/logos/kkm.png" },
+    { "name": "Institut Kefahaman Islam Malaysia", "file": "/logos/ikim.png" },
+    { "name": "Majlis Sukan Negara", "file": "/logos/msn.png" }
   ]
 }
