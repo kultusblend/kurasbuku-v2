@@ -1,14 +1,14 @@
 {
   "logos": [
-    { "name": "Universiti Malaysia Kelantan", "file": "/logos/umk.png" },
-    { "name": "Universiti Malaysia Sabah", "file": "/logos/ums.png" },
-    { "name": "Dewan Bahasa dan Pustaka", "file": "/logos/dbp.png" },
-    { "name": "Institut Terjemahan & Buku Malaysia", "file": "/logos/itbm.png" },
-    { "name": "Perbadanan Kota Buku", "file": "/logos/kota-buku.png" },
-    { "name": "Universiti Sains Islam Malaysia", "file": "/logos/usim.png" },
-    { "name": "Universiti Malaya", "file": "/logos/um.png" },
-    { "name": "Kementerian Kesihatan Malaysia", "file": "/logos/kkm.png" },
-    { "name": "Institut Kefahaman Islam Malaysia", "file": "/logos/ikim.png" },
-    { "name": "Majlis Sukan Negara", "file": "/logos/msn.png" }
+    { "name": "Universiti Malaysia Kelantan", "file": "/logos/umk.webp" },
+    { "name": "Universiti Malaysia Sabah", "file": "/logos/ums.webp" },
+    { "name": "Dewan Bahasa dan Pustaka", "file": "/logos/dbp.webp" },
+    { "name": "Institut Terjemahan & Buku Malaysia", "file": "/logos/itbm.webp" },
+    { "name": "Perbadanan Kota Buku", "file": "/logos/kota-buku.webp" },
+    { "name": "Universiti Sains Islam Malaysia", "file": "/logos/usim.webp" },
+    { "name": "Universiti Malaya", "file": "/logos/um.webp" },
+    { "name": "Kementerian Kesihatan Malaysia", "file": "/logos/kkm.webp" },
+    { "name": "Institut Kefahaman Islam Malaysia", "file": "/logos/ikim.webp" },
+    { "name": "Majlis Sukan Negara", "file": "/logos/msn.webp" }
   ]
 }
