@@ -2,9 +2,9 @@
   "cases": [
     {
       "metric": "40%",
-      "label": "Pengurangan masa editing",
+      "label": "Pengurangan masa suntingan",
       "tag": "Latihan Penulisan",
-      "quote": "Latihan Penerbitan Kuras Buku menyusun semula proses pelaporan jabatan kami. Editing time turun 40% dan kualiti dokumen lebih konsisten.",
+      "quote": "Latihan Penerbitan Kuras Buku menyusun semula proses pelaporan jabatan kami. Masa suntingan turun 40% dan kualiti dokumen lebih konsisten.",
       "attribution": "Pengarah, Sebuah Agensi Kerajaan Persekutuan",
       "cabaran": "Proses pelaporan jabatan mengambil masa berminggu kerana setiap draf melalui pusingan suntingan yang panjang dan tidak konsisten antara pegawai.",
       "pendekatan": "Kami audit aliran kerja sedia ada, membina templat berstruktur, dan melatih pasukan dengan standard editorial yang seragam."
@@ -13,8 +13,8 @@
       "metric": "3X",
       "label": "Output newsletter dipertingkatkan",
       "tag": "Strategi Penerbitan",
-      "quote": "Sebelum program, newsletter kami terbit setiap suku. Selepas latihan strategi penerbitan, kami konsisten terbit setiap bulan tanpa tambah pasukan.",
-      "attribution": "Head of Communications, GLC Tenaga",
+      "quote": "Sebelum program, newsletter kami terbit setiap suku tahunan. Selepas latihan strategi penerbitan, kami konsisten terbit setiap bulan tanpa tambah pasukan.",
+      "attribution": "Head of Communications, Sebuah Syarikat Penerbitan",
       "cabaran": "Newsletter organisasi terbit tidak menentu kerana ketiadaan workflow yang jelas dan pergantungan pada segelintir individu.",
       "pendekatan": "Kami terapkan rantaian pengeluaran penerbitan standard industri dan style guide yang membolehkan pasukan terbit secara konsisten."
     },

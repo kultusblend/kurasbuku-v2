@@ -6,7 +6,7 @@
     "headlineAccent": "Pemacu Suara Anda.",
     "sub": "Program latihan untuk individu, profesional, dan organisasi. Dari membina persona dan suara peribadi, hingga melengkapkan pasukan anda dengan kemahiran menulis, bercakap, dan berkomunikasi dengan penuh yakin.",
     "ctaPrimary": "Sertai Program",
-    "ctaSecondary": "Mohon Cadangan Korporat",
+    "ctaSecondary": "Undangan Program",
     "stats": [
       { "label": "Sejak", "value": "2015" },
       { "label": "Pengalaman", "value": "10 tahun" },
@@ -25,9 +25,9 @@
     "cardCta": "Butiran program →"
   },
   "methodology": {
-    "eyebrow": "Metodologi Penerbitan Kuras Buku",
+    "eyebrow": "Metodologi Latihan Kuras Buku",
     "heading": "Tiga Langkah Berstruktur. Hasil Tuntas yang Terukur.",
-    "lede": "Metodologi Penerbitan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.",
+    "lede": "Metodologi Latihan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.",
     "flow": ["Penilaian", "Latihan", "Pelaksanaan", "Hasil Tuntas"]
   },
   "enterprise": {
@@ -46,8 +46,8 @@
   },
   "legacy": {
     "eyebrow": "Bukti Kepakaran Akar Umbi",
-    "heading": "Akar Kami, Kepakaran Anda: Servis Penerbitan Bersepadu.",
-    "lede": "Sebelum melatih pasukan anda, kami terlebih dahulu mengotorkan tangan di lapangan. Sebagai sebuah rumah penerbitan yang aktif, kami kekal menawarkan perkhidmatan teknikal dari hujung ke hujung. Sama ada anda perlukan latihan atau pelaksanaan penuh, jentera kami sentiasa bersedia.",
+    "heading": "Gerak Kerja Penerbitan, Rapi dari Hulu ke Hilir.",
+    "lede": "Setiap naskhah yang keluar dari tangan kami menempuh proses kerja yang teliti dan berdisiplin. Dari suntingan patah kata hingga kawalan mutu cetakan, kami menjaga setiap peringkat dengan cermat, kerana mutu akhir sesebuah karya ditentukan oleh ketelitian pada setiap langkahnya.",
     "services": [
       { "num": "01", "icon": "pen", "title": "Suntingan Tepat, Bebas Ralat", "desc": "Kami meneliti setiap patah kata, nahu, dan frasa. Sama ada laporan tahunan atau buku polisi, kami pastikan setiap naskhah tajam, bebas cela, dan mengekalkan laras bahasa rasmi organisasi anda." },
       { "num": "02", "icon": "layout", "title": "Reka Letak Kemas, Sedap Ditelaah", "desc": "Susun atur bukan sekadar lambakan teks pada helaian. Kami merangka hierarki tipografi dan reka letak yang profesional agar dokumen tebal menjadi mesra pembaca, kemas, dan mudah difahami." },
@@ -58,7 +58,7 @@
   "cases": {
     "eyebrow": "Hasil yang Diukur",
     "heading": "Kajian kes organisasi.",
-    "lede": "Klien kami diukur dengan metric, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar."
+    "lede": "Klien kami diukur dengan metrik, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar."
   },
   "leadgen": {
     "eyebrow": "Borang Permohonan",
@@ -66,7 +66,6 @@
     "body": "Rintis transformasi hari ini. Hubungi kami untuk merangka modul latihan dan penerbitan yang paling selari dengan aspirasi organisasi anda.",
     "points": [
       "Proposal khas mengikut keperluan organisasi anda",
-      "Kompatibel dengan klaim HRD Corp",
       "Boleh dijalankan secara on-site atau hybrid"
     ],
     "labelName": "Nama penuh",
