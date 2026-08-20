@@ -25,7 +25,7 @@ ${programLinks}
 - [Wawasan & Artikel](${base}/artikel): Pemikiran tentang komunikasi organisasi.
 
 ## Hubungan
-- [Hubungi / Undangan Program](${base}/hubungi): Borang permohonan cadangan korporat.
+- [Hubungi / Undangan Program](${base}/hubungi): Borang permohonan cadangan program latihan.
 
 ## Polisi
 - [Polisi Privasi](${base}/privasi)
