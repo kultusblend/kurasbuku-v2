@@ -11,7 +11,7 @@ draft: false
 ---
 Ramai orang mampu menulis, tetapi tidak ramai yang benar-benar berkesan dalam penulisan mereka.
 
-Perbezaan antara tulisan yang dibaca hingga habis dan tulisan yang ditinggalkan selepas dua perenggan bukan terletak pada bakat semula jadi. Sebaliknya, ia terletak pada teknik, iaitu kebiasaan dan disiplin yang dipelajari serta diamalkan secara konsisten. Namun begitu, banyak teknik penulisan berkesan tidak pernah diajar secara formal, sama ada di sekolah mahupun di tempat kerja.
+Perbezaan antara tulisan yang dibaca hingga habis dan tulisan yang ditinggalkan selepas dua perenggan bukan terletak pada bakat semula jadi, tetapi pada teknik: kebiasaan dan disiplin yang dipelajari serta diamalkan secara konsisten. Namun begitu, banyak teknik penulisan berkesan tidak pernah diajar secara formal, sama ada di sekolah mahupun di tempat kerja.
 
 Artikel ini mengumpulkan teknik penulisan profesional yang sering terlepas pandang, lengkap dengan contoh ringkas agar anda dapat mengaplikasikannya dengan serta-merta.
 
@@ -45,7 +45,7 @@ Lima minit untuk membuat rangka boleh menjimatkan 30 minit semasa menyunting.
 
 ## 3. Ayat Pendek dan Jelas Menang Setiap Kali
 
-Ayat yang panjang bukan tanda kepandaian. Sebaliknya, ia adalah tanda penulis belum selesai berfikir.
+Ayat yang panjang bukan tanda kepandaian. Selalunya ia tanda penulis belum selesai berfikir.
 
 Lihat perbezaan ini:
 
@@ -97,7 +97,7 @@ Semasa menyunting, tanyakan soalan ini untuk setiap ayat dan setiap perenggan:
 - Adakah perkara ini sudah dinyatakan sebelum ini?
 - Bolehkah ini diringkaskan tanpa kehilangan maksud asalnya?
 
-Penulis profesional sering membuang 20 hingga 30 peratus daripada draf pertama mereka. Ini bukan pembaziran, sebaliknya ia adalah proses pemurnian. Setiap perkataan yang kekal dalam naskhah akhir perlu ada sebab untuk berada di sana.
+Penulis profesional sering membuang 20 hingga 30 peratus daripada draf pertama mereka. Ini bukan pembaziran. Ini penapisan. Setiap perkataan yang kekal dalam naskhah akhir perlu ada sebab untuk berada di sana.
 
 ## 8. Baca Kuat untuk Semak Irama
 
@@ -111,9 +111,9 @@ Ini adalah teknik yang digunakan oleh penulis buku, wartawan, dan penulis iklan 
 
 ## Disiplin Lebih Penting daripada Bakat
 
-Teknik penulisan bukanlah rahsia. Ia bukan sesuatu yang hanya dimiliki oleh segelintir "orang berbakat." Sebaliknya, ia adalah kemahiran yang boleh dipelajari, dilatih, dan diasah dari semasa ke semasa.
+Teknik penulisan bukanlah rahsia. Ia bukan milik segelintir orang berbakat. Ia kemahiran yang boleh dipelajari, dilatih, dan diasah dari semasa ke semasa.
 
-Perbezaan antara penulis yang baik dan penulis yang hebat bukan terletak pada kosa kata yang lebih luas atau idea yang lebih besar. Sebaliknya, ia terletak pada disiplin: disiplin untuk membuat rangka sebelum menulis, disiplin untuk menyunting dengan teliti, dan disiplin untuk menulis dengan pembaca dalam fikiran.
+Perbezaan antara penulis yang baik dan penulis yang hebat bukan pada kosa kata yang lebih luas atau idea yang lebih besar, tetapi pada disiplin: disiplin untuk membuat rangka sebelum menulis, disiplin untuk menyunting dengan teliti, dan disiplin untuk menulis dengan pembaca dalam fikiran.
 
 Jika anda ingin memperdalam kemahiran ini dengan panduan yang lebih berstruktur, lihat [cara memilih kursus penulisan yang sesuai](/artikel/cara-pilih-kursus-penulisan/) sebelum mendaftar mana-mana program. Kuras Buku turut menawarkan [Program Resensi](/program/resensi) untuk mereka yang inginkan latihan penulisan dalam format yang lebih intensif dan berfokus.
 

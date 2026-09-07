@@ -10,7 +10,7 @@ export const GET: APIRoute = async (context) => {
 	);
 
 	return rss({
-		title: `${SITE_ORG} — Artikel`,
+		title: `${SITE_ORG}: Artikel`,
 		description:
 			'Wawasan tentang penerbitan buku, kemahiran penulisan, dan komunikasi profesional daripada Penerbitan Kuras Buku.',
 		site: context.site ?? 'https://kurasbuku.com',

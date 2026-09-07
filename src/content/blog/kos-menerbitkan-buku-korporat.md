@@ -17,7 +17,7 @@ Lebih bermanfaat daripada mencari satu angka ialah memahami **komponen kos** yan
 
 ## Dua Kategori Besar: Kos Kandungan vs Kos Pengeluaran
 
-Sebelum melangkah lebih jauh, penting untuk difahami bahawa kos menerbitkan buku korporat terbahagi kepada dua blok besar yang berbeza sifatnya.
+Kos menerbitkan buku korporat terbahagi kepada dua blok besar yang berbeza sifatnya.
 
 **Kos kandungan** merangkumi semua kerja untuk menghasilkan isi buku: penulisan, penyuntingan, penterjemahan, dan pengumpulan maklumat. Ini melibatkan kerja intelektual, dan kosnya bergantung pada kerumitan kandungan serta kepakaran yang diperlukan.
 
@@ -37,7 +37,7 @@ Organisasi yang sudah mempunyai banyak bahan bertulis (laporan, artikel, ucapan)
 
 Jika organisasi mempunyai penulis dalaman atau mahu menulis sendiri, kos penulisan mungkin sifar. Tetapi jika memerlukan **penulis upahan (ghostwriter)** profesional, ini merupakan salah satu komponen kos yang terbesar, dan wajar kerana ia memerlukan kepakaran tinggi.
 
-Penulis upahan yang baik bukan sekadar menulis, mereka perlu memahami nada organisasi, menemu bual pemimpin, menyusun naratif, dan memastikan buku tersebut menyampaikan mesej yang konsisten. Kos kerja ini sangat bergantung pada pengalaman penulis, kompleksiti kandungan, dan tempoh masa yang diberikan.
+Penulis upahan yang baik bukan setakat menulis: mereka perlu memahami nada organisasi, menemu bual pemimpin, menyusun naratif, dan memastikan buku tersebut menyampaikan mesej yang konsisten. Kos kerja ini sangat bergantung pada pengalaman penulis, kompleksiti kandungan, dan tempoh masa yang diberikan.
 
 ### 3. Penyuntingan dan Pruf-Baca
 
@@ -128,13 +128,13 @@ Buku korporat adalah pelaburan dalam imej dan legasi organisasi. Terdapat situas
 -   Buku yang mewakili kepakaran atau autoriti kepimpinan organisasi
 -   Buku yang dirancang untuk edaran luas kepada awam atau media
 
-Untuk situasi-situasi ini, kualiti bukan pilihan, ia adalah keperluan. Buku yang kelihatan murah atau tidak teliti akan menyampaikan mesej yang salah mengenai organisasi anda.
+Untuk situasi seperti ini, kualiti tidak boleh dikompromi. Buku yang kelihatan murah atau tidak teliti akan menyampaikan mesej yang salah mengenai organisasi anda.
 
 Sebaliknya, bagi buku edaran dalaman atau buku yang skopnya kecil, anda mungkin boleh menguruskannya dengan sumber dalaman dan vendor percetakan sahaja.
 
 Jika anda mengurus projek penerbitan buku korporat untuk kali pertama, lihat juga [perkhidmatan penerbitan korporat](/penerbitan) kami untuk memahami lebih lanjut tentang apa yang biasanya terlibat dalam projek sebenar.
 
-## Kesimpulan
+## Fahami Nilai Dahulu, Barulah Angka
 
 Tiada formula tunggal untuk menentukan kos penerbitan buku korporat. Angka sebenar bergantung pada skop kandungan, spesifikasi reka bentuk, kualiti bahan, dan kuantiti cetakan. Yang lebih penting daripada mencari angka yang murah ialah memahami **nilai yang ingin anda capai** melalui buku tersebut, kemudian membina belanjawan yang sepadan dengan nilai itu.
 

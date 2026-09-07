@@ -91,7 +91,7 @@ Maka, **tiga ISBN yang berbeza** diperlukan, satu untuk setiap format. Anda perl
 
 **CIP** (Cataloguing-in-Publication) atau dalam Bahasa Melayu, Data Katalog Dalam Terbitan, merupakan maklumat bibliografi yang disediakan oleh perpustakaan sebelum sesebuah buku diterbitkan. Data ini biasanya tercetak di halaman hak cipta buku.
 
-Di Malaysia, data CIP boleh dimohon melalui PNM secara serentak dengan permohonan ISBN atau secara berasingan. Data CIP membantu perpustaraan mengkatalogkan buku anda dengan lebih mudah dan membolehkan buku anda dimasukkan ke dalam sistem katalog perpustakaan dengan cepat.
+Di Malaysia, data CIP boleh dimohon melalui PNM secara serentak dengan permohonan ISBN atau secara berasingan. Data CIP membantu perpustakaan mengkatalogkan buku anda dengan lebih mudah dan membolehkan buku anda dimasukkan ke dalam sistem katalog perpustakaan dengan cepat.
 
 Untuk buku yang disasarkan untuk koleksi perpustakaan, data CIP sangat digalakkan.
 
@@ -139,7 +139,7 @@ Format lama ISBN menggunakan 10 digit (ISBN-10), manakala format semasa yang dig
 
 Sentiasa semak laman web rasmi **Perpustakaan Negara Malaysia** di pnm.gov.my untuk prosedur dan keperluan terkini. Prosedur mungkin dikemas kini dari semasa ke semasa, dan maklumat rasmi daripada PNM adalah yang paling tepat.
 
-## Kesimpulan
+## ISBN Bukan Halangan
 
 Mendapatkan ISBN untuk buku anda di Malaysia bukanlah proses yang menakutkan. Ia percuma, sistematik, dan boleh dilakukan sendiri terus dengan Perpustakaan Negara Malaysia. Kuncinya ialah pastikan anda mendaftar sebagai penerbit dahulu, sediakan maklumat buku yang lengkap, dan ingat bahawa setiap format memerlukan ISBN tersendiri.
 

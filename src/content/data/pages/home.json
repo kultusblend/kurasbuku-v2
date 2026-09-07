@@ -27,13 +27,13 @@
   "methodology": {
     "eyebrow": "Metodologi Latihan Kuras Buku",
     "heading": "Tiga Langkah Berstruktur. Hasil Tuntas yang Terukur.",
-    "lede": "Metodologi Latihan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Kami tidak sekadar berkongsi teori; kami membentuk strategi.",
+    "lede": "Metodologi Latihan Kuras Buku dibina atas asas kajian sarjana penerbitan dan pengalaman lapangan perundingan komunikasi sebenar. Setiap kaedah sudah diuji pada projek sebenar sebelum dibawa ke bilik latihan.",
     "flow": ["Penilaian", "Latihan", "Pelaksanaan", "Hasil Tuntas"]
   },
   "enterprise": {
     "eyebrow": "Servis Tambahan",
     "heading": "Penerbitan Korporat Menyeluruh: Dari Idea Coretan ke Naskhah Edaran.",
-    "body": "Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Dari suntingan manuskrip yang jitu, reka letak berwibawa, hingga pengurusan cetakan pukal. Biar kami uruskan kerumitan teknikal, anda fokus pada visi besar organisasi.",
+    "body": "Jika projek anda menuntut pelaksanaan pakar luar, rumah penerbitan kami bersedia beroperasi pada kapasiti optimum. Dari suntingan manuskrip yang jitu, reka letak berwibawa, hingga pengurusan cetakan pukal. Biar kami uruskan kerja teknikal, pasukan anda kekal fokus pada kerja teras.",
     "list": [
       "Suntingan manuskrip profesional",
       "Susun atur dan reka bentuk muka surat",
@@ -58,14 +58,14 @@
   "cases": {
     "eyebrow": "Hasil yang Diukur",
     "heading": "Kajian kes organisasi.",
-    "lede": "Klien kami diukur dengan metrik, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar."
+    "lede": "Hasil kerja kami diukur dengan metrik, bukan janji. Berikut adalah perbezaan yang program kami bawa kepada organisasi sebenar."
   },
   "leadgen": {
     "eyebrow": "Borang Permohonan",
     "heading": "Sedia melonjakkan keupayaan komunikasi pasukan anda?",
-    "body": "Rintis transformasi hari ini. Hubungi kami untuk merangka modul latihan dan penerbitan yang paling selari dengan aspirasi organisasi anda.",
+    "body": "Hubungi kami untuk merangka modul latihan dan penerbitan yang paling selari dengan aspirasi organisasi anda.",
     "points": [
-      "Proposal khas mengikut keperluan organisasi anda",
+      "Cadangan khas mengikut keperluan organisasi anda",
       "Boleh dijalankan secara on-site atau hybrid"
     ],
     "labelName": "Nama penuh",
@@ -77,6 +77,6 @@
     "labelMessage": "Keperluan khusus (pilihan)",
     "messagePlaceholder": "Cth: latihan untuk pasukan 25 orang, sesi on-site di KL, fokus pada penulisan laporan tahunan…",
     "submit": "Hantar Permohonan",
-    "note": "Maklumat anda hanya digunakan untuk respons proposal. Tiada senarai mel atau pemasaran tambahan."
+    "note": "Maklumat anda hanya digunakan untuk membalas permohonan ini. Tiada senarai mel atau pemasaran tambahan."
   }
 }

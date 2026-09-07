@@ -6,20 +6,20 @@ heroImage: /images/blog/panduan-penerbitan-buku-korporat.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [penerbitan korporat, buku korporat, penerbitan buku, isbn malaysia, laporan tahunan, buku peringatan]
-tldr: "Penerbitan buku korporat bukan sekadar mencetak katalog. Artikel ini merangkumi jenis buku, proses penerbitan, dan pertimbangan utama sebelum organisasi anda mula."
+tldr: "Penerbitan buku korporat jauh berbeza daripada kerja mencetak katalog. Artikel ini merangkumi jenis buku, proses penerbitan, dan pertimbangan utama sebelum organisasi anda mula."
 draft: false
 ---
-Banyak organisasi, sama ada syarikat swasta, agensi kerajaan, mahupun universiti, mempunyai buku yang perlu diterbitkan tetapi tidak tahu di mana hendak bermula. Proses penerbitan buku korporat melibatkan lebih daripada sekadar meminta seseorang menulis dan terus menghantar ke percetakan. Ia memerlukan perancangan yang teliti, pasukan yang tepat, dan pemahaman tentang keperluan sebenar pembaca sasaran.
+Banyak organisasi, sama ada syarikat swasta, agensi kerajaan, mahupun universiti, mempunyai buku yang perlu diterbitkan tetapi tidak tahu di mana hendak bermula. Proses penerbitan buku korporat tidak semudah meminta seseorang menulis dan terus menghantar ke percetakan. Ia memerlukan perancangan yang teliti, pasukan yang tepat, dan pemahaman tentang keperluan sebenar pembaca sasaran.
 
 Artikel ini menyediakan gambaran menyeluruh mengenai penerbitan buku korporat di Malaysia: dari memahami jenis buku yang sesuai untuk organisasi anda, sehingga proses asas dari konsep hingga edaran, dan masa yang tepat untuk mendapatkan bantuan penerbit profesional.
 
 ## Apa Itu Buku Korporat dan Jenis-Jenisnya
 
-**Buku korporat** merujuk kepada sebarang penerbitan bercetak atau digital yang dihasilkan oleh sesebuah organisasi dengan tujuan komunikasi, dokumentasi, atau pembinaan jenama. Ia bukan buku jualan umum, tetapi juga bukan sekadar bahan pemasaran biasa.
+**Buku korporat** merujuk kepada sebarang penerbitan bercetak atau digital yang dihasilkan oleh sesebuah organisasi dengan tujuan komunikasi, dokumentasi, atau pembinaan jenama. Ia bukan buku jualan umum, dan bukan juga bahan pemasaran biasa.
 
 Berikut merupakan jenis buku korporat yang paling lazim diterbitkan di Malaysia:
 
-- **Laporan tahunan**: Wajib bagi syarikat awam dan agensi kerajaan tertentu. Merangkumi prestasi kewangan, peristiwa penting, dan hala tuju organisasi. Laporan tahunan yang baik bukan sekadar data semata-mata, malah ia menceritakan perjalanan organisasi sepanjang tahun.
+- **Laporan tahunan**: Wajib bagi syarikat awam dan agensi kerajaan tertentu. Merangkumi prestasi kewangan, peristiwa penting, dan hala tuju organisasi. Laporan tahunan yang baik menceritakan kisah organisasi sepanjang tahun, bukan membentangkan data semata-mata.
 
 - **Buku peringatan atau ulang tahun**: Diterbitkan sempena sambutan jubli syarikat, contohnya 25 tahun, 50 tahun, atau 100 tahun. Merekodkan sejarah, tokoh penting, dan pencapaian bersejarah. Sering dijadikan hadiah kepada pemegang taruh dan rakan kongsi.
 
@@ -105,7 +105,7 @@ Penerbit yang berpengalaman mempunyai rangkaian penulis, editor, pereka, dan pen
 
 Untuk projek laporan tahunan, anda boleh membaca panduan khusus kami: [Cara Menerbitkan Buku Laporan Tahunan](/artikel/cara-menerbitkan-buku-laporan-tahunan/). Dan jika organisasi anda sedang merancang penerbitan sempena jubli syarikat, sila lihat juga: [Panduan Buku Peringatan Ulang Tahun Syarikat](/artikel/buku-peringatan-ulang-tahun-syarikat/).
 
-## Kesimpulan
+## Tiga Kunci Kejayaan
 
 Penerbitan buku korporat merupakan pelaburan dalam imej dan warisan organisasi anda. Sama ada laporan tahunan, buku peringatan, atau coffee table book, buku yang dirancang dan dilaksanakan dengan baik akan memberikan impak yang jauh lebih lama daripada kebanyakan bahan komunikasi lain.
 

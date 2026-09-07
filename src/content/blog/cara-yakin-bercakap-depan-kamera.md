@@ -9,9 +9,9 @@ tags: [bercakap depan kamera, yakin depan kamera, public speaking, video, komuni
 tldr: "Ramai profesional gugup depan kamera kerana tiada maklum balas segera dan terlalu sedar diri. Artikel ini membimbing anda langkah demi langkah: dari persediaan, teknik penyampaian, hingga cara membina keyakinan secara berperingkat."
 draft: false
 ---
-Bayangkan anda diminta merakam video untuk LinkedIn, atau membentangkan laporan melalui rakaman skrin. Anda menekan butang rekod, dan tiba-tiba, semua yang anda rancang hilang begitu sahaja. Mulut terasa kering, pandangan mata tidak menentu, dan suara pula kedengaran janggal di telinga sendiri.
+Anda diminta merakam video untuk LinkedIn, atau membentangkan laporan melalui rakaman skrin. Anda menekan butang rekod, dan tiba-tiba semua yang anda rancang hilang begitu sahaja. Mulut terasa kering, pandangan mata tidak menentu, dan suara pula kedengaran janggal di telinga sendiri.
 
-Anda tidak keseorangan. Bercakap di hadapan kamera adalah kemahiran yang perlu dipelajari dan dilatih, bukan bakat semula jadi yang hanya dimiliki oleh sesetengah orang. Artikel ini akan membimbing anda bermula daripada punca rasa gementar, cara bersedia, teknik penyampaian yang berkesan, sehinggalah kepada latihan berperingkat yang boleh anda mulakan hari ini.
+Perkara ini berlaku kepada kebanyakan orang, termasuk yang petah bercakap di khalayak. Bercakap di hadapan kamera adalah kemahiran yang perlu dipelajari dan dilatih, bukan bakat semula jadi yang hanya dimiliki oleh sesetengah orang. Artikel ini akan membimbing anda bermula daripada punca rasa gementar, cara bersedia, teknik penyampaian yang berkesan, sehinggalah kepada latihan berperingkat yang boleh anda mulakan hari ini.
 
 ## Kenapa Ramai Profesional Gementar Di Hadapan Kamera
 
@@ -115,7 +115,7 @@ Anda tidak memerlukan peralatan mahal untuk bermula. Berikut adalah kombinasi pe
 
 Peningkatan peralatan boleh dilakukan kemudian apabila anda sudah selesa di hadapan kamera. Kandungan dan penyampaian yang baik lebih penting daripada peralatan canggih pada peringkat awal.
 
-## Kesimpulan
+## Latihan Mengalahkan Bakat
 
 Keyakinan bercakap di hadapan kamera dibina melalui latihan berulang, bukan bakat semula jadi. Mulakan dengan memahami punca gementar anda, bersedia dengan isi penting yang jelas, dan mempraktikkan teknik penyampaian secara berperingkat. Setiap rakaman adalah peluang untuk belajar, bukan ujian untuk dinilai.
 

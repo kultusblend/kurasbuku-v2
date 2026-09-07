@@ -86,7 +86,7 @@ Kulit buku merupakan elemen pemasaran yang paling kuat. Reka bentuk kulit yang l
 - Muka belakang: sinopsis, ulasan, kod bar ISBN.
 - Tulang (spine): tajuk dan nama penulis, penting untuk buku yang diletakkan di rak.
 
-Bekerjasamalah dengan pereka yang memahami sasaran pembaca anda. Reka bentuk kulit bukan sekadar cantik, malah ia perlu menyampaikan mesej yang betul kepada sasaran pembaca yang tepat.
+Bekerjasamalah dengan pereka yang memahami sasaran pembaca anda. Reka bentuk kulit yang cantik belum tentu berkesan: ia perlu menyampaikan mesej yang betul kepada sasaran pembaca yang tepat.
 
 ---
 
@@ -144,7 +144,7 @@ Pemasaran buku adalah proses yang berterusan, bukan hanya sekali sahaja. Buku ya
 
 ---
 
-## Kesimpulan
+## Tujuh Langkah, Satu Buku Siap
 
 Proses dari manuskrip ke buku bercetak memerlukan masa, tetapi ia boleh dilalui dengan teratur apabila anda memahami setiap langkah. Secara ringkasnya:
 

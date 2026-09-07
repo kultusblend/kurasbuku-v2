@@ -11,7 +11,7 @@ draft: false
 ---
 Ramai yang menyimpan impian untuk menerbitkan buku. Idea sudah ada, pengalaman sudah cukup, cerita menunggu untuk dikongsi. Namun setiap kali langkah pertama hendak diambil, muncul persoalan yang sama: dari mana perlu bermula?
 
-Perjalanan dari idea ke buku bercetak bukanlah sesuatu yang mustahil. Ia hanya memerlukan peta yang jelas, disiplin yang konsisten, dan kefahaman tentang proses yang perlu dilalui. Artikel ini adalah panduan menyeluruh untuk anda yang sedang merancang untuk menerbitkan buku pertama di Malaysia.
+Dari idea ke buku bercetak bukanlah perkara mustahil. Yang diperlukan ialah urutan kerja yang jelas, disiplin yang konsisten, dan kefahaman tentang setiap peringkat yang perlu dilalui. Artikel ini adalah panduan menyeluruh untuk anda yang sedang merancang untuk menerbitkan buku pertama di Malaysia.
 
 ## Dua Laluan Utama: Self-Publishing atau Penerbit Tradisional?
 
@@ -29,7 +29,7 @@ Tanpa mengira laluan yang anda pilih, proses asas menerbitkan buku melibatkan be
 
 ### 1. Siapkan Manuskrip
 
-Ini adalah kerja terbesar. Menulis buku memerlukan lebih daripada sekadar idea yang baik. Anda perlu:
+Ini adalah kerja terbesar. Idea yang baik sahaja tidak mencukupi. Anda perlu:
 
 - Tentukan skop dan struktur buku sebelum mula menulis
 - Tetapkan sasaran penulisan harian atau mingguan yang realistik
@@ -40,7 +40,7 @@ Untuk panduan langkah demi langkah yang lebih lengkap, lihat: [7 Langkah dari Ma
 
 ### 2. Penyuntingan
 
-Penyuntingan bukan pilihan, ia adalah keperluan. Terdapat beberapa peringkat penyuntingan yang perlu dipertimbangkan:
+Penyuntingan tidak boleh dilangkau. Terdapat beberapa peringkat penyuntingan yang perlu dipertimbangkan:
 
 - **Suntingan kandungan** (substantive editing): memastikan struktur, aliran, dan logik buku
 - **Suntingan bahasa** (copy editing): tatabahasa, ejaan, dan konsistensi gaya
@@ -90,7 +90,7 @@ Sebelum anda bermula, terdapat beberapa kebenaran penting yang perlu anda terima
 
 **Disiplin menulis adalah kemahiran yang perlu dilatih.** Idea yang baik tidak memadai. Anda perlu membina tabiat menulis yang konsisten, terutamanya jika ini adalah buku pertama anda.
 
-**Jangkaan jualan perlu realistik.** Penulis baharu jarang sekali terjual ribuan naskhah dalam bulan pertama. Bina khalayak pembaca secara berperingkat, mulakan pemasaran sebelum buku siap, dan anggap buku pertama sebagai pelaburan jangka panjang dalam profil penulis anda.
+**Jangkaan jualan perlu realistik.** Penulis baharu jarang sekali terjual ribuan naskhah dalam bulan pertama. Bina khalayak pembaca secara berperingkat, mulakan pemasaran sebelum buku siap, dan anggap buku pertama sebagai batu asas profil penulis anda.
 
 ## Kesilapan Lazim Penulis Baharu
 
@@ -104,7 +104,7 @@ Elakkan perangkap yang sering menjerat penulis baharu:
 
 ## Sumber dan Bantuan yang Ada
 
-Anda tidak perlu melalui perjalanan ini berseorangan. Beberapa sumber yang boleh membantu:
+Anda tidak perlu menguruskan semuanya berseorangan. Beberapa sumber yang boleh membantu:
 
 - **Perpustakaan Negara Malaysia (PNM)**: untuk permohonan ISBN dan deposit manuskrip
 - **Dewan Bahasa dan Pustaka (DBP)**: untuk panduan bahasa dan terbitan berkaitan
@@ -113,10 +113,10 @@ Anda tidak perlu melalui perjalanan ini berseorangan. Beberapa sumber yang boleh
 
 Jika anda ingin memperkukuh kemahiran penulisan sebelum atau semasa proses menerbitkan buku, lihat [program latihan menulis](/program) yang tersedia melalui Kuras Buku.
 
-## Kesimpulan
+## Daripada Impian kepada Naskhah
 
 Menerbitkan buku pertama adalah satu pencapaian yang bermakna, tetapi ia memerlukan perancangan yang teliti, disiplin yang kuat, dan keberanian untuk meneruskan proses walaupun ia terasa perlahan.
 
 Mulakan dengan langkah yang jelas: pilih laluan yang sesuai, siapkan manuskrip, dapatkan bantuan profesional untuk penyuntingan dan reka bentuk, uruskan ISBN melalui PNM, dan rancang pemasaran sejak awal lagi.
 
-Jika anda memerlukan panduan atau bantuan dalam menerbitkan buku pertama anda, sama ada untuk keperluan peribadi atau organisasi, hubungi pasukan kami melalui [halaman hubungi](/hubungi). Kami berbesar hati untuk membantu anda menjadikan buku itu kenyataan.
+Jika anda memerlukan panduan atau bantuan dalam menerbitkan buku pertama anda, sama ada untuk keperluan peribadi atau organisasi, hubungi pasukan kami melalui [halaman hubungi](/hubungi). Kami berbesar hati membantu anda menyiapkannya hingga ke naskhah bercetak.

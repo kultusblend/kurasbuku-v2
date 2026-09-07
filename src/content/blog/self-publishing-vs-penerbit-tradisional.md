@@ -132,7 +132,7 @@ Jangan membuat keputusan berdasarkan emosi semata-mata. Nilailah setiap faktor s
 
 ---
 
-## Kesimpulan
+## Timbang Ikut Matlamat Anda
 
 Tiada jawapan tunggal yang betul untuk semua orang. Penerbitan kendiri memberikan kebebasan dan keuntungan yang lebih besar, tetapi memerlukan lebih banyak usaha dan pelaburan awal. Penerbit tradisional menawarkan sokongan dan kredibiliti, namun dengan kawalan yang lebih terhad dan tempoh masa yang lebih panjang.
 

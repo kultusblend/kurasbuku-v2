@@ -6,14 +6,14 @@ heroImage: /images/blog/penerbitan-buku-ilmiah-prosiding-universiti.webp
 module: penerbitan
 author: hafiz-latiff
 tags: [buku ilmiah, prosiding, penerbitan akademik, universiti, monograf, jurnal]
-tldr: "Penerbitan buku ilmiah dan prosiding bukan sekadar formaliti akademik, ia bukti nyata sumbangan ilmu sesebuah institusi. Artikel ini menjelaskan jenis penerbitan, proses yang terlibat, dan bagaimana penerbit profesional boleh membantu fakulti dan pusat penyelidikan menguruskan keluaran akademik mereka."
+tldr: "Penerbitan buku ilmiah dan prosiding ialah bukti nyata sumbangan ilmu sesebuah institusi, bukan formaliti akademik semata-mata. Artikel ini menjelaskan jenis penerbitan, proses yang terlibat, dan bagaimana penerbit profesional boleh membantu fakulti dan pusat penyelidikan menguruskan keluaran akademik mereka."
 draft: false
 ---
-Di universiti dan institusi pengajian tinggi (IPT), penyelidikan tidak berakhir apabila kajian selesai dijalankan. Ia hanya lengkap apabila hasil penyelidikan tersebut dikongsi, didokumentasikan, dan dapat diakses oleh komuniti ilmiah yang lebih luas. Di sinilah penerbitan buku ilmiah dan prosiding memainkan peranan yang tidak boleh dipandang remeh. Namun, bagi kebanyakan fakulti dan pusat penyelidikan, proses menghasilkan penerbitan akademik yang berkualiti sering menjadi cabaran tersendiri, terutamanya apabila ia perlu diuruskan selari dengan kewajipan pengajaran dan penyelidikan harian.
+Di universiti dan institusi pengajian tinggi (IPT), penyelidikan tidak berakhir apabila kajian selesai dijalankan. Ia hanya lengkap apabila hasil penyelidikan tersebut dikongsi, didokumentasikan, dan dapat diakses oleh komuniti ilmiah yang lebih luas. Di sinilah penerbitan buku ilmiah dan prosiding mengambil tempatnya. Namun, bagi kebanyakan fakulti dan pusat penyelidikan, proses menghasilkan penerbitan akademik yang berkualiti sering menjadi cabaran tersendiri, terutamanya apabila ia perlu diuruskan selari dengan kewajipan pengajaran dan penyelidikan harian.
 
 ## Jenis Penerbitan Akademik yang Lazim di IPT
 
-Sebelum merancang sebarang penerbitan, adalah penting untuk memahami kategori yang wujud serta tujuan setiap satunya:
+Sebelum merancang sebarang penerbitan, elok difahami dahulu kategori yang wujud serta tujuan setiap satunya:
 
 **Buku ilmiah (scholarly book):** Karya tunggal atau koleksi bab yang membincangkan topik tertentu secara mendalam. Biasanya ditulis oleh seorang atau beberapa orang pengarang, dengan hujah dan dapatan yang disusun secara menyeluruh. Buku ilmiah sesuai untuk mendokumentasikan hasil kajian jangka panjang, menyusun semula teori, atau menyediakan rujukan komprehensif dalam sesuatu bidang.
 
@@ -25,7 +25,7 @@ Sebelum merancang sebarang penerbitan, adalah penting untuk memahami kategori ya
 
 ## Kenapa IPT Perlu Menerbitkan Secara Aktif
 
-Penerbitan akademik bukan sekadar soal prestij. Ia mempunyai kaitan langsung dengan beberapa aspek penting dalam ekosistem universiti:
+Penerbitan akademik bukan soal prestij semata-mata. Ia berkait langsung dengan beberapa aspek penting dalam ekosistem universiti:
 
 - **KPI penyelidikan:** Bilangan penerbitan, termasuk buku, prosiding, dan artikel jurnal, sering menjadi penanda aras prestasi penyelidik dan jabatan. Universiti bersaing untuk meningkatkan hasil penerbitan bagi tujuan penarafan dan akreditasi.
 - **Perkongsian ilmu:** Pengetahuan yang tersimpan dalam laporan dalaman sahaja tidak akan memberi manfaat kepada masyarakat. Penerbitan membuka akses kepada komuniti ilmiah, pengamal industri, dan pembuat dasar.
@@ -95,8 +95,8 @@ Seorang penerbit profesional boleh membantu dalam beberapa aspek berikut:
 
 Dengan sokongan ini, fakulti dan pusat penyelidikan dapat menumpukan tenaga pada kandungan ilmiah, manakala aspek teknikal penerbitan pula dikendalikan oleh pihak yang berpengalaman.
 
-## Kesimpulan: Penerbitan Ilmiah sebagai Pelaburan Strategik
+## Nilai yang Melangkaui KPI
 
-Bagi universiti dan institusi penyelidikan, penerbitan buku ilmiah dan prosiding adalah lebih daripada sekadar memenuhi KPI. Ia merupakan cara konkrit untuk membuktikan sumbangan institusi kepada perkembangan ilmu, memperkukuh jenama akademik, dan memastikan warisan penyelidikan terus hidup melangkaui dinding kampus.
+Bagi universiti dan institusi penyelidikan, penerbitan buku ilmiah dan prosiding tidak berhenti pada memenuhi KPI. Ia cara konkrit untuk membuktikan sumbangan institusi kepada perkembangan ilmu, memperkukuh jenama akademik, dan memastikan warisan penyelidikan terus hidup melangkaui dinding kampus.
 
 Jika fakulti atau pusat penyelidikan anda sedang merancang penerbitan akademik dan memerlukan sokongan editorial atau produksi, pasukan [Penerbitan Kuras Buku](/penerbitan) sedia membantu dari peringkat perancangan hingga penerbitan siap. Hubungi kami melalui [borang pertanyaan](/hubungi) untuk berbincang tentang keperluan spesifik anda.

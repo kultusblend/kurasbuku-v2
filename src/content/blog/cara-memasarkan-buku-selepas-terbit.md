@@ -50,18 +50,18 @@ Kandungan yang berkesan bukan iklan terang-terangan. Kongsi **nilai** dari buku 
 Pra-tempahan (pre-order) adalah alat pemasaran yang sering diabaikan oleh penulis Malaysia. Ia memberikan beberapa kelebihan:
 
 - Mengesahkan minat pasaran sebelum cetakan besar.
-- Mewujudkan rasa eksklusif dan urgensi.
+- Mewujudkan rasa eksklusif dan dorongan untuk membeli awal.
 - Memberikan modal tunai awal untuk menampung kos penerbitan atau promosi.
 
 Tawarkan insentif pra-tempahan yang bermakna, misalnya harga awal, sesi Soal Jawab (Q&A) eksklusif bersama penulis, atau akses kepada bab pertama lebih awal. Promosikan melalui rangkaian peribadi dahulu sebelum dibuka kepada umum.
 
 ## Majlis Pelancaran yang Berkesan
 
-Majlis pelancaran bukan sekadar formaliti. Jika dirancang dengan baik, ia boleh menjana liputan media, memperluas rangkaian, dan menghasilkan jualan awal yang memberangsangkan.
+Majlis pelancaran bukan formaliti semata-mata. Jika dirancang dengan baik, ia boleh menjana liputan media, memperluas rangkaian, dan menghasilkan jualan awal yang memberangsangkan.
 
 Tips untuk majlis pelancaran yang berkesan:
 
-- Jemput **orang yang betul**, bukan sekadar ramai orang. Wartawan, pempengaruh buku, tokoh industri yang berkaitan, dan pembaca setia adalah lebih berharga daripada khalayak umum yang tidak berkaitan.
+- Utamakan jemputan kepada **orang yang betul** berbanding jumlah hadirin. Wartawan, pempengaruh buku, tokoh industri yang berkaitan, dan pembaca setia adalah lebih berharga daripada khalayak umum yang tidak berkaitan.
 - Sediakan **satu "daya penarik" yang kuat** untuk media: apa yang menjadikan buku ini unik atau tepat pada masanya?
 - Rakam majlis dan kongsi klip pendek di media sosial selepas acara.
 - Pastikan ada mekanisme jualan langsung di tempat, termasuk pilihan pembayaran digital.
@@ -85,7 +85,7 @@ Kuras Buku mempunyai [Program Resensi](/program/resensi) yang menghubungkan penu
 
 Pendekatan yang bijak:
 
-- Cari pempengaruh yang niche-nya selari dengan tema buku anda, bukan sekadar yang mempunyai pengikut ramai.
+- Cari pempengaruh yang niche-nya selari dengan tema buku anda, bukan semata-mata yang pengikutnya ramai.
 - Tawarkan naskhah percuma sebagai pertukaran untuk ulasan atau sebutan jujur.
 - Pertimbangkan kerjasama yang lebih mendalam seperti sesi Instagram Live bersama, atau mereka menjadi tetamu dalam podcast anda.
 
@@ -103,7 +103,7 @@ Strategi terbaik: gunakan kedua-dua saluran, tetapi fokus untuk membina jualan l
 
 ## Acara, Booth, dan Pesta Buku
 
-Pesta Buku Antarabangsa Kuala Lumpur (PBAKL), Pesta Buku Selangor, dan acara komuniti adalah peluang keemasan untuk **promosi buku** secara langsung. Berhadapan dengan pembaca secara fizikal membina kepercayaan yang sukar dicapai secara digital.
+Pesta Buku Antarabangsa Kuala Lumpur (PBAKL), Pesta Buku Selangor, dan acara komuniti adalah medan terbaik untuk **promosi buku** secara langsung. Berhadapan dengan pembaca secara fizikal membina kepercayaan yang sukar dicapai secara digital.
 
 Tips untuk acara:
 
@@ -122,7 +122,7 @@ Ini boleh berbentuk:
 - Podcast atau video YouTube tentang topik berkaitan.
 - Surat berita (newsletter) mingguan atau bulanan yang berkongsi petikan, tip, atau cerita di sebalik buku.
 
-Pemasaran kandungan memposisikan anda sebagai **pakar** dalam bidang anda, bukan sekadar penulis yang menjual buku. Ini selari dengan membina [persona profesional di media sosial](/artikel/membina-persona-profesional-media-sosial/) yang menjadi aset jangka panjang kerjaya penulisan anda.
+Pemasaran kandungan memposisikan anda sebagai **pakar** dalam bidang anda, bukan hanya penulis yang menjual buku. Ini selari dengan membina [persona profesional di media sosial](/artikel/membina-persona-profesional-media-sosial/) yang menjadi aset jangka panjang kerjaya penulisan anda.
 
 Bacaan berguna untuk penulis yang baru bermula: [Panduan Menerbitkan Buku Pertama](/artikel/panduan-menerbitkan-buku-pertama/) memberikan asas yang kukuh sebelum anda masuk ke fasa pemasaran.
 
@@ -136,10 +136,10 @@ Kejayaan pemasaran buku bukan hanya tentang jumlah jualan. Ukur juga:
 - **Ulasan dan testimoni**: kualiti maklum balas daripada pembaca sebenar.
 - **Jemputan berbayar**: adakah buku membuka peluang ceramah, bengkel, atau konsultansi?
 
-Jualan adalah penting, tetapi buku yang berjaya sering membuka pintu kepada peluang lain yang nilainya melebihi royalti.
+Jualan memang penting, tetapi buku yang berjaya sering membawa peluang lain yang nilainya melebihi royalti: jemputan ceramah, bengkel, dan nama yang dikenali dalam bidang anda.
 
-## Kesimpulan
+## Mulakan Sebelum Buku Siap
 
 Pemasaran buku adalah proses berterusan yang memerlukan strategi, konsistensi, dan kesediaan untuk belajar daripada setiap kempen. Mulakan awal, bina khalayak sebelum buku siap diterbitkan, dan gunakan pelbagai saluran secara selektif mengikut kesesuaian niche anda.
 
-Jika anda ingin dilengkapkan dengan kemahiran yang lebih terstruktur untuk membina pengaruh sebagai penulis, Program Pempengaruh Kuras Buku direka khas untuk membantu anda membangun kehadiran digital yang autentik dan berkesan. [Ketahui lebih lanjut tentang Program Pempengaruh](/program/pempengaruh) dan mulakan perjalanan sebagai penulis yang benar-benar dikenali.
+Jika anda ingin dilengkapkan dengan kemahiran yang lebih terstruktur untuk membina pengaruh sebagai penulis, Program Pempengaruh Kuras Buku direka khas untuk membantu anda membangun kehadiran digital yang autentik dan berkesan. [Ketahui lebih lanjut tentang Program Pempengaruh](/program/pempengaruh) dan bina nama sebagai penulis yang benar-benar dikenali.
